@@ -39,6 +39,16 @@ jobs:
           cd public
           npx tailwindcss -i ../src/input.css -o ./style.css --minify --config ./tailwind.config.js
 
+      - name: Generate cache busting version
+        id: cache-bust
+        run: echo "version=$(date +%s)" >> $GITHUB_OUTPUT
+
+      - name: Update CSS references in HTML files
+        run: |
+          cd public
+          # Replace all CSS links with versioned links
+          find . -name "*.html" -type f -exec sed -i "s/href=\"style\.css\"/href=\"style.css?v=${{ steps.cache-bust.outputs.version }}\"/g" {} \;
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
