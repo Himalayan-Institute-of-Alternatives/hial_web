@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life at Phyang Village</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./static/favicon.png"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  </head>
+  <body>
+    <!--    NAV - BAR -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+
+
+     <!-- main content -->
+     <div class="flex heading text-4xl px-4 font-bold text-theme-golden justify-center mt-6"><h6>Life at Phyang</h6></div>
+     <hr class="text-xl font-medium mt-1">
+    <!-- ------------ grid ---------- -->
+    <div
+      class="grid grid-col-1 md:grid-cols-12 gap-1 my-4 p-4 place-items-start"
+    >
+      <!-- SPV  -->
+      <div class="md:col-span-12 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+           HIAL is located in Phyang, a beautiful village located at a distance of approx. 19 kms from the Leh airport. HIAL shares a collaborative relationship with the village that results in mutually beneficial outcomes, working with the Amalays (mothers) of Phyang for the Himalayan Farm Stays project. HIAL also organizes village walks, workshops, and activities like farmers market pop-ups featuring local products and food items to draw more tourists to the village.
+           <br>
+
+Being at a convenient distance from the Leh market, one can always visit the city for shopping, dining out, or visiting major tourist spots in Leh like the Shanti Stupa, Leh Palace, Tsemo Monastery, etc. HIAL is also very accessible from many other famous tourist attractions like the Spituk Monastery, Hall of Fame, Magnetic Hill, Pathar Sahib Gurudwara, Sangam (Confluence) of Indus and Zanskar Rivers, Nimo River Rafting, etc.
+        </p>
+      </div>
+    </div>
+
+
+     <!-- Gallery Grid -->
+     <hr class="text-xl font-medium my-2">
+
+    <section class="imahe-grid my-4 mx-4">
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center hover:scale-150"
+          src="./static/gallery.jpg"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center hover:scale-150"
+          src="./static/gallery.jpeg"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center hover:scale-150"
+          src="./static/gallery (2).jpeg"
+        />
+      </div>
+       <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center hover:scale-150"
+          src="./static/gallery (2).jpeg"
+        />
+      </div>
+    </div>
+    </div>
+      </div>
+    </section>
+
+     <!-- Footer -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>

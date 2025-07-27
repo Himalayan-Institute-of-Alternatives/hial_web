@@ -1,0 +1,21 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500">
+	<title>template</title>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 60px;fill: #ffffff;font-weight: 400;font-family: "Roboto-Regular", "Roboto" } 
+		.t1 { font-size: 40px;fill: #ffffff;font-weight: 400;font-family: "Roboto-Regular", "Roboto" } 
+	</style>
+	<rect width="1500" height="500" id="Layer 1" style="fill: #711117"/>
+	<text id="The current pace of global development renders insufficient the 3Rs (Reading, wRiting, aRithmetic) and necessitates the need for 3Hs, (Head, Hands &amp; Heart)." style="transform: matrix(1,0,0,1,162,195.12)" >
+		<tspan x="0" y="0" class="t0">Experiential Learning
+</tspan>
+	</text>
+	<text id="Research and innovation drives e" style="transform: matrix(1,0,0,1,162,267.12)" >
+		<tspan x="0" y="0" class="t1">Research and innovation drives every aspect of HIAL. </tspan><tspan  y="0" class="t1">
+</tspan>
+		<tspan x="0" y="48" class="t1">Learners of all academic levels are encouraged to undertake </tspan><tspan  y="48" class="t1">
+</tspan>
+		<tspan x="0" y="96" class="t1">research and creative endeavours in collaboration with facilitators.
+</tspan>
+	</text>
+</svg>

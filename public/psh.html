@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PSH</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./static/favicon.png"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  </head>
+  <body>
+    <!--    NAV - BAR -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+
+
+     <!-- main content -->
+     <div class="flex heading text-4xl px-4 font-bold text-theme-golden justify-center mt-6"><h6>PASSIVE SOLAR HEATING</h6></div>
+     <hr class="text-xl font-medium mt-1">
+    <!-- ------------ grid ---------- -->
+    <div
+      class="grid grid-col-1 md:grid-cols-12 gap-1 my-4 p-4 place-items-start"
+    >
+      <!-- SPV  -->
+      <div class="md:col-span-12 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">Overview:</h4>
+        
+             Learners gain the knowledge and skills to design and build sustainable buildings for cold mountainous regions. Environmental friendly, carbon neutral and innovative sources of energy like solar power and geo-thermal heat pumps play a crucial role in design and orientation. Earthquake safety, which has become an issue of great concern in mountain communities, is studied and ensured. Learners research techniques, materials, and designs to build passive solar heated spaces while promoting and working with locally and abundantly available eco-friendly materials like clay and stone. Under the guidance of experts and architects, learners apply their knowledge towards the construction of the HIAL campus as well as projects taken for various private and government clients that serve as the Live Labs of this Centre. 
+        </p>
+      </div>
+      
+    </div>
+
+    <!-- Gallery Grid -->
+     <hr class="text-xl font-medium my-2">
+
+    <section class="imahe-grid my-4 mx-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-4">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center"
+          src="./static/psh.png"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center"
+          src="./static/psh1.jpg"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center"
+          src="./static/psh2.JPG"
+        />
+      </div>
+       <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center"
+          src="./static/psh3.JPG"
+        />
+      </div>
+    </div>
+    </div>
+      </div>
+    </section>
+
+     <!-- Footer -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>

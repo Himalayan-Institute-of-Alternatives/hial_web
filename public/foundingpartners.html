@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Board of Directors</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="./static/favicon.png" />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!--    NAV - BAR -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+
+    <!-- main content -->
+    <!-- FOUNDING PARTNERS  -->
+    <section class="my-6 px-4">
+      <div class="mb-12">
+        <h2
+          class="font-manrope text-3xl text-center font-bold text-theme-golden"
+        >
+          FOUNDING PARTNERS
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="spk block bg-theme-golden shadow-md rounded-md">
+          <div class="grid grid-cols-1 sm:grid-cols-2">
+            <div class="img flex justify-center items-center px-2">
+              <img
+                src="./static/sanjay-prakash.webp"
+                class="rounded-sm w-96 shadow-lg"
+                alt=""
+              />
+            </div>
+            <div
+              class="desc flex flex-col justify-center items-center p-2 text-gray-200"
+            >
+              <h3 class="font-bold">SANJAY PRAKASH</h3>
+              <i>.....................................</i>
+              <p>
+                Sanjay Prakash is an architect who specialises in
+                energy-conscious architecture, eco-friendly design, people’s
+                participation in planning, music, production design, and more.
+                Over the years, he has integrated all his work with the practice
+                of new urbanism and sustainability. He is a co-founder of the
+                Future Institute, a founding member and the lead architect at
+                HIAL, and principal consultant of his design firm, SHiFt: Studio
+                for Habitat Futures.
+              </p>
+              <!-- social media icons -->
+            </div>
+          </div>
+        </div>
+        <div class="sb block bg-theme-golden shadow-md rounded-md">
+          <div class="grid grid-cols-1 sm:grid-cols-2">
+            <div class="img flex justify-center items-center px-2">
+              <img
+                src="./static/suparna-bhallanew.webp"
+                class="rounded-sm w-96"
+                alt=""
+              />
+            </div>
+            <div
+              class="desc flex flex-col justify-center items-center p-2 text-gray-200"
+            >
+              <h3 class="font-bold">SUPARNA BHALLA</h3>
+              <i>.....................................</i>
+              <p>
+                The Principal Architect at Abaxial Architects Pvt. Ltd., Suparna
+                Bhalla is visiting faculty of various architecture schools in
+                Delhi-NCR. She writes for several design journals and is on the
+                Editorial Board of Green Life magazine and the advisory for the
+                Future Institute. She is an architect and conservationist who
+                has worked on a number of architectural projects, conservation
+                and interior projects in India and abroad.
+              </p>
+              <!-- social media icons -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERBc</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./static/favicon.png"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  </head>
+  <body>
+    <!--    NAV - BAR -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+
+
+     <!-- main content -->
+     <div class="flex heading text-4xl px-4 font-bold text-theme-golden justify-center mt-6"><h6>INTERNSHIP BASED ECO-RESPONSIVE BUILDING PROGRAM</h6></div>
+     <hr class="text-xl font-medium mt-1">
+    <!-- ------------ grid ---------- -->
+    <div
+      class="grid grid-col-1 md:grid-cols-12 gap-1 my-4 p-4 place-items-center"
+    >
+      <!-- SPV  -->
+      <div class="md:col-span-6 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">Overview:</h4>
+        
+             Eco Responsive Building Course is designed to encompass natural/earth building techniques that are passive solar in nature. It is a 6 months long comprehensive hands-on course in building sustainable and eco-friendly structures using locally available materials. The internship is designed to provide skill development in design and construction techniques for natural buildings in cold mountainous regions. Environment-friendly and sustainable sources of energy like solar power and geothermal heat pumps will be a crucial part of the course. Earthquake safety, which has become an issue of great concern in mountain communities, along with the effects of climate change and its impact on traditional architecture, will also be studied. <br>
+
+We will research techniques, materials, and designs to build passive solar spaces while promoting and working with locally available local materials. Under the guidance of experts and architects, learners will apply their knowledge during Live Labs of construction either at the HIAL campus or through their own ventures.
+
+<h4 class="text-xl font-bold text-theme-golden pr-2 pt-2">Learning outcomes: </h4>
+<ul>
+  <li>Understanding the concept of natural building techniques and their response to different geographical areas.</li>
+  <li>Designing and building passive solar buildings for cold regions.</li>
+  <li>Exposure to ancient and modern techniques through visiting old palaces, forts, and residential structures.</li>
+</ul>
+<h4 class="text-xl font-bold text-theme-golden pr-2 pt-2">Eligibility: </h4>
+Graduate in architecture or civil engineering (Since our institute is based on experiential learning, candidates having interest and experience in building and construction-related studies/practice). <br>
+
+Basic knowledge of AutoCAD and MS OFFICE (Excel, PowerPoint, Word) is preferred.
+<h4 class="text-xl font-bold text-theme-golden pr-2 pt-2">Stipend : </h4>
+HIAL believes in earning while learning, hence there will be a stipend of Rs 7000/ month.
+<h4 class="text-xl font-bold text-theme-golden pr-2 pt-2">Internship structure: </h4>
+<ol>
+  <li>Total duration: 6 and half months. </li>
+  <li>Eco-responsive Building internship includes hands-on practice (Learning by doing) on drawing, land marking, site supervision, procurement, and brick-making production, etc.</li>
+  <li>Exposures to different construction techniques</li>
+  <li>Introduction to passive solar building techniques</li>
+  <li>Weekly and end of the project presentation/meeting/report writing to check their level of understanding.  </li>
+</ol>
+
+<b>For queries or further information, write to us at:</b> <i>study@hial.edu.in </i> 
+        </p>
+      </div>
+      <!-- SPV side photo  -->
+      <div class="md:col-span-6 justify-center flex overflow-hidden">
+       <img src="./static/erbc.webp" alt="">
+      </div>
+      
+    </div>
+
+     <!-- Footer -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHADE</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./static/favicon.png"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  </head>
+  <body>
+    <!--    NAV - BAR -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+
+
+     <!-- main content -->
+     <div class="flex heading text-4xl px-4 font-bold text-theme-golden justify-center mt-6"><h6>School Of High Altitude Desert Ecology (SHADE)</h6></div>
+     <hr class="text-xl font-medium mt-1">
+    <!-- ------------ grid ---------- -->
+    <div
+      class="grid grid-col-1 md:grid-cols-12 gap-1 my-4 p-4 place-items-center"
+    >
+      
+      <!-- Artificial vertical Glaciers side photo  -->
+      <div class="md:col-span-12 justify-center flex overflow-hidden">
+       <img src="./static/LIVE-SIMPLY-1024x683.webp" alt="">
+      </div>
+
+      <!-- Artificial vertical Glaciers  -->
+      <div class="md:col-span-12 place-content-center justify-center flex-col overflow-hidden mt-2">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">Artificial Vertical Glaciers - Ice Stupas for conservation of waste-winter water for irrigation in Spring:</h4>
+        
+        The Ice Stupa artificial glaciers solve the problem of water shortage in the face of climate change- using which the ecologically damaged valleys are being restored. The Ice-stupas use waste-winter-streaming water and store it in the form of conical ice structures resembling a stupa, and melts during the spring, providing water to the farmers in the driest period… when it is most needed. Last year, 16 villages made 21 Ice Stupas and benefitted from it.
+        </p>
+      </div>
+      <!-- Abandoned Village Rehabilitation -->
+       <div class="md:col-span-12 justify-center flex-col overflow-hidden mt-2">
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">Solar Car Shed:</h4>
+       The primary aim of this project is to study and document the methodology of village rehabilitation in the trans-Himalayan region of Ladakh, particularly in the village of Kulum which has been abandoned due to the reason of water scarcity. The project also envisions preparing a list of such water-scarce villages in the region in order to compile a flexible framework that can be applied in the rehabilitation process of villages facing similar challenges. The secondary aim is to empower the tribals of the region through the knowledge sharing of adaptive measures that will build resilience towards climate change on a much wider scale than before. These adaptive measures include the building of ice stupas, implementing modern plantation and irrigation practices, and introducing solar passive design and technology.
+        </p>
+      </div>
+       <!-- Abandoned Village Rehabilitation side photo -->
+       <div class="md:col-span-4 justify-center flex overflow-hidden">
+        <img src="./static/ice.webp" alt="" class="p-2">
+      </div>
+      <div class="md:col-span-4 justify-center flex overflow-hidden">
+        <img src="./static/Rehabilitation2.webp" alt="" class="p-2">
+      </div>
+      <div class="md:col-span-4 justify-center flex overflow-hidden">
+        <img src="./static/Rehabilitation3.webp" alt="" class="p-2">
+      </div>
+
+      <!-- High valley desert greening for increasing water absorption and flow reduction in extreme rainfall events - Desert greening with native plants -->
+      <div class="md:col-span-12 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-5">High valley desert greening for increasing water absorption and flow reduction in extreme rainfall events - Desert greening with native plants:</h4>
+        Frequent floods due to loose soil, lack of vegetation, and cloud bursts damaged houses and crops. As a counter, HIAL is undertaking the ambitious valley greening and afforestation project. Indigenous Trees will be planted using a mix of innovative techniques and methods. Using Native species for plantation ensures that plants don’t use too much water. Water retention on account of vegetation cover will help in mitigating disasters such as the leaching of nutrients from the soil, water run-off, and damage to houses and property in the event of floods or severe rainfalls. HIAL has a land of 125 acres, out of which roughly 100 acres will be afforested.
+        </p>
+        
+      </div>
+      <!-- High valley desert greening hr photo  -->
+      <div class="md:col-span-6 justify-center flex overflow-hidden">
+       <img src="./static/High valley desert greening1.webp" alt="" class="p-5">
+      </div>
+      <div class="md:col-span-6 justify-center flex overflow-hidden">
+       <img src="./static/High valley desert greening2.webp" alt="" class="p-5">
+      </div>
+    </div>
+
+     <!-- Footer -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>

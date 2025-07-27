@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>village rehabilitation</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./static/favicon.png"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  </head>
+  <body>
+    <!--    NAV - BAR -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+
+
+     <!-- main content -->
+     <div class="flex heading text-4xl px-4 font-bold text-theme-golden justify-center mt-6"><h6>CoE In ABANDONED VILLAGE REHABILITATION</h6></div>
+     <hr class="text-xl font-medium mt-1">
+    <!-- ------------ grid ---------- -->
+    <div
+      class="grid grid-col-1 md:grid-cols-12 gap-1 my-4 p-4 place-items-start"
+    >
+      <!-- SPV  -->
+      <div class="md:col-span-12 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">Overview:</h4>
+        
+             Learners study and document the methodology of village rehabilitation in the trans-Himalayan region of Ladakh, particularly in the village of Kulum which has been abandoned due to the reason of water scarcity. The Center envisions preparing a list of such water-scarce villages in the region in order to compile a flexible framework that can be applied in the rehabilitation process of villages facing similar challenges. The secondary aim is to empower the tribals of the region through the knowledge sharing of adaptive measures that will build resilience towards climate change on a much wider scale than before. These adaptive measures include the building of ice stupas, implementing modern plantation and irrigation practices, and introducing solar passive design and technology.
+        </p>
+      </div>
+      
+    </div>
+
+
+    <!-- Gallery Grid -->
+     <hr class="text-xl font-medium my-2">
+
+    <section class="imahe-grid my-4 mx-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-4">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center"
+          src="./static/Vrlh1.jpeg"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center"
+          src="./static/vrlh2.JPG"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center"
+          src="./static/vrlh3.JPG"
+        />
+      </div>
+       <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center"
+          src="./static/vrlh4.jpeg"
+        />
+      </div>
+    </div>
+    </div>
+      </div>
+    </section>
+
+     <!-- Footer -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>

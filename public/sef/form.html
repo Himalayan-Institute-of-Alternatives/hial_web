@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration For S&E Fest | 2025</title>
+
+    <!-- favicon -->
+    <links
+      rel="shortcut icon"
+      type="image/png"
+      href="./images/logoSun&Earth.png"
+    />
+
+    <!-- style sheet -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+      body {
+        font-family: "Roboto", sans-serif;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      span,
+      div,
+      label,
+      input,
+      textarea,
+      button {
+        font-family: "Roboto", sans-serif;
+      }
+
+      /* Input and placeholder styles */
+      input,
+      textarea {
+        font-size: 0.875rem !important; /* 14px */
+        font-weight: 400 !important;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        font-size: 0.875rem !important; /* 14px */
+        font-weight: 300 !important;
+        color: #6b7280 !important;
+      }
+
+      .font-playfair {
+        font-family: "Playfair Display", serif;
+      }
+
+      /* Theme colors */
+      :root {
+        --theme-gradient: linear-gradient(to right, #711117, #88672a);
+        --theme-from: #711117;
+        --theme-to: #88672a;
+      }
+
+      .bg-theme-maroon {
+        background-color: #711117;
+      }
+
+      .text-theme-maroon {
+        color: #711117;
+      }
+
+      .hover\:bg-theme-maroon:hover {
+        background-color: #711117;
+      }
+
+      .hover\:text-theme-maroon:hover {
+        color: #711117;
+      }
+
+      .bg-theme-golden {
+        background-color: #88672a;
+      }
+
+      .text-theme-golden {
+        color: #88672a;
+      }
+
+      .hover\:bg-theme-golden:hover {
+        background-color: #88672a;
+      }
+
+      .hover\:text-theme-golden:hover {
+        color: #88672a;
+      }
+
+      .bg-theme-golden-light {
+        background-color: #f4b528;
+      }
+
+      .text-theme-golden-light {
+        color: #f4b528;
+      }
+
+      .focus\:ring-theme-golden-light:focus {
+        --tw-ring-color: #f4b528;
+      }
+
+      .border-theme-maroon {
+        border-color: #711117;
+      }
+
+      .card-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+      }
+
+      .theme-button {
+        background: var(--theme-gradient);
+        color: white;
+        transition: all 0.3s ease;
+      }
+
+      .theme-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(113, 17, 23, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Common Banner Section -->
+    <div
+      class="relative h-24 bg-cover bg-center"
+      style="
+        background-image: url('./images/taxtureFormbg.jpg');
+        background-color: rgba(138, 138, 138, 0);
+        background-blend-mode: multiply;
+      "
+    >
+      <!-- Banner Content -->
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center text-white px-4"
+      >
+        <h1
+          class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#711117] to-[#711117cd] text-center max-w-3xl mx-auto"
+        >
+          Build a Regenerative Future
+        </h1>
+        <p class="text-xs sm:text-sm text-white">2K25</p>
+      </div>
+
+      <!-- Logo straddling banner border -->
+      <a href="./index.html">
+        <img
+          src="./images/logoSun&Earth.png"
+          alt="Logo"
+          class="absolute bottom-[-28px] left-8 h-20 w-30 z-10"
+        />
+      </a>
+    </div>
+
+    <!-- Info Box -->
+    <div class="p-4 mb-4 bg-blue-50 border-l-4 border-blue-500 mt-8 mx-8">
+      <div class="flex">
+        <div class="flex-shrink-0">
+          <svg
+            class="h-5 w-5 text-blue-500"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="ml-3">
+          <h3 class="text-sm font-medium text-blue-800">
+            Important Information
+          </h3>
+          <div class="mt-2 text-sm text-blue-700">
+            <p>
+              By submitting this questionnaire, you are applying for
+              participation in the event. If accepted, you will receive:
+            </p>
+            <ul class="list-disc list-inside mt-1">
+              <li>A confirmation email</li>
+              <li>Payment instructions and link</li>
+            </ul>
+            <p class="mt-1">
+              Your registration will only be complete after payment
+              confirmation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Container -->
+    <div class="max-w-2xl mx-auto bg-white min-h-screen relative">
+      <!-- Registration Form -->
+      <div id="registration-form" class="p-8 pt-8">
+        <form class="space-y-6" id="eduCon">
+          <div class="grid grid-cols-1 gap-6">
+            <div>
+              <label class="block text-gray-700 text-xs font-bold mb-1"
+                >Name <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                name="name"
+                required
+                class="w-full px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]"
+              />
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-xs font-bold mb-1"
+                >Country <span class="text-red-500">*</span></label
+              >
+              <select
+                name="country"
+                required
+                onchange="updateStates(this.value)"
+                class="w-full px-3 py-1.5 text-xs border rounded-lg focus:ring-2 focus:ring-[#f4b528]"
+              >
+                <option value="">Select Country</option>
+                <option value="IN">India</option>
+                <option value="US">United States</option>
+                <option value="GB">United Kingdom</option>
+                <option value="CA">Canada</option>
+                <option value="AU">Australia</option>
+                <option value="NZ">New Zealand</option>
+                <option value="SG">Singapore</option>
+                <option value="AE">United Arab Emirates</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="QA">Qatar</option>
+                <option value="OM">Oman</option>
+                <option value="KW">Kuwait</option>
+                <option value="BH">Bahrain</option>
+                <option value="MY">Malaysia</option>
+                <option value="ID">Indonesia</option>
+                <option value="TH">Thailand</option>
+                <option value="PH">Philippines</option>
+                <option value="VN">Vietnam</option>
+                <option value="CN">China</option>
+                <option value="JP">Japan</option>
+                <option value="KR">South Korea</option>
+                <option value="DE">Germany</option>
+                <option value="FR">France</option>
+                <option value="IT">Italy</option>
+                <option value="ES">Spain</option>
+                <option value="NL">Netherlands</option>
+                <option value="CH">Switzerland</option>
+                <option value="SE">Sweden</option>
+                <option value="NO">Norway</option>
+                <option value="DK">Denmark</option>
+                <option value="FI">Finland</option>
+                <option value="IE">Ireland</option>
+                <option value="BE">Belgium</option>
+                <option value="AT">Austria</option>
+                <option value="PT">Portugal</option>
+                <option value="GR">Greece</option>
+                <option value="PL">Poland</option>
+                <option value="CZ">Czech Republic</option>
+                <option value="HU">Hungary</option>
+                <option value="RO">Romania</option>
+                <option value="BG">Bulgaria</option>
+                <option value="HR">Croatia</option>
+                <option value="SK">Slovakia</option>
+                <option value="SI">Slovenia</option>
+                <option value="EE">Estonia</option>
+                <option value="LV">Latvia</option>
+                <option value="LT">Lithuania</option>
+                <option value="CY">Cyprus</option>
+                <option value="LU">Luxembourg</option>
+                <option value="MT">Malta</option>
+                <option value="IS">Iceland</option>
+                <option value="LI">Liechtenstein</option>
+                <option value="AD">Andorra</option>
+                <option value="MC">Monaco</option>
+                <option value="SM">San Marino</option>
+                <option value="VA">Vatican City</option>
+                <option value="BR">Brazil</option>
+                <option value="AR">Argentina</option>
+                <option value="CL">Chile</option>
+                <option value="CO">Colombia</option>
+                <option value="PE">Peru</option>
+                <option value="MX">Mexico</option>
+                <option value="ZA">South Africa</option>
+                <option value="EG">Egypt</option>
+                <option value="MA">Morocco</option>
+                <option value="TN">Tunisia</option>
+                <option value="DZ">Algeria</option>
+                <option value="LY">Libya</option>
+                <option value="SD">Sudan</option>
+                <option value="ET">Ethiopia</option>
+                <option value="KE">Kenya</option>
+                <option value="NG">Nigeria</option>
+                <option value="GH">Ghana</option>
+                <option value="CI">Ivory Coast</option>
+                <option value="SN">Senegal</option>
+                <option value="CM">Cameroon</option>
+                <option value="UG">Uganda</option>
+                <option value="TZ">Tanzania</option>
+                <option value="ZM">Zambia</option>
+                <option value="ZW">Zimbabwe</option>
+                <option value="BW">Botswana</option>
+                <option value="NA">Namibia</option>
+                <option value="MZ">Mozambique</option>
+                <option value="AO">Angola</option>
+                <option value="MG">Madagascar</option>
+                <option value="MU">Mauritius</option>
+                <option value="SC">Seychelles</option>
+                <option value="RW">Rwanda</option>
+                <option value="BI">Burundi</option>
+                <option value="SS">South Sudan</option>
+                <option value="ER">Eritrea</option>
+                <option value="DJ">Djibouti</option>
+                <option value="SO">Somalia</option>
+                <option value="CF">Central African Republic</option>
+                <option value="TD">Chad</option>
+                <option value="NE">Niger</option>
+                <option value="ML">Mali</option>
+                <option value="BF">Burkina Faso</option>
+                <option value="GN">Guinea</option>
+                <option value="GW">Guinea-Bissau</option>
+                <option value="SL">Sierra Leone</option>
+                <option value="LR">Liberia</option>
+                <option value="ST">Sao Tome and Principe</option>
+                <option value="GQ">Equatorial Guinea</option>
+                <option value="GA">Gabon</option>
+                <option value="CG">Republic of the Congo</option>
+                <option value="CD">Democratic Republic of the Congo</option>
+                <option value="KM">Comoros</option>
+                <option value="MR">Mauritania</option>
+                <option value="GM">Gambia</option>
+                <option value="CV">Cape Verde</option>
+                <option value="EH">Western Sahara</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-xs font-bold mb-1"
+                >State/Province <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                name="state"
+                required
+                placeholder="Enter your State/Province"
+                class="w-full px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]"
+              />
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-xs font-bold mb-1"
+                >Participant Type <span class="text-red-500">*</span></label
+              >
+              <select
+                name="participant_type"
+                required
+                onchange="updateFields(this.value)"
+                class="w-full px-3 py-1.5 text-xs border rounded-lg focus:ring-2 focus:ring-[#f4b528]"
+              >
+                <option value="">Select Participant Type</option>
+                <option value="Professional">Professional</option>
+                <option value="Student">Student</option>
+                <option value="General">General</option>
+                <option value="Local">Local</option>
+              </select>
+            </div>
+
+            <!-- Dynamic Fields Container -->
+            <div id="dynamic-fields">
+              <!-- Fields will be dynamically inserted here -->
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-xs font-bold mb-1"
+                >Gender <span class="text-red-500">*</span></label
+              >
+              <select
+                name="gender"
+                required
+                class="w-full px-3 py-1.5 text-xs border rounded-lg focus:ring-2 focus:ring-[#f4b528]"
+              >
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-xs font-bold mb-1"
+                >Phone Number <span class="text-red-500">*</span></label
+              >
+              <input
+                type="tel"
+                name="phone"
+                required
+                class="w-full px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]"
+              />
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-xs font-bold mb-1"
+                >E-mail Address <span class="text-red-500">*</span></label
+              >
+              <input
+                type="email"
+                name="email"
+                required
+                class="w-full px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]"
+              />
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-xs font-bold mb-1"
+                >Address <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                name="address"
+                required
+                class="w-full px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]"
+              />
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-xs font-bold mb-1"
+                >Medical Conditions</label
+              >
+              <input
+                type="text"
+                name="medical_conditions"
+                placeholder="Enter any medical conditions (if any)"
+                class="w-full px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]"
+              />
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-xs font-bold mb-1"
+                >Food Allergies</label
+              >
+              <input
+                type="text"
+                name="food_allergies"
+                placeholder="Enter any food allergies (if any)"
+                class="w-full px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]"
+              />
+            </div>
+          </div>
+
+          <div class="border-t border-gray-200 pt-6 mt-6">
+            <div>
+              <label class="block text-gray-700 text-xs font-bold mb-1">
+                Why do you want to participate?
+                <span class="text-red-500">*</span>
+              </label>
+              <textarea
+                name="participation_reason"
+                required
+                rows="4"
+                class="w-full px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528] resize-none"
+                placeholder="Please share your motivation for participating in this event..."
+              ></textarea>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-xs font-bold mb-1">
+                Optional 4 day post festival tour is available at a modest
+                additional cost <span class="text-red-500">*</span>
+              </label>
+              <select
+                name="festival_selection"
+                required
+                class="w-full px-3 py-1.5 text-xs border rounded-lg focus:ring-2 focus:ring-[#f4b528]"
+              >
+                <option value="" disabled selected>Post Festival Tour</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-xs font-bold mt-3">
+                How did you hear about S&E Fest?
+                <span class="text-red-500">*</span>
+              </label>
+              <div class="space-y-2">
+                <div class="flex items-center">
+                  <input
+                    type="radio"
+                    name="hear_about"
+                    value="social_media"
+                    id="hear_social_media"
+                    class="mr-2"
+                    required
+                  />
+                  <label for="hear_social_media" class="text-sm"
+                    >Social Media</label
+                  >
+                </div>
+                <div class="flex items-center">
+                  <input
+                    type="radio"
+                    name="hear_about"
+                    value="website"
+                    id="hear_website"
+                    class="mr-2"
+                    required
+                  />
+                  <label for="hear_website" class="text-sm">Website</label>
+                </div>
+                <div class="flex items-center">
+                  <input
+                    type="radio"
+                    name="hear_about"
+                    value="friends"
+                    id="hear_friends"
+                    class="mr-2"
+                    required
+                  />
+                  <label for="hear_friends" class="text-sm">Friends</label>
+                </div>
+                <div class="flex items-center">
+                  <input
+                    type="radio"
+                    name="hear_about"
+                    value="news"
+                    id="hear_news"
+                    class="mr-2"
+                    required
+                  />
+                  <label for="hear_news" class="text-sm">News</label>
+                </div>
+                <div class="flex items-center">
+                  <input
+                    type="radio"
+                    name="hear_about"
+                    value="others"
+                    id="hear_others"
+                    class="mr-2"
+                    required
+                    onchange="toggleOthersField()"
+                  />
+                  <label for="hear_others" class="text-sm">Others</label>
+                </div>
+                <div id="others_field" class="hidden ml-6 mt-2">
+                  <input
+                    type="text"
+                    name="hear_about_others"
+                    placeholder="Please specify..."
+                    class="w-full px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528] text-sm"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold text-gray-800 mb-4">
+              Investment:
+            </h4>
+            <div class="grid grid-cols-1 gap-6">
+              <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+                <h5 class="text-l font-semibold text-[#711117] mb-4">
+                  Sun and Earth Festival
+                </h5>
+                <p class="text-xl font-bold text-gray-800 mb-2">₹40K</p>
+              </div>
+            </div>
+
+            <div class="mt-4 text-center">
+              <a
+                href="#"
+                onclick="showCancellationCharges()"
+                class="text-[#e1333f] hover:text-[#88672a] text-sm"
+              >
+                View Cancellation Charges
+              </a>
+            </div>
+
+            <!-- Early Bird Discount -->
+
+            <!-- Special Rate for Local -->
+            <div
+              class="mt-6 bg-green-50 rounded-xl p-6 border border-green-100"
+            >
+              <div class="flex items-center mb-4">
+                <svg
+                  class="w-6 h-6 text-green-600 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+                <h4 class="text-lg font-semibold text-theme-maroon">
+                  Special Rate for Local Participants
+                </h4>
+              </div>
+              <p class="text-gray-700">
+                For Local participants, the cost is
+                <span class="text-[#711117] font-bold">₹1000 per day</span>
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold text-gray-800 mb-4">Includes:</h4>
+            <ul class="space-y-2">
+              <li class="flex items-center text-gray-700">
+                <svg
+                  class="w-5 h-5 mr-2 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                Workshop fees
+              </li>
+              <li class="flex items-center text-gray-700">
+                <svg
+                  class="w-5 h-5 mr-2 text-green-500"
+                  fill="none"
+                  s
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                Expert Lectures
+              </li>
+              <li class="flex items-center text-gray-700">
+                <svg
+                  class="w-5 h-5 mr-2 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                Accommodation
+              </li>
+              <li class="flex items-center text-gray-700">
+                <svg
+                  class="w-5 h-5 mr-2 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                Food
+              </li>
+              <li class="flex items-center text-gray-700">
+                <svg
+                  class="w-5 h-5 mr-2 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                Field trips
+              </li>
+            </ul>
+          </div>
+
+          <div class="border-t border-gray-200 pt-6 mt-6">
+            <div class="mb-6">
+              <p class="text-lg font-semibold">
+                Get <span class="text-[#711117] font-bold">20% off</span> for
+                groups of 4 or more participants
+              </p>
+            </div>
+
+            <div class="mb-6">
+              <label class="block text-gray-700 text-xs font-bold mb-3"
+                >How will you be participating in this event?
+                <span class="text-red-500">*</span></label
+              >
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div
+                  class="border rounded-lg p-4 flex items-center cursor-pointer hover:border-[#711117] border-[#711117]"
+                  onclick="selectParticipationType('individual')"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-[#711117] flex items-center justify-center mr-3 text-white"
+                  >
+                    A
+                  </div>
+                  <span>Individual</span>
+                  <input
+                    type="radio"
+                    name="participation_type"
+                    value="individual"
+                    class="ml-auto"
+                    checked
+                    required
+                  />
+                </div>
+                <div
+                  class="border rounded-lg p-4 flex items-center cursor-pointer hover:border-[#711117]"
+                  onclick="selectParticipationType('group')"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center mr-3 text-gray-700"
+                  >
+                    B
+                  </div>
+                  <span>In a group</span>
+                  <input
+                    type="radio"
+                    name="participation_type"
+                    value="group"
+                    class="ml-auto"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div id="group-participants-section" class="mb-6 hidden">
+              <div class="mb-4">
+                <label class="block text-gray-700 text-xs font-bold mb-1"
+                  >Number of Participants
+                  <span class="text-red-500">*</span></label
+                >
+                <input
+                  type="number"
+                  name="participant_count"
+                  min="4"
+                  max="10"
+                  placeholder="Enter number (4-10)"
+                  class="w-full px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]"
+                  onchange="generatePassengerInputs(this.value)"
+                  required
+                />
+              </div>
+
+              <!-- Passenger Details Container -->
+              <div id="passenger-details-container" class="space-y-4">
+                <!-- Passenger cards will be dynamically added here -->
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onclick="validateAndProceed()"
+            class="w-full bg-gradient-to-r from-[#711117] to-[#88672a] hover:from-[#88672a] hover:to-[#711117] text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+
+      <!-- Success Message Modal -->
+      <div
+        id="success-message"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      >
+        <div class="bg-white p-8 rounded-xl shadow-2xl max-w-md w-full mx-4">
+          <div class="text-center">
+            <svg
+              class="w-16 h-16 text-green-500 mx-auto mb-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            <h3 class="text-2xl font-bold text-[#711117] mb-4">Thank You!</h3>
+            <p class="text-gray-600 mb-6">
+              Your registration has been submitted successfully. We will get
+              back to you soon.
+            </p>
+            <button
+              onclick="closeSuccessMessage()"
+              class="bg-gradient-to-r from-[#711117] to-[#88672a] text-white font-bold py-2 px-6 rounded-lg hover:from-[#88672a] hover:to-[#711117] transition-all duration-300"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add this before the closing body tag -->
+    <!-- Cancellation Charges Popup -->
+    <div
+      id="cancellation-popup"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+    >
+      <div class="bg-white p-6 rounded-lg max-w-2xl w-full mx-4 relative">
+        <button
+          onclick="closeCancellationPopup()"
+          class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-[#711117] mb-4">
+            Cancellation Charges
+          </h3>
+          <img
+            src="../static/cancellation_Charges.jpg"
+            alt="Cancellation Charges Details"
+            class="max-w-full h-auto mx-auto"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /* Script for Posting data to google sheet */
+      async function submitFormToGoogleSheets() {
+        const form = document.getElementById("eduCon");
+
+        // Show loading state
+        const submitButton = document.querySelector(
+          'button[onclick="validateAndProceed()"]'
+        );
+        const originalButtonText = submitButton.textContent;
+        submitButton.textContent = "Submitting...";
+        submitButton.disabled = true;
+
+        try {
+          // Get all form data
+          const formData = {
+            timestamp: new Date().toISOString(),
+            name: form.querySelector('input[name="name"]').value,
+            country: form.querySelector('select[name="country"]').value,
+            state: form.querySelector('input[name="state"]').value,
+            participant_type: form.querySelector(
+              'select[name="participant_type"]'
+            ).value,
+            profession:
+              form.querySelector('input[name="profession"]')?.value || "",
+            programme:
+              form.querySelector('input[name="programme"]')?.value || "",
+            company: form.querySelector('input[name="company"]')?.value || "",
+            institution:
+              form.querySelector('input[name="institution"]')?.value || "",
+            gender: form.querySelector('select[name="gender"]').value,
+            medical_conditions:
+              form.querySelector('input[name="medical_conditions"]').value ||
+              "",
+            food_allergies:
+              form.querySelector('input[name="food_allergies"]').value || "",
+            phone: form.querySelector('input[name="phone"]').value,
+            email: form.querySelector('input[name="email"]').value,
+            address: form.querySelector('input[name="address"]').value,
+            participation_type: form.querySelector(
+              'input[name="participation_type"]:checked'
+            ).value,
+            participant_count:
+              form.querySelector('input[name="participant_count"]')?.value ||
+              "1",
+            participation_reason: form.querySelector(
+              'textarea[name="participation_reason"]'
+            ).value,
+            festival_selection: form.querySelector(
+              'select[name="festival_selection"]'
+            ).value,
+            hear_about: (() => {
+              const selectedOption = form.querySelector(
+                'input[name="hear_about"]:checked'
+              );
+              if (!selectedOption) return "";
+              if (selectedOption.value === "others") {
+                const othersValue = form.querySelector(
+                  'input[name="hear_about_others"]'
+                ).value;
+                return othersValue ? `Others: ${othersValue}` : "Others";
+              }
+              return selectedOption.value;
+            })(),
+            group_participants: JSON.stringify(collectPassengerDetails()),
+          };
+
+          // Make the fetch request to your new Google Apps Script URL
+          const response = await fetch(
+            "https://script.google.com/macros/s/AKfycbyILLr9xHSvIRB4d3rOAzbu4RZXoeLQCWOEMvsEvQ6KbpmnPAsTYTEiemQSCD5ZcutS/exec",
+            {
+              method: "POST",
+              body: JSON.stringify(formData),
+              headers: {
+                "Content-Type": "application/json",
+              },
+              mode: "no-cors",
+            }
+          );
+
+          // Show success message
+          document.getElementById("success-message").classList.remove("hidden");
+
+          // Reset form
+          form.reset();
+
+          // Reset dynamic fields
+          document.getElementById("dynamic-fields").innerHTML = "";
+          document.getElementById("passenger-details-container").innerHTML = "";
+        } catch (error) {
+          console.error("Submission error:", error);
+          alert("Error submitting form. Please try again or contact support.");
+        } finally {
+          // Reset button state
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+        }
+      }
+
+      /* Script for participation type selection */
+      function selectParticipationType(type) {
+        const individualOption = document.querySelector(
+          'input[value="individual"]'
+        );
+        const groupOption = document.querySelector('input[value="group"]');
+        const groupParticipantsSection = document.getElementById(
+          "group-participants-section"
+        );
+        const participantCountInput = document.querySelector(
+          'input[name="participant_count"]'
+        );
+        const groupParticipantsTextarea = document.querySelector(
+          'textarea[name="group_participants"]'
+        );
+
+        // Update radio button states
+        individualOption.checked = type === "individual";
+        groupOption.checked = type === "group";
+
+        // Update visual styles for individual option
+        const individualParent = individualOption.parentElement;
+        const individualIcon = individualParent.querySelector("div");
+        individualParent.classList.toggle(
+          "border-[#711117]",
+          type === "individual"
+        );
+        individualIcon.classList.toggle("bg-[#711117]", type === "individual");
+        individualIcon.classList.toggle("text-white", type === "individual");
+        individualIcon.classList.toggle("bg-gray-200", type !== "individual");
+        individualIcon.classList.toggle("text-gray-700", type !== "individual");
+
+        // Update visual styles for group option
+        const groupParent = groupOption.parentElement;
+        const groupIcon = groupParent.querySelector("div");
+        groupParent.classList.toggle("border-[#711117]", type === "group");
+        groupIcon.classList.toggle("bg-[#711117]", type === "group");
+        groupIcon.classList.toggle("text-white", type === "group");
+        groupIcon.classList.toggle("bg-gray-200", type !== "group");
+        groupIcon.classList.toggle("text-gray-700", type !== "group");
+
+        // Show/hide group participants section
+        if (type === "individual") {
+          groupParticipantsSection.classList.add("hidden");
+          document
+            .querySelector('input[name="participant_count"]')
+            .removeAttribute("required");
+        } else {
+          groupParticipantsSection.classList.remove("hidden");
+          document
+            .querySelector('input[name="participant_count"]')
+            .setAttribute("required", "required");
+        }
+
+        // Update amount calculation
+        calculateAmount();
+      }
+
+      // Initialize participation type on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        selectParticipationType("individual"); // Default to individual option
+      });
+
+      /* Constants for pricing */
+      const PRICES = {
+        dorm: 40000, // Base price for 4 sharing (₹40,000)
+        double: 50000, // Base price for double occupancy (₹50,000)
+        single: 60000, // Base price for single occupancy (₹60,000)
+        groupDiscountThreshold: 4, // Minimum participants for group discount
+        groupDiscountPercentage: 0.2, // 20% discount for groups
+      };
+
+      /* Script for accommodation type selection */
+      function selectAccommodationType(type) {
+        const dormOption = document.querySelector('input[value="dorm"]');
+        const doubleOption = document.querySelector('input[value="double"]');
+        const singleOption = document.querySelector('input[value="single"]');
+
+        // Reset all options
+        [dormOption, doubleOption, singleOption].forEach((option) => {
+          option.checked = false;
+          option.parentElement.classList.remove("border-[#711117]");
+          option.parentElement
+            .querySelector("div")
+            .classList.add("bg-gray-200", "text-gray-700");
+          option.parentElement
+            .querySelector("div")
+            .classList.remove("bg-[#711117]", "text-white");
+        });
+
+        // Set selected option
+        const selectedOption = document.querySelector(`input[value="${type}"]`);
+        selectedOption.checked = true;
+        selectedOption.parentElement.classList.add("border-[#711117]");
+        selectedOption.parentElement
+          .querySelector("div")
+          .classList.remove("bg-gray-200", "text-gray-700");
+        selectedOption.parentElement
+          .querySelector("div")
+          .classList.add("bg-[#711117]", "text-white");
+
+        calculateAmount();
+      }
+
+      /* Function to calculate and display amount */
+      function calculateAmount() {
+        const participationType = document.querySelector(
+          'input[name="participation_type"]:checked'
+        ).value;
+        const accommodationType = document.querySelector(
+          'input[name="accommodation_type"]:checked'
+        )?.value;
+        const participantCount =
+          document.querySelector('input[name="participant_count"]')?.value || 1;
+
+        if (!accommodationType) return;
+
+        const amountDisplay = document.getElementById("amount-display");
+        const baseAmountElement = document.getElementById("base-amount");
+        const discountRow = document.getElementById("discount-row");
+        const discountAmountElement =
+          document.getElementById("discount-amount");
+        const totalAmountElement = document.getElementById("total-amount");
+
+        // Calculate base amount
+        const basePrice = PRICES[accommodationType];
+        const baseAmount = basePrice * participantCount;
+
+        // Calculate discount if applicable
+        let discount = 0;
+        if (
+          participationType === "group" &&
+          participantCount >= PRICES.groupDiscountThreshold
+        ) {
+          discount = baseAmount * PRICES.groupDiscountPercentage;
+          discountRow.classList.remove("hidden");
+        } else {
+          discountRow.classList.add("hidden");
+        }
+
+        // Calculate total
+        const totalAmount = baseAmount - discount;
+
+        // Update display
+        amountDisplay.classList.remove("hidden");
+        baseAmountElement.textContent = `₹${baseAmount.toLocaleString()}`;
+        discountAmountElement.textContent = `-₹${discount.toLocaleString()}`;
+        totalAmountElement.textContent = `₹${totalAmount.toLocaleString()}`;
+      }
+
+      // Add event listener for participant count changes
+      document
+        .querySelector('input[name="participant_count"]')
+        ?.addEventListener("input", calculateAmount);
+
+      /* Form validation function */
+      function validateAndProceed() {
+        let errorMessage = "";
+        const form = document.getElementById("eduCon");
+
+        // Basic required fields validation
+        const requiredFields = {
+          name: "Name",
+          country: "Country",
+          state: "State/Province",
+          participant_type: "Participant Type",
+          gender: "Gender",
+          phone: "Phone Number",
+          email: "Email Address",
+          address: "Address",
+          participation_reason: "Participation Reason",
+          festival_selection: "Festival Selection",
+        };
+
+        // Check all required fields
+        for (const [field, label] of Object.entries(requiredFields)) {
+          const element = form.querySelector(`[name="${field}"]`);
+          if (!element || !element.value.trim()) {
+            errorMessage += `Please enter your ${label}.\n`;
+          }
+        }
+
+        // Email format validation
+        const email = form.querySelector('input[name="email"]').value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          errorMessage += "Please enter a valid email address.\n";
+        }
+
+        // Phone number validation (basic format)
+        const phone = form.querySelector('input[name="phone"]').value;
+        const phoneRegex = /^\+?[\d\s-]{10,}$/;
+        if (!phoneRegex.test(phone)) {
+          errorMessage += "Please enter a valid phone number.\n";
+        }
+
+        // Festival selection validation
+        const festivalSelection = form.querySelector(
+          'select[name="festival_selection"]'
+        ).value;
+        if (!festivalSelection || festivalSelection === "") {
+          errorMessage +=
+            "Please select which festival(s) you want to participate in.\n";
+        }
+
+        // "How did you hear about S&E Fest?" validation
+        const hearAbout = form.querySelector(
+          'input[name="hear_about"]:checked'
+        );
+        if (!hearAbout) {
+          errorMessage += "Please select how you heard about S&E Fest.\n";
+        } else if (hearAbout.value === "others") {
+          const othersValue = form.querySelector(
+            'input[name="hear_about_others"]'
+          ).value;
+          if (!othersValue.trim()) {
+            errorMessage += "Please specify how you heard about S&E Fest.\n";
+          }
+        }
+
+        // Participant type specific validations
+        const participantType = form.querySelector(
+          'select[name="participant_type"]'
+        ).value;
+        switch (participantType) {
+          case "Professional":
+            const profession = form.querySelector(
+              'input[name="profession"]'
+            )?.value;
+            const company = form.querySelector('input[name="company"]')?.value;
+            if (!profession?.trim())
+              errorMessage += "Please enter your profession.\n";
+
+            if (!company?.trim())
+              errorMessage += "Please enter your organization/company.\n";
+            break;
+
+          case "Student":
+            const programme = form.querySelector(
+              'input[name="programme"]'
+            )?.value;
+            const institution = form.querySelector(
+              'input[name="institution"]'
+            )?.value;
+            if (!programme?.trim())
+              errorMessage += "Please enter your programme.\n";
+            if (!institution?.trim())
+              errorMessage += "Please enter your university/college name.\n";
+            break;
+
+          case "General":
+          case "Local":
+            const generalProfession = form.querySelector(
+              'input[name="profession"]'
+            )?.value;
+            if (!generalProfession?.trim())
+              errorMessage += "Please enter your profession.\n";
+            break;
+        }
+
+        // Participation type validation
+        const participationType = form.querySelector(
+          'input[name="participation_type"]:checked'
+        )?.value;
+        if (!participationType) {
+          errorMessage +=
+            "Please select your participation type (Individual/Group).\n";
+        }
+
+        // Group participation validation
+        if (participationType === "group") {
+          const participantCount = form.querySelector(
+            'input[name="participant_count"]'
+          )?.value;
+          if (
+            !participantCount ||
+            participantCount < 2 ||
+            participantCount > 10
+          ) {
+            errorMessage +=
+              "Please enter a valid number of participants (2-10).\n";
+          }
+
+          // Validate group participant details
+          const count = parseInt(participantCount);
+          for (let i = 1; i < count; i++) {
+            const participantName = form.querySelector(
+              `input[name="participant_name_${i}"]`
+            )?.value;
+            const participantGender = form.querySelector(
+              `select[name="participant_gender_${i}"]`
+            )?.value;
+
+            if (!participantName?.trim()) {
+              errorMessage += `Please enter the name for Participant ${
+                i + 1
+              }.\n`;
+            }
+            if (!participantGender) {
+              errorMessage += `Please select the gender for Participant ${
+                i + 1
+              }.\n`;
+            }
+          }
+        }
+
+        // If there are errors, show them
+        if (errorMessage) {
+          alert("Please fix the following errors:\n\n" + errorMessage);
+          return;
+        }
+
+        // If validation passes, proceed with form submission
+        submitFormToGoogleSheets();
+      }
+
+      // Add this new function to handle closing the success message
+      function closeSuccessMessage() {
+        document.getElementById("success-message").classList.add("hidden");
+        // Optionally redirect to thank you page or home page
+        window.location.href = "./index.html";
+      }
+
+      function generatePassengerInputs(count) {
+        const container = document.getElementById(
+          "passenger-details-container"
+        );
+        container.innerHTML = ""; // Clear existing fields
+
+        // Create participant cards
+        for (let i = 1; i < count; i++) {
+          const card = document.createElement("div");
+          card.className =
+            "bg-white p-4 rounded-lg border border-gray-200 relative";
+
+          // Add participant number and remove button
+          const header = document.createElement("div");
+          header.className = "flex justify-between items-center mb-4";
+          header.innerHTML = `
+            <h3 class="font-bold text-[#711117]">Participant ${i + 1}</h3>
+            <button type="button" onclick="removePassenger(this)" class="text-gray-500 hover:text-red-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          `;
+
+          // Add participant details form with updated fields and text-xs class for gender select
+          const form = `
+            <div class="grid grid-cols-1 gap-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input type="text" name="participant_name_${i}" placeholder="Name" required
+                  class="px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]">
+                <input type="text" name="participant_profession_${i}" placeholder="Profession" required
+                  class="px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]">
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <select name="participant_gender_${i}" required
+                  class="text-xs px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]">
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+                <input type="text" name="participant_medical_${i}" placeholder="Medical Conditions (if any)"
+                  class="px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]">
+              </div>
+              <input type="text" name="participant_allergies_${i}" placeholder="Food Allergies (if any)"
+                class="px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]">
+            </div>
+          `;
+
+          card.innerHTML = header.outerHTML + form;
+          container.appendChild(card);
+        }
+      }
+
+      function removePassenger(button) {
+        const card = button.closest(".bg-white");
+        card.remove();
+
+        // Update participant count
+        const countInput = document.querySelector(
+          'input[name="participant_count"]'
+        );
+        countInput.value = parseInt(countInput.value) - 1;
+
+        // Regenerate passenger cards to fix numbering
+        generatePassengerInputs(countInput.value);
+      }
+
+      // Update the collectPassengerDetails function to collect new fields
+      function collectPassengerDetails() {
+        const count = parseInt(
+          document.querySelector('input[name="participant_count"]').value
+        );
+        const participants = [];
+
+        for (let i = 1; i < count; i++) {
+          participants.push({
+            name: document.querySelector(`input[name="participant_name_${i}"]`)
+              .value,
+            profession: document.querySelector(
+              `input[name="participant_profession_${i}"]`
+            ).value,
+            gender: document.querySelector(
+              `select[name="participant_gender_${i}"]`
+            ).value,
+            medical: document.querySelector(
+              `input[name="participant_medical_${i}"]`
+            ).value,
+            allergies: document.querySelector(
+              `input[name="participant_allergies_${i}"]`
+            ).value,
+          });
+        }
+
+        return participants;
+      }
+
+      // Function to update fields based on participant type
+      function updateFields(participantType) {
+        const dynamicFieldsContainer =
+          document.getElementById("dynamic-fields");
+        let fieldsHTML = "";
+
+        switch (participantType) {
+          case "Professional":
+            fieldsHTML = `
+              <div>
+                <label class="block text-gray-700 text-xs font-bold mb-1">Profession <span class="text-red-500">*</span></label>
+                <input type="text" name="profession" required class="w-full px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]" />
+              </div>
+              <div>
+                <label class="block text-gray-700 text-xs font-bold mb-1">Organization/Company <span class="text-red-500">*</span></label>
+                <input type="text" name="company" required class="w-full px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]" />
+              </div>
+            `;
+            break;
+
+          case "Student":
+            fieldsHTML = `
+              <div>
+                <label class="block text-gray-700 text-xs font-bold mb-1">Programme <span class="text-red-500">*</span></label>
+                <input type="text" name="programme" required class="w-full px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]" />
+              </div>
+              <div>
+                <label class="block text-gray-700 text-xs font-bold mb-1">University/College Name <span class="text-red-500">*</span></label>
+                <input type="text" name="institution" required class="w-full px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]" />
+              </div>
+            `;
+            break;
+
+          case "General":
+          case "Local":
+            fieldsHTML = `
+              <div>
+                <label class="block text-gray-700 text-xs font-bold mb-1">Profession <span class="text-red-500">*</span></label>
+                <input type="text" name="profession" required class="w-full px-3 py-1.5 border rounded-lg focus:ring-2 focus:ring-[#f4b528]" />
+              </div>
+            `;
+            break;
+
+          default:
+            fieldsHTML = "";
+        }
+
+        dynamicFieldsContainer.innerHTML = fieldsHTML;
+      }
+
+      // Add these new functions for cancellation charges popup
+      function showCancellationCharges() {
+        document
+          .getElementById("cancellation-popup")
+          .classList.remove("hidden");
+      }
+
+      function closeCancellationPopup() {
+        document.getElementById("cancellation-popup").classList.add("hidden");
+      }
+
+      // Function to toggle the "Others" field visibility
+      function toggleOthersField() {
+        const othersField = document.getElementById("others_field");
+        const othersRadio = document.getElementById("hear_others");
+        const othersInput = document.querySelector(
+          'input[name="hear_about_others"]'
+        );
+
+        if (othersRadio.checked) {
+          othersField.classList.remove("hidden");
+          othersInput.setAttribute("required", "required");
+        } else {
+          othersField.classList.add("hidden");
+          othersInput.removeAttribute("required");
+          othersInput.value = "";
+        }
+      }
+
+      // Add event listeners for radio buttons to hide "Others" field when other options are selected
+      document.addEventListener("DOMContentLoaded", function () {
+        const radioButtons = document.querySelectorAll(
+          'input[name="hear_about"]'
+        );
+        radioButtons.forEach((radio) => {
+          radio.addEventListener("change", function () {
+            if (this.value !== "others") {
+              const othersField = document.getElementById("others_field");
+              const othersInput = document.querySelector(
+                'input[name="hear_about_others"]'
+              );
+              othersField.classList.add("hidden");
+              othersInput.removeAttribute("required");
+              othersInput.value = "";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

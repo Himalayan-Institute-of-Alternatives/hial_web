@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SENSe</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./static/favicon.png"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  </head>
+  <body>
+    <!--    NAV - BAR -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+
+
+     <!-- main content -->
+     <div class="flex heading text-4xl px-4 font-bold text-theme-golden justify-center mt-6"><h6>School Of Energy Studies (SENSe)</h6></div>
+     <hr class="text-xl font-medium mt-1">
+    <!-- ------------ grid ---------- -->
+    <div
+      class="grid grid-col-1 md:grid-cols-12 gap-1 my-4 p-4 place-items-center"
+    >
+      <!-- SPV  -->
+      <div class="md:col-span-6 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">SPV Greenhouse:</h4>
+        
+             The government of India plans a 25 GW Solar PV installation in Ladakh. The huge capacity, however, will not be used entirely in Ladakh. However, the region can benefit immensely if the space under the SPV systems can use to grow food or fodder. To address this question, we designed a simple experiment. This is a 5 kW Solar PV system fixed atop a greenhouse that powers HIAL’s borewell. It merges the utility of Solar-power production with that of food/fodder production in the cold arid region of Ladakh. The set-up, still in study, found that it is possible to grow fodder and food under a partial shading condition inside a greenhouse, even in winter. The idea has the potential to address the issue of severe food scarcity in the region throughout the year as well as save the pashmina goats in Changthang from dying in the cold winters when there is no grass as the entire landscape is covered with Snow.
+        </p>
+      </div>
+      <!-- SPV side photo  -->
+      <div class="md:col-span-6 justify-center flex overflow-hidden">
+       <img src="./static/spv.png" alt="">
+      </div>
+      <!-- Solar Car Shed -->
+       <div class="md:col-span-6 justify-center flex-col overflow-hidden">
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">Solar Car Shed:</h4>
+       HIAL has the philosophy of leading by example. So, it tests ideas in situ before promoting them. As an environment-conscious institute, it has decided to meet all of its power needs using solar photovoltaic technology. The SPV system further acts as a car shed as well as the charging station for our fleet of electric vehicles.
+        </p>
+      </div>
+       <!-- car shed side photo -->
+       <div class="md:col-span-6 justify-center flex overflow-hidden">
+        <img src="./static/The-SPV-car-shed.png" alt="" class="p-2">
+      </div>
+
+      <!-- Lead-acid battery house cum sentry-post  -->
+      <div class="md:col-span-6 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>  <br> <br>
+          <h4 class="text-xl font-bold text-theme-golden pr-5">Lead-acid battery house cum sentry-post:</h4>
+        We designed a passive solar heated battery house that can double as a guard house in Ladakh.
+        The design makes it possible to keep the indoor environment at a comfortable temperature of above 15 degC at all times. Thus, ensuring the batteries maintain their performance throughout the year. The intervention required an ingenious step of placing the lead-acid batteries in a PSH room and using the thermal mass of the batteries as thermal banks, besides already being an electrical bank. Simple Lead-acid batteries having a lot of water act as a very efficient thermal mass (water has 2x the volumetric heat capacity as concrete). This thermal bank releases heat to the indoors after sunset.
+        <br>
+        This battery house can also double as a PSH guard house or sentry post with its own power-generating system (rooftop SPV) which can be used to power lights around the fences or sentry post itself. Thus preventing avoidable injuries to our soldiers from accidental fires, which happen very often in Ladakh.
+        </p>
+        
+      </div>
+      <!-- battery house side photo  -->
+      <div class="md:col-span-6 justify-center flex overflow-hidden">
+       <img src="./static/The-Battery-house.webp" alt="" class="p-5">
+      </div>
+
+       <!-- PSH mainstreaming in Ladakh  -->
+      <div class="md:col-span-6 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+          <br> <br>
+          <h4 class="text-xl font-bold text-theme-golden pr-5">PSH mainstreaming in Ladakh:</h4>
+        Ladakh has an extremely harsh and long winter climate and buildings currently are poorly insulated, using fuels such as coal and biomass for heating. Since the early 1980s, several NGOs have promoted PSH buildings in the region as appropriate technology. However, despite 40 years of promotion, PSH houses have not been mainstreamed and new construction using modern building materials still uses climatically inappropriate building methods without taking advantage of PSH design concepts.
+        <br>
+        Through this research, we intend to promote the extended usage of Passive Solar Heated (PSH) buildings to realize the PM’s vision of a Carbon Neutral Ladakh. The research aims to identify and address the major hurdles in the path to mainstreaming the PSH concept and come up with design thumb rules, capacity-building modules, and policy recommendations for its uptake.
+        <h4 class="text-xl font-semibold text-theme-golden pr-5">PSH vs Non-PSH performance vs cost study:</h4>
+        The study aims to compare the thermal performance and cost (capital as well as operational) of PSH buildings against conventional, non-psh buildings in Leh, Ladakh.
+        <h4 class="text-xl font-semibold text-theme-golden pr-5">PCM integration in Building component for enhanced passive solar space-heating autonomy:</h4>
+        While the Construction Team of HIAL has incorporated water into building bricks, the Energy team is now working to incorporate Phase Change materials into those bricks. This will enhance the thermal capacity of manifolds and hence the passive solar space-heating autonomy of the upcoming buildings in Ladakh.
+        </p>
+        
+      </div>
+      <!-- PSH mainstreaming in Ladakh side photo  -->
+      <div class="md:col-span-6 justify-center flex overflow-hidden">
+       <img src="./static/psh.png" alt="" class="p-5">
+      </div>
+    </div>
+
+     <!-- Footer -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>

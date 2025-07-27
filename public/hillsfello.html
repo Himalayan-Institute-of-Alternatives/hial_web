@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hills Fellowship</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="./static/favicon.png" />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!--    NAV - BAR -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+
+    <!-- main content -->
+    <div class="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
+      <!-- Hero Image -->
+      <div class="flex justify-center mb-4 sm:mb-8">
+        <img
+          src="./static/elp.webp"
+          alt="Hills Fellowship"
+          class="w-full max-w-4xl rounded-lg shadow-lg"
+        />
+      </div>
+      <hr class="border-t-2 border-theme-golden mb-4 sm:mb-8" />
+
+      <!-- Content Grid -->
+      <div class="flex flex-col lg:grid lg:grid-cols-2 gap-4 sm:gap-8">
+        <!-- About Hills Fellow -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md lg:col-span-2">
+          <h4
+            class="text-lg sm:text-2xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            ABOUT HILLS FELLOWSHIP:
+          </h4>
+          <p class="text-sm sm:text-base">
+            The HILLs (Himalayan Institute of Live Learnings) fellowship is an
+            eleven-month fully immersive trans-disciplinary postgraduate
+            programme, which brings young (at heart) individuals who are
+            passionate about tackling the challenges faced by the Hindu Kush
+            Himalayas and the other mountain ranges of the world. The selection
+            for the fellowship is highly competitive with limited seats and the
+            candidates are selected on the basis of their interest,
+            solution-mindedness and the vision ("Big Idea") that they wish to
+            work upon during their stay in the fellowship. HILLs fellowship is
+            aimed at finding indigenous solutions to local problems through the
+            pedagogy of experiential learning in the context of the mountains.
+            It aims to expose the fellows to a diverse set of subjects and
+            perspectives, delivered by some of the finest action academicians
+            and practitioners from India and abroad. The aim is to empower the
+            fellows in becoming social entrepreneurs and in achieving their "Big
+            Idea". The fellows will learn-by-doing (experiential learning)
+            things and majority of their learnings will come from live action
+            labs (where they will learn by working alongside the local people in
+            Ladakh). They will become well-rounded individuals who are able to
+            think critically and systemically from multiple perspectives with a
+            commitment to improving the quality of lives and livelihoods in the
+            fragile Himalayan eco-system through sustainable social and
+            entrepreneurial practices. HILLs fellowship is an intense and
+            rigorous programme, which engages fellows in various
+            multidisciplinary courses, working on the field with the local
+            community and providing the opportunity to earn while learning.
+            These are models that are unique to the HILLs fellowship and the
+            pedagogy will require the students to contribute to the running of
+            the courses as well as building of several aspects of the Institute
+            during their fellowship programme, which will develop their
+            governance, leadership and collaborative skills.
+          </p>
+          <br />
+          <h4 class="text-base sm:text-xl font-bold text-theme-golden">
+            Key details of the Fellowship:
+          </h4>
+          <ul
+            class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base"
+          >
+            <li>
+              The HILLs (Himalayan Institute of Live Learnings) fellowship is an
+              eleven-month fully immersive trans-disciplinary postgraduate
+              programme
+            </li>
+            <li>Eligibility Criteria: graduate / post graduates</li>
+            <li>Duration: 11 months</li>
+            <li>Start date: 21 July 2025</li>
+            <li>Location: Phyang, Leh-UT Ladakh</li>
+            <li>
+              Funding/Benefits: A stipend of ₹7,000 per month will be provided
+              to help cover accommodation and food expenses at HIAL, as it is a
+              residential program.
+            </li>
+            <li>
+              Completion certificate: A completion certificate will be provided
+              to fellows who successfully clear the passing criteria as per the
+              assessment rules and regulations of HIAL.
+            </li>
+          </ul>
+        </div>
+
+        <!-- HILLS FELLOWS ARE EXPECTED TO -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            HILLS FELLOWS ARE EXPECTED TO:
+          </h4>
+          <ul
+            class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base"
+          >
+            <li>
+              Behave responsibly, with professionalism and fulfil their
+              obligations
+            </li>
+            <li>Maintain high levels of academic integrity</li>
+            <li>Ensure punctuality in their work</li>
+            <li>
+              Display compassion and respect towards nature, co-fellows, faculty
+              and the community at large
+            </li>
+            <li>Strive for cooperation as opposed to competition</li>
+            <li>
+              Work towards the well-being of the people in the mountain regions
+            </li>
+            <li>
+              Understand the problems being faced by the local communities and
+              actively engage in the work they do
+            </li>
+            <li>Become self-aware individuals</li>
+          </ul>
+        </div>
+
+        <!-- Hills Fellow side photo -->
+        <div class="flex items-center justify-center">
+          <img
+            src="./static/hills1.webp"
+            alt="Hills Fellowship"
+            class="w-full h-auto rounded-lg shadow-lg"
+          />
+        </div>
+
+        <!-- ACADEMICS -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md lg:col-span-2">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            ACADEMICS:
+          </h4>
+          <p class="text-sm sm:text-base mb-2">
+            The HILLs fellowship consists of the following aspects:
+          </p>
+          <ul
+            class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base"
+          >
+            <li>
+              30% classroom lectures. 70% of the learning would be on the field
+              or through experiential/ live learning sessions where the fellows
+              will learn by working alongside the faculty members on real-life
+              problems and come up with real-life solutions
+            </li>
+            <li>
+              To pursue their "Big Idea" as part of their Experiential Learning
+              Project (ELP) and launch their own enterprise at the end of the
+              program.
+            </li>
+            <li>
+              Interaction with leading faculty members who are experts in their
+              respective fields. Guest sessions and seminars in various fields
+              from leaders and faculty from across the globe
+            </li>
+            <li>
+              Workshops to develop their writing, communication and critical
+              thinking skills.
+            </li>
+          </ul>
+          <p class="text-sm sm:text-base mt-4">
+            The 11-month programme is delivered across 4 terms. The first term
+            would be of 6 weeks, the second, third and fourth of 12 weeks each.
+            The fourth term would be the "Experiential Learning Project (ELP)"
+            where the fellows will finalise their project or the "Big Idea" that
+            they have been working on for the entire year. This will comprise an
+            8-week long internship in December and January and a 4-week long ELP
+            break during the winters designated exclusively for ELP work.
+          </p>
+          <p class="text-sm sm:text-base mt-2">
+            3 courses (Ecology, Entrepreneurship, Tourism/ Responsive Buildings)
+            will be taught throughout the year. The plenary courses of Ecology
+            and Entrepreneurship will have 120 and 150 hours respectively, and
+            the electives of Tourism and Architecture will have 720 hours of
+            learning time each. Experiential Learning Project (ELP) starts in
+            Term 2 and continues alongside the regular courses for the remaining
+            terms.
+          </p>
+        </div>
+
+        <!-- COURSE MATERIAL AND MANAGEMENT -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            COURSE MATERIAL AND MANAGEMENT:
+          </h4>
+          <ul
+            class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base"
+          >
+            <li>
+              Fellows will be provided with required reading material by the
+              HILLs, either electronically or otherwise
+            </li>
+            <li>
+              Fellows are free to borrow books from the HILLs Library but must
+              ensure that they are returned on time and undamaged.
+            </li>
+          </ul>
+        </div>
+
+        <!-- EXPERIENTIAL LEARNING PROJECT (ELP) -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            EXPERIENTIAL LEARNING PROJECT (ELP):
+          </h4>
+          <p class="text-sm sm:text-base mb-2">
+            The ELP serves as an effective platform for the fellows to pursue
+            their "Big Idea" and also to actively create solutions for the
+            mountain communities. Fellows also learn strategic thinking, design
+            thinking, problem solving, teamwork, communication skills, project
+            management, planning and execution through the implementation of
+            their ELPs.
+          </p>
+          <h5 class="font-bold mt-2 text-sm sm:text-base">
+            The objectives of these projects are to:
+          </h5>
+          <ul
+            class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base"
+          >
+            <li>Help the fellows to achieve their Big Idea</li>
+            <li>
+              Actively engage with people on the field and also the local
+              communities
+            </li>
+            <li>
+              Develop indigenous sustainable solutions for the mountain regions
+            </li>
+            <li>Develop their collaborative and leadership skills</li>
+            <li>Empower the local communities in the process</li>
+            <li>
+              Learn about their own selves and to bond with their co-fellows and
+              mentors
+            </li>
+          </ul>
+        </div>
+
+        <!-- ELP horizontal photo -->
+        <div class="flex justify-center lg:col-span-2">
+          <img
+            src="./static/elp_new_content.webp"
+            alt="ELP Content"
+            class="w-full max-w-4xl rounded-lg shadow-lg"
+          />
+        </div>
+
+        <!-- EXAMINATION POLICY -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            EXAMINATION POLICY:
+          </h4>
+          <p class="text-sm sm:text-base">
+            Fellows will be graded through formative and summative exams.
+            Formative tests will be ongoing and weekly/ monthly/ periodic and
+            summative will be at the end of the course. This will be a
+            combination of written and oral exams, project works and ELP.
+          </p>
+        </div>
+
+        <!-- CREDITS/ELP REQUIREMENTS -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            CREDITS/ELP REQUIREMENTS:
+          </h4>
+          <ul
+            class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base"
+          >
+            <li>
+              Life Skills will have 2 credits, Applied Ecology 4 credits,
+              Entrepreneurship (ELP) 18 credits, Tourism and Responsive
+              Buildings will have 16 credits each.
+            </li>
+            <li>
+              When a fellow receives a grade higher than 'D', they acquire 1
+              credit for it
+            </li>
+            <li>
+              In order to graduate from the programme, a fellow must earn 20
+              credits out of the total of 40 credits including mandatory ELP.
+            </li>
+            <li>
+              In case a fellow fails more than 3 courses, s/he may choose to
+              reappear for the exams to make up for the lost credits. This will
+              also enable the fellow to complete the credit requirements and
+              graduate at the end of the year.
+            </li>
+            <li>
+              Only when a fellow has completed all their credit requirements
+              will they be issued their Diploma and Transcript.
+            </li>
+          </ul>
+        </div>
+
+        <!-- ATTENDANCE -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            ATTENDANCE:
+          </h4>
+          <ul
+            class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base"
+          >
+            <li>
+              100% attendance under all circumstances for each course. For any
+              class they miss, fellows have to take permission from the course
+              coordinator.
+            </li>
+            <li>
+              If a fellow is absent for more than 2 classes for any course
+              without adequate cause, they will receive an 'F' grade for the
+              course.
+            </li>
+            <li>
+              All days designated for ELP related work and activities require
+              100% attendance. Fellows are expected to keep to their
+              commitments. Failure to do so will invite appropriate action by
+              the programme team and may affect the ELP grades of individuals or
+              the team as a whole.
+            </li>
+          </ul>
+        </div>
+
+        <!-- resident_life right photo -->
+        <div class="flex items-center justify-center">
+          <img
+            src="./static/resident_life1-1024x438.webp"
+            alt="Residence Life"
+            class="w-full h-auto rounded-lg shadow-lg"
+          />
+        </div>
+
+        <!-- MENTORING PROGRAMME -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            MENTORING PROGRAMME:
+          </h4>
+          <p class="text-sm sm:text-base mb-2">
+            Fellows are supported by Mentors who will serve as their buddies
+            during the fellowship process. All fellows will be assigned a buddy
+            based on their interests and aspirations.
+          </p>
+          <p class="text-sm sm:text-base mb-2">
+            HILLs fellowship promotes an atmosphere where fellows can openly
+            express their concerns, suggest recommendations and work towards
+            improvements for the benefit of the community. All such feedback
+            should be routed through the student coordinators. Fellows can also
+            take appointments with any member of the programme team should the
+            need arise. There will also be townhalls hosted at regular
+            intervals, in which the fellows will get the chance to interact with
+            the senior management of various departments at the Institute. These
+            meetings ensure regular and effective communication among the
+            various stakeholders of the programme.
+          </p>
+          <p class="text-sm sm:text-base">
+            <b>Feedback:</b> In order to stay finely tuned to student experience
+            at the HILLs, the programme team expects regular feedback on
+            academics, ELPs, the residential experience and other engagements at
+            the fellowship. It is mandatory for fellows to submit their feedback
+            every term.
+          </p>
+        </div>
+
+        <!-- SUPPORT FOR FELLOWS -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            SUPPORT FOR FELLOWS:
+          </h4>
+          <p class="text-sm sm:text-base mb-2">
+            <b>Programme Team:</b> HILLs is administered through the programme
+            team that is responsible for managing its academic engagements, ELPs
+            and professional development services. The programme team will serve
+            as the main point of contact for all matters related to a fellow's
+            participation in the HILLs.
+          </p>
+          <p class="text-sm sm:text-base mb-2">
+            The programme team will be responsible for the following:
+          </p>
+          <ul
+            class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base"
+          >
+            <li>Orientation</li>
+            <li>Counselling</li>
+            <li>Ensuring timely delivery of the programme</li>
+            <li>Administering the Experiential Learning Projects (ELPs)</li>
+            <li>Maintaining academic documents and records</li>
+            <li>Scheduling and maintaining the academic calendar</li>
+            <li>Course evaluations</li>
+          </ul>
+        </div>
+
+        <!-- RESIDENTIAL LIFE -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md lg:col-span-2">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            RESIDENTIAL LIFE:
+          </h4>
+          <ul
+            class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base"
+          >
+            <li>
+              HILLs is a fully residential programme and all fellows are
+              required to stay in and work out of the farmstays.
+            </li>
+            <li>HILLs fellows will be sharing rooms with their co-fellows.</li>
+            <li>
+              Fellows must ensure to accord due care to their farmstay hosts and
+              not to engage in any unruly behaviour, loud music or any such
+              conduct that hampers the well-being of their host families.
+            </li>
+            <li>
+              HILLs strictly prohibits the manufacture, distribution, sale,
+              possession or use of any drugs/alcohol on campus. Smoking and
+              drinking are strictly prohibited within the farmstay premises.
+              Violators of this policy will be subject to disciplinary action
+              that may lead to dismissal from the programme.
+            </li>
+            <li>
+              Fellows should display impeccable civic sense and behave in a
+              manner that does not disturb or cause any distress to other
+              fellows or other neighbours.
+            </li>
+            <li>
+              Fellows will be personally responsible for the maintenance of
+              their rooms, furniture, bathrooms and other farmstay property in
+              their use. They should keep their valuables in a safe place. The
+              farmstay management does not take responsibility for the personal
+              belongings of fellows.
+            </li>
+            <li>
+              All health related issues should be reported immediately to the
+              student coordinators.
+            </li>
+            <li>Personal pets are not permitted at the farmstays.</li>
+            <li>
+              Any indiscipline and misconduct on the part of the fellows should
+              be reported to the programme team by the student coordinators
+              immediately for necessary action and disciplinary measures.
+            </li>
+          </ul>
+        </div>
+
+        <!-- resident_life horizontal photo -->
+        <div class="flex justify-center lg:col-span-2">
+          <img
+            src="./static/residence_life.webp"
+            alt="Residence Life"
+            class="w-full max-w-4xl rounded-lg shadow-lg"
+          />
+        </div>
+
+        <!-- CODE OF CONDUCT -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md lg:col-span-2">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            CODE OF CONDUCT:
+          </h4>
+          <ol class="list-decimal pl-4 sm:pl-6 space-y-4 text-sm sm:text-base">
+            <li>
+              <b>Anti-discrimination:</b> HILLs programme does not discriminate
+              on the basis of race, gender, religion, caste, nationality, ethnic
+              origin, sexual orientation, age or disability. If fellows have any
+              complaints regarding discrimination, they must report them to the
+              programme team immediately.
+            </li>
+            <li>
+              <b>Sexual Harassment and Violence:</b> HILLs is committed to
+              providing a safe environment for all the members of the programme,
+              along with their visitors, and has strict policies on sexual
+              harassment and violence on its premises. Sexual harassment
+              includes any verbal or physical conduct of a sexual nature that is
+              directed towards an individual against their will or consent.
+              Consent cannot be assumed if the individual is deemed unable to
+              make a reasonable judgment about the nature of the activity (i.e.,
+              they are intoxicated, on medication or of unsound mind). Violence
+              is any physical conduct that threatens the physical, emotional and
+              mental safety and health of an individual. Please report all
+              complaints in this regard directly to the programme team and the
+              student coordinators.
+              <p class="mt-2">
+                The Institute will provide all necessary support to victims of
+                sexual harassment and violence. The programme team will conduct
+                a thorough investigation and submit its recommendations back to
+                the Dean's office for appropriate action. The Dean will ensure
+                that the programme team's recommendations are adhered to and
+                violators will face appropriate disciplinary action. Sexual
+                harassment and violence are grounds for immediate dismissal from
+                the HILLs fellowship. The Institute will keep all findings and
+                the investigations confidential.
+              </p>
+            </li>
+            <li>
+              <b>Anti-ragging Policy:</b> Ragging is considered a grave offence
+              and in conformity with the directives of the Honourable Supreme
+              Court of India, the Institute exercises zero tolerance for all
+              instances of ragging. If found guilty of the offence, the fellow
+              will be dismissed from the programme immediately. Fellows must
+              also ensure to immediately report instances of ragging if they
+              come across any. Forcing someone to behave/act in any manner
+              without their consent is considered ragging and any student
+              feeling discomfort in these situations should register a
+              complaint. Strict confidentiality will be maintained in case of
+              any such complaints. If fellows wish to express a grievance about
+              any fellow, faculty member or staff member, they may discuss the
+              grievance with the programme team and their respective mentors.
+            </li>
+            <li>
+              <b>HILLs Honour Code:</b> HILLs is committed to creating
+              responsible and ethical individuals. In keeping with this
+              ideology, all fellows are expected to share the responsibility of
+              maintaining the highest standards of honesty and integrity during
+              the programme. The HILLs Honour Code has been established to
+              ensure that this culture is retained. To create such an
+              atmosphere, the programme expects fellows to:
+              <ul class="list-disc pl-4 sm:pl-6 mt-2 space-y-1">
+                <li>Practise academic integrity at all times</li>
+                <li>
+                  Avoid possession of articles that may be deemed harmful to
+                  others or themselves
+                </li>
+                <li>
+                  Respect all farmstay and Institute property and facilities
+                </li>
+                <li>
+                  Provide accurate information on their personal background
+                  during the admissions process
+                </li>
+                <li>Act in a lawful manner</li>
+                <li>
+                  Refrain from offences such as cheating, plagiarism, and giving
+                  or receiving unauthorised aid
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+
+        <!-- GUIDELINES FOR JOINING AND LEAVING -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md lg:col-span-2">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            GUIDELINES FOR JOINING AND LEAVING:
+          </h4>
+          <ul
+            class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base"
+          >
+            <li>
+              Entry Formalities: When fellows arrive, they will be asked to
+              designate a contact name and number in case of an emergency such
+              as critical health situation, financial payment default or
+              expulsion. In other personal cases (such as basic health problems,
+              sexual harassment and general academic issues), the member of the
+              programme team will contact the designated person with the
+              fellow's consent.
+            </li>
+            <li>
+              In all electronic communication, fellows must incorporate the
+              following signature:
+              <ul class="list-none pl-4 mt-2">
+                <li>Name</li>
+                <li>HILLs Fellow, Class of 2024</li>
+                <li>
+                  Himalayan Institute of Live Learnings, Phyang, Ladakh – 194101
+                </li>
+                <li>(Personal mobile phone number)</li>
+              </ul>
+            </li>
+            <li>
+              The fellows must take approval from the programme team for
+              distribution of all banners, advertisements, publications, HILLs
+              merchandise and other HILLs' materials. Appropriate action will be
+              taken against violators of these policies.
+            </li>
+            <li>
+              All material submitted by fellows for admission to the HILLs
+              becomes the property of the Institute and will be preserved over
+              the duration of the programme.
+            </li>
+            <li>
+              Fellows are entitled to request and review information regarding
+              their academic transcripts and admission files. This does not
+              include confidential information disclosed in their admissions
+              file, such as letters of recommendation or interview comments.
+            </li>
+            <li>
+              No individual outside the Institute academic committee and select
+              faculty/ staff members may view the fellows' files without their
+              consent. They must give a signed consent to the programme team,
+              who will then take the final decision on releasing the fellows'
+              files.
+            </li>
+            <li>
+              The programme administration may disclose basic personal
+              information without a fellow's consent as long as it is for
+              education related use; for example, name, address (permanent
+              home), e-mail, phone number, other institutes attended, age,
+              gender, activities involved in while at the HILLs, year of
+              graduation, specialisation at the HILLs, or company name and
+              position. Education-related use could include directories, alumni
+              mailing or aggregated demographic information, and must be
+              approved by the Dean.
+            </li>
+            <li>
+              The programme will not allow any unauthorised party to review
+              fellows' records. These include financial information, admission
+              information, staff and faculty reviews, and governing board
+              documents.
+            </li>
+            <li>
+              Exit Formalities: Before departing from the HILLs, all fellows are
+              required to complete a set of procedures, including the return of
+              library books, settling debit notes, completing exit surveys,
+              payment of medical bills, etc. Details of these procedures will be
+              shared with fellows closer to the date of departure.
+            </li>
+            <li>
+              Fellows will not be handed their Graduation Certificates/
+              Transcripts unless all exit clearance formalities have been
+              completed.
+            </li>
+          </ul>
+        </div>
+
+        <!-- FACILITIES -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            FACILITIES:
+          </h4>
+          <ul
+            class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base"
+          >
+            <li>
+              Stay: The fellows will be staying at the farmstays in Phyang that
+              serve as the ecosystem for the fellowship.
+            </li>
+            <li>
+              Meals: Breakfast and dinner will be provided at the farmstays.
+              Lunch will be provided either at Site or at HIAL campus.
+            </li>
+            <li>
+              Medical Facilities: There is a Government Hospital at Leh that is
+              very well equipped.
+            </li>
+            <li>
+              Transport: Will be provided for academic trips and for commuting
+              from the place of residence to the Institute.
+            </li>
+          </ul>
+        </div>
+
+        <!-- ELECTRONIC INFORMATION POLICY -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            ELECTRONIC INFORMATION POLICY:
+          </h4>
+          <p class="text-sm sm:text-base">
+            We strictly prohibit unauthorised copying or use of HILLs/HIAL
+            licensed software by any member of the HILLs community. HILLs
+            fellows must comply with all contractual software obligations. In
+            addition, the programme and its members will abide by all local,
+            state and national intellectual property laws, and Information
+            Technology regulations.
+          </p>
+        </div>
+
+        <!-- RELIGIOUS GUIDELINES -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            RELIGIOUS GUIDELINES:
+          </h4>
+          <p class="text-sm sm:text-base mb-2">
+            HILLs does not discriminate against any religion or sect in terms of
+            hiring, admission or grading.
+          </p>
+          <p class="text-sm sm:text-base mb-2">
+            Fellows are expected to respect the religious preferences of others
+            on campus. For prayer, puja or worship, fellows should use their own
+            rooms. Please remember that:
+          </p>
+          <ul
+            class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base"
+          >
+            <li>
+              No fire is permitted on campus or in the farmstays for safety
+              reasons
+            </li>
+            <li>
+              No spice/paint/stickers may be placed on any floors or walls
+              whatsoever
+            </li>
+            <li>
+              No loud music, singing or chanting that might disturb others is
+              allowed
+            </li>
+          </ul>
+        </div>
+
+        <!-- CONTRACTS -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            CONTRACTS:
+          </h4>
+          <ul
+            class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base"
+          >
+            <li>
+              No fellow or fellows' organisation may sign any contract on behalf
+              of HIAL/ HILLs fellowship.
+            </li>
+            <li>
+              The programme team will review and undertake all contracts
+              regarding the programme after consulting those involved.
+            </li>
+          </ul>
+        </div>
+
+        <!-- IMPORTANT CONTACTS -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md lg:col-span-2">
+          <h4
+            class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4"
+          >
+            IMPORTANT CONTACTS:
+          </h4>
+          <ul class="list-none pl-4 space-y-1 text-sm sm:text-base">
+            <li>Dechen Spalzes</li>
+            <li>Academics Coordinator</li>
+            <li>dechan.spalzes@hial.edu.in</li>
+            <li>7051992140</li>
+            <li>General query: study@hial.edu.in</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Apply Now Button -->
+    <div
+      class="container mx-auto px-2 sm:px-4 py-4 sm:py-8 flex justify-center"
+    >
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSd2zcIHUrCtqY_QL5AIks1vXATPm_9ApwiLgBZBPoR7wiKfCg/viewform "
+        class="bg-theme-golden hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg"
+      >
+        Apply Now
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Board of Directors</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="./static/favicon.png" />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!--    NAV - BAR -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+
+    <!-- main content -->
+    <!-- SENIOR MANAGEMENT -->
+    <section class="my-6 px-4">
+      <div class="mb-12">
+        <h2
+          class="font-manrope text-3xl text-center font-bold text-theme-golden"
+        >
+          BOARD OF DIRECTORS
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="vkr block bg-theme-golden shadow-md rounded-md">
+          <div class="grid grid-cols-1 sm:grid-cols-2">
+            <div class="img flex justify-center items-center px-2">
+              <img
+                src="./static/VenKhenpoRigzin.jpg"
+                class="rounded-sm w-96 shadow-lg"
+                alt=""
+              />
+            </div>
+            <div
+              class="desc flex flex-col justify-center items-center p-2 text-gray-200"
+            >
+              <h3 class="font-bold">VEN. KHENPO RIGZIN</h3>
+              <i>.....................................</i>
+              <p>
+                Dr. Khanpo Konchok Rigzen is a Buddhist Scholar, author of many
+                rare books, Member of DDR Leh and other organisations in Leh.
+                Presently he is working as Assistant Professor in CIBS Leh.
+                Participated in many National and International conferences.
+                Hundreds of articles published on various topic and languages.
+              </p>
+              <!-- social media icons -->
+            </div>
+          </div>
+        </div>
+        <div class="td block bg-theme-golden shadow-md rounded-md">
+          <div class="grid grid-cols-1 sm:grid-cols-2">
+            <div class="img flex justify-center items-center px-2">
+              <img
+                src="./static/tashi-dorjay.jpeg"
+                class="rounded-sm w-96"
+                alt=""
+              />
+            </div>
+            <div
+              class="desc flex flex-col justify-center items-center p-2 text-gray-200"
+            >
+              <h3 class="font-bold">TASHI DORJEY</h3>
+              <i>.....................................</i>
+              <p></p>
+              <!-- social media icons -->
+            </div>
+          </div>
+        </div>
+        <div class="sw block bg-theme-golden shadow-md rounded-md">
+          <div class="grid grid-cols-1 sm:grid-cols-2">
+            <div class="img flex justify-center items-center px-2">
+              <img
+                src="./static/sw.jpg"
+                class="rounded-sm w-96 shadow-lg"
+                alt=""
+              />
+            </div>
+            <div
+              class="desc flex flex-col justify-center items-center p-2 text-gray-200"
+            >
+              <h3 class="font-bold">SONAM WANGCHUK</h3>
+              <i>Founding Director</i>
+              <i>.....................................</i>
+              <p>
+                A mechanical engineer by training, Sonam Wangchuk has worked
+                primarily in the field of education reform for the last 30
+                years. His work is directly responsible for bringing the
+                percentage of pass grades in the crucial Ladakhi 10th-grade
+                examinations up to 75% from 5%. His vision for the Himalayan
+                communities to lead sustainable lives has resulted in
+                innovations like the Ice Stupa and passive solar heated
+                buildings.
+              </p>
+              <!-- social media icons -->
+            </div>
+          </div>
+        </div>
+        <div class="gj block bg-theme-golden shadow-md rounded-md">
+          <div class="grid grid-cols-1 sm:grid-cols-2">
+            <div class="img flex justify-center items-center px-2">
+              <img src="./static/GJA.jpeg" class="rounded-sm w-96" alt="" />
+            </div>
+            <div
+              class="desc flex flex-col justify-center items-center p-2 text-gray-200"
+            >
+              <h3 class="font-bold">GITANJALI JB</h3>
+              <i>Founder & CEO</i>
+              <i>.....................................</i>
+              <p>
+                An entrepreneur turned educator, Gitanjali is passionate about
+                creating an environment that empowers learners and facilitators
+                to become the best versions of themselves. Gifted in multiple
+                disciplines such as business, education, performing and martial
+                arts, she believes that human beings can continue to grow into
+                multi-faceted individuals throughout their lives, and the aim of
+                education is to instil this lifelong quest for learning and
+                progressing.
+              </p>
+              <!-- social media icons -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>

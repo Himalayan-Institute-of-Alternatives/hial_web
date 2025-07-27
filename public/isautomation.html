@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Stupa Automation</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./static/favicon.png"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  </head>
+  <body>
+    <!--    NAV - BAR -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+
+
+     <!-- main content -->
+     <div class="flex heading text-4xl px-4 font-bold text-theme-golden justify-center mt-6"><h6>Ice Stupa Automation</h6></div>
+     <hr class="text-xl font-medium mt-1">
+    <!-- ------------ grid ---------- -->
+    <div
+      class="grid grid-col-1 md:grid-cols-12 gap-1 my-4 p-4 place-items-start"
+    >
+      <!-- SPV  -->
+      <div class="md:col-span-12 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">Overview:</h4>
+        
+            Climate change poses significant challenges in the Himalayan region, leading to increased water scarcity and impacting both ecosystems and communities. Rising temperatures are causing glaciers to melt at accelerated rates, disrupting traditional water sources and affecting agricultural productivity and overall livelihoods. <br> <br>
+
+One innovative solution to address water scarcity in the Himalayas is the implementation of Ice Stupas, augmented by automation technology. Ice Stupas are artificial glaciers designed to store and gradually release water during dry seasons. By diverting water from streams during winter months, the water freezes into conical structures that resemble traditional stupas. As temperatures rise and the Ice Stupas melt during warmer months, they provide a reliable water source for irrigation during the spring time when it is most scarce. <br> <br>
+
+Automation plays a crucial role in optimizing the effectiveness and efficiency of Ice Stupas. Automated systems control the flow of water, ensuring precise distribution and optimal conditions for ice formation. Advanced monitoring technology tracks weather patterns and water levels in real-time, enabling adjustments to be made promptly enhancing the scalability of Ice Stupa projects. <br><br>
+
+Implementing Ice Stupas with automation offers several benefits. Firstly, it provides a sustainable solution to water scarcity, mitigating the adverse effects of climate change on Himalayan communities. Secondly, it reduces dependency on dwindling natural water sources, promoting water security and resilience. Thirdly, it fosters local economic development by creating opportunities for technological innovation and community engagement.
+<br> <br>
+Overall, leveraging Ice Stupas with automation represents a promising approach to addressing water scarcity in the Himalayas amidst the challenges posed by climate change. By combining traditional knowledge with cutting-edge technology, this solution has the potential to enhance water availability, promote sustainable development, and safeguard the well-being of Himalayan communities for generations to come.
+
+        </p>
+      </div>
+      
+    </div>
+
+    <!-- Gallery Grid -->
+     <hr class="text-xl font-medium my-2">
+
+    <section class="imahe-grid my-4 mx-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-4">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center"
+          src="./static/IS1.JPG"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center"
+          src="./static/IS2.JPG"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center"
+          src="./static/IS3.JPG"
+        />
+      </div>
+       <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center"
+          src="./static/IS4.jpg"
+        />
+      </div>
+    </div>
+    </div>
+      </div>
+    </section>
+
+     <!-- Footer -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>

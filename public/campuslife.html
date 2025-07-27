@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Life</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./static/favicon.png"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  </head>
+  <body>
+    <!--    NAV - BAR -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+
+
+     <!-- main content -->
+     <div class="flex heading text-4xl px-4 font-bold text-theme-golden justify-center mt-6"><h6>Campus Life at HIAL</h6></div>
+     <hr class="text-xl font-medium mt-1">
+    <!-- ------------ grid ---------- -->
+    <div
+      class="grid grid-col-1 md:grid-cols-12 gap-1 my-4 p-4 place-items-start"
+    >
+      <!-- Campus Life  text -->
+      <div class="md:col-span-12 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+           The HIAL campus is unlike any other university campus in Ladakh or India. Our buildings blend perfectly with the surrounding landscape due to their unique earthen architecture. Once completed, HIAL will be an inclusive campus wherein locals can collaborate on various projects like the greenhouse, orchards, sports, gymnasium, and visitors can tour the campus and shop from the souvenir store.
+        </p>
+      </div>
+    </div>
+
+    <!-- Gallery Grid -->
+     <hr class="text-xl font-medium my-2">
+
+    <section class="imahe-grid my-4 mx-4">
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+    <div class="grid gap-4">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center hover:scale-150 hover:translate-x-1/2"
+          src="./static/gallery.jpg"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center hover:scale-150 hover:translate-x-1/2"
+          src="./static/gallery.jpeg"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center hover:scale-150 hover:translate-x-1/2"
+          src="./static/gallery (2).jpeg"
+        />
+      </div>
+    </div>
+    <div class="grid gap-4">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center hover:scale-150 hover:-translate-x-1/2"
+          src="./static/gallery1.jpeg"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center hover:scale-150 hover:-translate-x-1/2"
+          src="./static/gallery2.jpeg"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center hover:scale-150 hover:-translate-x-1/2"
+          src="./static/gallery3.jpg"
+          alt="gallery-photo"
+        />
+      </div>
+    </div>
+    <div class="grid gap-4">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center hover:scale-150 hover:translate-x-1/2"
+          src="./static/gallery3 (2).jpg"
+          alt="gallery-photo"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center hover:scale-150 hover:translate-x-1/2"
+          src="./static/gallery5.png"
+          alt="gallery-photo"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center hover:scale-150 hover:translate-x-1/2"
+          src="./static/erbc.webp"
+        />
+      </div>
+    </div>
+    <div class="grid gap-4">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center hover:scale-150 hover:-translate-x-1/2"
+          src="./static/gallery20.jpg"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center hover:scale-150 hover:-translate-x-1/2"
+          src="./static/LIVE-SIMPLY-1024x683.webp"
+        />
+      </div>
+    </div>
+      </div>
+    </section>
+
+     <!-- Footer -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>

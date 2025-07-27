@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Philosophy</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./static/favicon.png"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!--    NAV - BAR -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+
+    <!-- main content -->
+    <div
+      class="flex heading font-manrope text-3xl font-bold text-theme-golden justify-center mt-4"
+    >
+      <h6>OUR PHILOSOPHY</h6>
+    </div>
+    <hr class="text-xl font-medium my-2" />
+    <!-- ------------ video Intro ---------- -->
+    <div class="grid grid-col-1 md:grid-cols-12 gap-4 mb-4 p-4">
+      <!-- video iframe in this div SW -->
+      <div class="md:col-span-6 justify-center flex overflow-hidden">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/E8lBXYbe7j8?si=vlkbXA5rs9BcqprR&amp;controls=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- SW 3r-3h  -->
+      <div class="md:col-span-6 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">3R TO 3H:</h4>
+        
+             “HIAL is a collaborative exercise between learners and facilitators, and aims to inspire the seekers of knowledge to explore both outside and within themselves. Instead of solving problems with the conventional 3Rs (Reading, wRiting, and aRithmetic), we encourage learners to problem solve using the 3Hs: Bright Head, Kind Heart, and Skilled Hands.”
+             <br>
+             <i>Sonam Wangchuk | Founder & Director, HIAL</i>
+        </p>
+      </div>
+
+      <!-- GJB LIFELONG LEARNING  -->
+      <div class="md:col-span-6 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">LIFELONG LEARNING:</h4>
+        
+             ”The secrets of your splendour are not concealed in the lines of your fate, nor are they hidden in the wiring of your DNA. They exist firmly and definitely, in the infinite potential of your soul. Flowering of these, through unending education, is the sublime aim of life and its rare privilege!
+             <br>
+             <i>Gitanjali J B | Co-Founder & CEO</i>
+        </p>
+      </div>
+      <!-- video iframe in this div Gitanjali -->
+      <div class="md:col-span-6 justify-center flex overflow-hidden">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/fC4ouuOcTAM?si=HmVmh65OGzKTKd-A"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+<!-- heading -->
+<div
+      class="flex heading text-xl font-bold text-theme-golden justify-center mt-4"
+    >
+      <h6>GUIDING PRINCIPLES</h6>
+    </div>
+    <!-- divider -->
+    <hr class="text-xl font-medium my-2" />
+    <!-- ------------ image grid ---------- -->
+    <div
+      class="grid grid-col-1 md:grid-cols-12 gap-1 my-4 p-4 place-items-center"
+    >
+      <!-- HIAL conceptual model photo  -->
+      <div class="md:col-span-6 place-content-center justify-center flex-col overflow-hidden">
+       <img src="./static/hial_conceptual_model.webp" alt="">
+       <i class="text-gray-300">HIAL Conceptual Model</i>
+      </div>
+      
+      <!-- 4 key pillars photo  -->
+      <div class="md:col-span-6 justify-center flex-col overflow-hidden">
+       <img src="./static/4_key_pillars.webp" alt="">
+       <i class="text-gray-300">4 key pillars</i>
+      </div>
+    </div>  
+
+    <!-- ------------ guiding principle paragraph grid ---------- -->
+    <div
+      class="grid grid-col-1 md:grid-cols-12 gap-1 my-4 p-4 place-items-center"
+    >
+
+      <!-- Learning by Doing  -->
+      <div class="md:col-span-4 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">LEARNING BY DOING:</h4>
+        
+          Well-planned and uniquely assessed experiential learning programs stimulate intellectual curiosity, reflection, compassion, creativity and skilfulness. Therefore, HIAL encourages learner development through Live Learning Labs that supplement the traditional academic setting. These opportunities instil qualities of leadership, cultural awareness, and entrepreneurship.
+        </p>
+      </div>
+
+      <!-- Collaborative Teaching  -->
+      <div class="md:col-span-4 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">COLLABORATIVE LEARNING:</h4>
+        
+             HIAL is building a network of collaborative partners that support its efforts in research, teaching, and exchange programs. Guest lectures by visiting faculty and industry experts is facilitated on a regular basis and learner-facilitator collaborations are encouraged. Programs are designed to create a space for learners where they share and reflect on their experiences.
+        </p>
+      </div>
+
+      <!-- Research and Innovation  -->
+      <div class="md:col-span-4 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">RESEARCH AND INNOVATION:</h4>
+        
+             Research and innovation drives every aspect of HIAL. Learners of all academic levels are encouraged to undertake research and creative endeavours in collaboration with facilitators. These projects encourage free thinking and help in evolving solutions to address some of the key challenges experienced by mountain communities.
+        </p>
+      </div>
+    </div> 
+
+<!-- divider -->
+<hr class="text-xl font-medium my-2" />
+<!-- heading -->
+<div
+      class="flex heading text-xl font-bold text-theme-golden justify-center mt-4"
+    >
+      <h6>4 KEY PILLARS</h6>
+    </div>
+    <!-- ------------ 4 key pillers paragraph grid ---------- -->
+    <div
+      class="grid grid-col-1 md:grid-cols-12 gap-1 my-4 p-4 "
+    >
+
+      <!-- Holistic & integral education  -->
+      <div class="md:col-span-3  justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">1. Holistic & Integral Education</h4>
+        
+          The current pace of global development renders insufficient the 3Rs (Reading, wRiting, aRithmetic) and necessitates the need for 3Hs, (Head, Hands & Heart).
+        </p>
+      </div>
+
+      <!-- Contextual education   -->
+      <div class="md:col-span-3  justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">2. Contextual Education </h4>
+        
+             Context is defined by nearness in space, time, and experience of the surrounding environment. Contextual space is a student’s actual environment. Time relates to the prevailing thinking or global world view, which, today, is ‘scientific-technological.’ Experience encompasses native language and indigenous wisdom. Curricula relating to the student’s context catalyses their ability to abstract knowledge and apply it to other contexts.
+        </p>
+      </div>
+
+      <!-- Experiential learning  -->
+      <div class="md:col-span-3 justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">3. Experiential Learning</h4>
+        
+             Research and innovation drives every aspect of HIAL. Learners of all academic levels are encouraged to undertake research and creative endeavours in collaboration with facilitators. These projects encourage free thinking and help in evolving solutions to address some of the key challenges experienced by mountain communities.
+        </p>
+      </div>
+
+      <!-- Trans-disciplinary  -->
+      <div class="md:col-span-3 justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">4. Trans-Disciplinary</h4>
+        
+             Reality is composite and should be a problem-solving approach, the cornerstone of education be.
+        </p>
+      </div>
+    </div> 
+
+    <!-- Footer -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>

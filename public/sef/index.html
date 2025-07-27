@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Sun & Earth Festival 2025 | HIAL" />
+    <meta
+      property="og:description"
+      content="Celebration for a carbon-neutral Ladakh, curated by the School of Eco-Responsive Architecture and School of Energy Studies at HIAL. "
+    />
+    <meta property="og:image" content="./images/logoSun&Earth.png" />
+    <meta property="og:url" content="https://hial.edu.in/sef/" />
+    <title>Sun & Earth Festival 2025 | HIAL</title>
+
+    <!-- Resource hints -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./images/logoSun&Earth.png"
+    />
+
+
+    
+
+  
+    <!-- Defer non-critical scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" ></script>
+    
+    
+
+    
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+      body {
+        font-family: "Roboto", sans-serif;
+        overflow-x: hidden;
+      }
+
+      .hero-gradient {
+        background: linear-gradient(
+          to right,
+          rgba(113, 17, 23, 0.9),
+          rgba(136, 103, 42, 0.9)
+        );
+      }
+
+      .mountain-bg {
+        background-image: url("/api/placeholder/1920/1080");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .fade-in.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .path-animation {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 2s linear forwards;
+      }
+
+      @keyframes dash {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      .timeline-dot {
+        transition: all 0.3s ease;
+      }
+
+      .timeline-dot:hover {
+        transform: scale(1.2);
+      }
+
+      .card-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .animate-gradient {
+        background-size: 300% 300%;
+        animation: gradient 15s ease infinite;
+      }
+
+      .timeline-dot::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(59, 130, 246, 0.2);
+        border-radius: 50%;
+        transform: scale(0);
+        transition: transform 0.3s ease;
+      }
+
+      .timeline-dot:hover::after {
+        transform: scale(2);
+      }
+
+      /* Update nav styles */
+      .navbar {
+        z-index: 50;
+        transition: all 300ms;
+        background: transparent;
+        transform: translateY(-100%);
+      }
+
+      .navbar.scrolled {
+        background: white;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transform: translateY(0);
+      }
+
+      /* Add new styles for navbar gradient */
+      .navbar-gradient {
+        background: transparent;
+        transition: all 0.3s ease;
+      }
+
+      /* Theme colors */
+      :root {
+        --theme-gradient: linear-gradient(to right, #711117, #88672a);
+        --theme-from: #711117;
+        --theme-to: #88672a;
+      }
+
+      /* Theme text styles */
+      .hero-section h1.title,
+      .hero-section h2.subtitle {
+        color: #711117;
+        -webkit-text-fill-color: initial;
+      }
+
+      .hero-section h1:not(.title),
+      .hero-section h2:not(.subtitle),
+      footer h1,
+      footer h2,
+      footer h3,
+      footer h4 {
+        color: white;
+        -webkit-text-fill-color: initial;
+      }
+
+      section:not(.hero-section) h1,
+      section:not(.hero-section) h2,
+      section:not(.hero-section) h3,
+      section:not(.hero-section) h4 {
+        color: #711117;
+        -webkit-text-fill-color: initial;
+      }
+
+      /* Theme button styles */
+      .theme-button {
+        background: var(--theme-gradient);
+        color: white;
+        transition: all 0.3s ease;
+      }
+
+      .theme-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(113, 17, 23, 0.2);
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #711117;
+      }
+
+      /* Add modal styles */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal.active {
+        display: flex;
+      }
+
+      .modal-content {
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        max-width: 600px;
+        width: 90%;
+        position: relative;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .modal-close:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Add Modal -->
+    <div id="datesModal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <h3 class="text-xl font-bold text-[#711117] mb-4">Important Update:</h3>
+        <div class="space-y-4 text-gray-700">
+          <p>Only 10 seats are available for the festival. Last date for registration and payment is 15th July, 2025.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full z-50 transition-all duration-300 navbar-gradient"
+      id="navbar"
+    >
+      <div
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center">
+            <img
+              src="./logo.png"
+              alt="HIAL Logo"
+              class="w-full h-full object-contain"
+              width="40"
+              height="40"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+          <a
+            href="#about"
+            class="text-gray-800 hover:text-[#711117] transition-colors"
+            >About</a
+          >
+          <a
+            href="#theme"
+            class="text-gray-800 hover:text-[#711117] transition-colors"
+            >Theme</a
+          >
+          <a
+            href="#schedule"
+            class="text-gray-800 hover:text-[#711117] transition-colors"
+            >Schedule</a
+          >
+          <a
+            href="#register"
+            class="text-gray-800 hover:text-[#711117] transition-colors"
+            >Register</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-800 hover:text-[#711117] transition-colors"
+            >Contact</a
+          >
+        </div>
+        <div class="md:hidden">
+          <button class="text-gray-800" id="menu-toggle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        class="md:hidden hidden bg-white w-full py-3 px-6 shadow-inner"
+        id="mobile-menu"
+      >
+        <div class="flex flex-col space-y-4 text-sm font-medium">
+          <a
+            href="#about"
+            class="text-gray-600 hover:text-[#711117] transition-colors"
+            >About</a
+          >
+          <a
+            href="#theme"
+            class="text-gray-600 hover:text-[#711117] transition-colors"
+            >Theme</a
+          >
+          <a
+            href="#schedule"
+            class="text-gray-600 hover:text-blue-600 transition-colors"
+            >Schedule</a
+          >
+          <a
+            href="#register"
+            class="text-gray-600 hover:text-blue-600 transition-colors"
+            >Register</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-600 hover:text-blue-600 transition-colors"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative h-screen mountain-bg hero-section">
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-[#88672a]/90 via-[#fffff1]/85 to-[#88672a]/90 animate-gradient"
+      ></div>
+      <!-- Hero bg -->
+      <div class="absolute inset-0 flex items-center justify-center opacity-30">
+        <img
+          src="./images/earthTexture.avif"
+          alt="earth texture"
+          class="w-screen h-screen object-cover transform rotate-0"
+          width="1920"
+          height="1080"
+          loading="lazy"
+        />
+      </div>
+      <div
+        class="container mx-auto px-6 relative z-10 h-full flex flex-col justify-center items-center text-center"
+      >
+        <img
+          src="./images/logoSun&Earth.png"
+          alt="Sun & Earth Festival Logo"
+          class="w-64 md:w-96 h-auto mb-4"
+          width="384"
+          height="auto"
+          loading="lazy"
+        />
+        <h2 class="text-xl md:text-3xl font-medium mb-8 subtitle">
+          Build a Regenerative Future
+        </h2>
+        <div class="flex flex-wrap justify-center gap-4">
+          <div
+            class="bg-white/10 backdrop-blur-lg rounded-2xl px-8 py-4 border border-white/20 hover:bg-white/20 transition-all duration-300"
+          >
+            <p class="text-white">
+              <span class="font-bold">Where:</span> HIAL, Phyang, Leh, Ladakh
+            </p>
+          </div>
+          <div
+            class="bg-white/10 backdrop-blur-lg rounded-2xl px-8 py-4 border border-white/20 hover:bg-white/20 transition-all duration-300"
+          >
+            <p class="text-white">
+              <span class="font-bold">When:</span> 28th July to 5th August, 2025
+            </p>
+          </div>
+        </div>
+        <a
+          href="./form.html"
+          class="mt-10 bg-gradient-to-r from-[#711117] to-[#88672a] hover:from-[#88672a] hover:to-[#711117] text-white font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+        >
+          Register Now
+        </a>
+      </div>
+      <div
+        class="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce"
+      >
+        <a href="#about">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Event Description Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white rounded-xl p-8 shadow-lg fade-in">
+            <div class="space-y-6">
+              <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#711117] mb-4">
+                  Sun & Earth Festival 2025
+                </h2>
+                <div
+                  class="w-24 h-1 bg-gradient-to-r from-[#711117] to-[#88672a] mx-auto"
+                ></div>
+              </div>
+
+              <div class="mb-8">
+                <div class="prose max-w-none">
+                  <p class="mb-4">
+                    Himalayan Institute of Alternatives Ladakh invites you to
+                    the Sun & Earth Festival - a celebration for a
+                    carbon-neutral Ladakh, curated by the School of
+                    Eco-Responsive Architecture and School of Energy Studies at
+                    HIAL. Join us for 9 days of exciting and enriching hands-on
+                    workshops and experiential sessions celebrating best
+                    practices in solar energy and earthen materials for
+                    low-carbon, eco-responsive, and regenerative architecture.
+                  </p>
+                  <p class="mb-4">
+                    Building on Ladakh's rich 40-year history in low-carbon
+                    Solar-heated Mud Housing and SECMOL's 25+ years of
+                    experience, HIAL proudly presents the 6th edition of this
+                    much-loved International Festival from  28th July to 5th August
+                    , 2025. The festival is structured in two parts: Earth
+                    Construction and Solar Energy for Buildings, allowing
+                    participants to attend either or both segments based on
+                    their interests and availability.
+                  </p>
+                </div>
+
+                <div class="mt-8">
+                  <h3 class="text-2xl font-semibold mb-4">Why Attend?</h3>
+                  <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <li class="flex items-start space-x-2">
+                      <span class="text-primary">•</span>
+                      <span
+                        >Hands-on Earth Building: Learn & build with natural
+                        materials</span
+                      >
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span class="text-primary">•</span>
+                      <span
+                        >Solar-Powered Innovation: Discover energy-efficient
+                        design</span
+                      >
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span class="text-primary">•</span>
+                      <span
+                        >Breathtaking Ladakh: Learn in nature's most stunning
+                        classroom</span
+                      >
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span class="text-primary">•</span>
+                      <span
+                        >Anthropology in Human Settlements: Explore practical
+                        solutions for eco-responsive living</span
+                      >
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span class="text-primary">•</span>
+                      <span
+                        >Campus Experience: Earthen structures, Zero carbon
+                        buildings, Water Conscious Campus</span
+                      >
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span class="text-primary">•</span>
+                      <span
+                        >Cultural Immersion: Savor local food, music &
+                        traditions</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div class="bg-gray-50 rounded-lg p-6 text-center">
+                  <div class="text-[#711117] font-bold text-lg mb-2">Venue</div>
+                  <p class="text-gray-600">HIAL Campus, Phyang, Leh</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6 text-center">
+                  <div class="text-[#711117] font-bold text-lg mb-2">
+                    Format
+                  </div>
+                  <p class="text-gray-600">Workshops & Interactive Sessions</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6 text-center">
+                  <div class="text-[#711117] font-bold text-lg mb-2">Focus</div>
+                  <p class="text-gray-600">
+                    <ul>
+                      <li>Eco- Responsive Architecture,  Passive Solar Technology and Energy Efficient solutions.</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="w-full md:w-1/2 mb-10 md:mb-0">
+            <video
+              class="rounded-xl shadow-lg fade-in w-full h-auto"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              loading="lazy"
+            >
+              <source src="aab.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="w-full md:w-1/2 md:pl-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 fade-in">
+              About HIAL
+            </h2>
+            <p class="text-gray-600 mb-6 leading-relaxed fade-in">
+              HIAL aims to develop Ladakh into a benchmark for a sustainable
+              economic living for the mountain world, where students receive a
+              meaningful education that prepares them for a life of dignity in
+              harmony with nature.
+            </p>
+            <p class="text-gray-600 mb-8 leading-relaxed fade-in">
+              It empowers the mountain youth to take charge of their contexts
+              through contextual and experiential learning rooted in grassroot
+              innovation and indigenous knowledge systems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conference Info -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-16 fade-in">
+          Festival Components
+        </h2>
+        <div
+          class="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-10 md:space-y-0"
+        >
+          <!-- Sun Fest -->
+          <div
+            class="w-full md:w-1/2 bg-gradient-to-br from-white to-yellow-50 rounded-xl shadow-lg p-8 card-hover fade-in border border-yellow-100"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <svg
+                class="w-8 h-8 text-yellow-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-4">Sun Fest</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2 text-yellow-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Passive Solar Heating Technology
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2 text-yellow-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Energy Efficient Building Solutions
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2 text-yellow-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Thermal Comfort and Psychometric Analysis
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2 text-yellow-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Building Simulation
+              </li>
+            </ul>
+          </div>
+
+          <!-- Earth Fest -->
+          <div
+            class="w-full md:w-1/2 bg-gradient-to-br from-white to-green-50 rounded-xl shadow-lg p-8 card-hover fade-in border border-green-100"
+          >
+            <div
+              class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <svg
+                class="w-8 h-8 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-4">Earth Fest</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                 Earth Building Workshops 
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Passive Design Principles 
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Case Studies and Live Demonstration 
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Theme Section -->
+    <section id="theme" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-16 fade-in">
+          Theme & Scope
+        </h2>
+        <div
+          class="flex flex-col md:flex-row md:space-x-10 space-y-10 md:space-y-0"
+        >
+          <div class="w-full md:w-1/2 fade-in">
+            <div class="bg-blue-50 rounded-xl p-8 h-full">
+              <h3 class="text-2xl font-semibold text-blue-800 mb-6">
+                Theme of the Festival
+              </h3>
+              <p class="text-gray-700 mb-6 leading-relaxed">
+                The Sun & Earth Festival, a celebration of low-carbon,
+                eco-responsive and regenerative architecture for a
+                carbon-neutral Ladakh. Curated by the School of Eco-Responsive
+                Architecture and the School of Energy Studies at HIAL, this
+                festival continues the rich legacy of solar-heated mud housing
+                in Ladakh. By embracing nature's elements—the sun and earth ,
+                the festival brings together traditional wisdom and modern
+                innovations to promote sustainable building solutions that
+                address the challenges of climate change.
+              </p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 fade-in">
+            <div class="bg-green-50 rounded-xl p-8 h-full">
+              <h3 class="text-2xl font-semibold text-green-800 mb-6">
+                Scope of the Festival
+              </h3>
+              <p>This immersive event seamlessly interleaves Earth Construction and Passive Solar Energy for Buildings. You'll gain practical, hands-on knowledge in natural building techniques like rammed earth, cob, and adobe, while integrating essential passive design principles.</p>
+          <p>Throughout the festival, participants will learn, share and co-create with international experts and fellow practitioners. You will gain practical insights, exchange ideas and contribute to shaping a sustainable future for mountain communities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Section -->
+
+    <!-- Registration Section -->
+    <section id="register" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-16 fade-in">
+          Registration Details
+        </h2>
+
+        <div class="max-w-3xl mx-auto">
+          <div
+            class="bg-[#711117]/5 rounded-xl p-8 mb-10 shadow-lg fade-in border border-[#711117]/20"
+          >
+            <div class="space-y-8">
+              <div>
+                <h4 class="text-lg font-semibold text-gray-800 mb-2">
+                  Last date for registration:
+                </h4>
+                <p class="text-gray-700">June 30, 2025</p>
+              </div>
+
+            
+
+              <div class="text-center space-y-6">
+                <p class="text-gray-600">For queries, contact:</p>
+                <div class="space-y-4">
+                  <div class="flex items-center justify-center">
+                    <svg
+                      class="w-5 h-5 mr-2 text-[#711117]"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                    <a
+                      href="mailto:sunandearth@hial.edu.in"
+                      class="text-[#711117] hover:text-[#88672a]"
+                      >sun.earth@hial.edu.in</a
+                    >
+                  </div>
+                  <div class="flex items-center justify-center space-x-4">
+                    <span class="text-gray-700">Call:</span>
+                    <div class="space-y-2">
+                      <p class="text-gray-800">
+                        Gigmet Yangski:
+                        <a
+                          href="tel:+917051992140"
+                          class="text-[#711117] hover:text-blue-700"
+                          >+91 97735 69988</a
+                        >
+                      </p>
+                      <p class="text-gray-800">
+                        Shweta Sharma:
+                        <a
+                          href="tel:+917889566457"
+                          class="text-[#711117] hover:text-blue-700"
+                          >+91 70182 04633</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  href="./form.html"
+                  class="inline-block bg-gradient-to-r from-[#711117] to-[#88672a] text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                >
+                  Register Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-16 fade-in">
+          Contact Us
+        </h2>
+
+        <div class="max-w-4xl mx-auto grid grid-cols-1 gap-8">
+          <div class="bg-white rounded-xl p-8 shadow-lg fade-in card-hover">
+            <h3 class="text-2xl font-semibold text-blue-800 mb-6">
+              Get in Touch
+            </h3>
+            <div class="space-y-6">
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 bg-[#711117]/10 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-6 h-6 text-[#711117]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <div class="ml-4">
+                  <p class="text-sm text-gray-600">Email</p>
+                  <a
+                    href="mailto:sunandearth@hial.edu.in"
+                    class="text-[#711117] hover:text-[#88672a]"
+                    >sun.earth@hial.edu.in</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 bg-[#711117]/10 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-6 h-6 text-[#711117]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
+                </div>
+                <div class="ml-4">
+                  <p class="text-sm text-gray-600">Phone</p>
+                  <div class="space-y-1">
+                    <p class="text-gray-800">
+                      Gigmet Yangskit:
+                      <a
+                        href="tel:+917051992140"
+                        class="text-[#711117] hover:text-blue-700"
+                        >+91 97735 69988</a
+                      >
+                    </p>
+                    <p class="text-gray-800">
+                      Shweta Sharma:
+                      <a
+                        href="tel:+917889566457"
+                        class="text-[#711117] hover:text-blue-700"
+                        >+91 70182 04633
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <div
+                class="w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <img
+                  src="https://hial.edu.in/static/logo_white.png"
+                  alt="HIAL Logo"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <span class="text-xl font-bold">Sun & Earth Festival</span>
+            </div>
+            <p class="text-gray-400">
+              Celebrating sustainable living and renewable energy in the heart
+              of Ladakh.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#theme"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Theme</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#schedule"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Schedule</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#register"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Register</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2 text-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <a
+                  href="mailto:sunandearth@hial.edu.in"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >sun.earth@hial.edu.in</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2025 HIAL Events. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Add modal functions
+      function showModal() {
+        const modal = document.getElementById('datesModal');
+        if (modal) {
+          modal.classList.add('active');
+        }
+      }
+
+      function closeModal() {
+        const modal = document.getElementById('datesModal');
+        if (modal) {
+          modal.classList.remove('active');
+        }
+      }
+
+      // Show modal when page loads
+      window.addEventListener('load', function() {
+        setTimeout(showModal, 1000); // Show after 1 second
+      });
+
+      // Close modal when clicking outside
+      const modal = document.getElementById('datesModal');
+      if (modal) {
+        modal.addEventListener('click', function(e) {
+          if (e.target === this) {
+            closeModal();
+          }
+        });
+      }
+
+      // Mobile menu toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      if (menuToggle) {
+        menuToggle.addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobile-menu");
+          if (mobileMenu) {
+            mobileMenu.classList.toggle("hidden");
+          }
+        });
+      }
+
+      // Navbar scroll effects
+      window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        if (navbar) {
+          if (window.scrollY > 100) {
+            navbar.classList.add("scrolled");
+            navbar.style.background = "white";
+          } else {
+            navbar.classList.remove("scrolled");
+            navbar.style.background = "transparent";
+          }
+        }
+      });
+
+      // Fade-in animation
+      const fadeElements = document.querySelectorAll(".fade-in");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      fadeElements.forEach((element) => {
+        observer.observe(element);
+      });
+    </script>
+  </body>
+</html>

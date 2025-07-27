@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HIAL</title>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./static/favicon.png"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+        <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Main content area -->
+    <section class="mx-auto max-w-7xl">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-2 p-4">
+        <!-- Large block on the left -->
+        <div
+          class="md:col-span-2 md:row-span-2 bg-slider bg-cover bg-center bg-no-repeat duration-300 text-white cursor-pointer"
+        >
+          <!-- Component: Slider with controls inside -->
+          <div class="relative w-full glide-01 pt-72">
+            <!-- Slides -->
+            <div class="overflow-hidden" data-glide-el="track">
+              <ul
+                class="relative w-full overflow-hidden whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]"
+              >
+                <!-- ADD CORRENT COURSES AND UPDATES HERE  -->
+
+                <li>
+                  <img
+                    src="./static/HE.jpeg"
+                    class="w-full max-w-full max-h-full m-auto pt-36"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="./static/TD.jpeg"
+                    class="w-full max-w-full max-h-full m-auto pt-36"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="./static/EE.jpeg"
+                    class="w-full max-w-full max-h-full m-auto pt-36"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="./static/CE.jpeg"
+                    class="w-full max-w-full max-h-full m-auto pt-36"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="./static/HOTDOF.jpeg"
+                    class="w-full max-w-full max-h-full m-auto pt-36"
+                  />
+                </li>
+              </ul>
+            </div>
+            <!-- Controls Goes Here -->
+          </div>
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+
+          <script>
+            var glide01 = new Glide(".glide-01", {
+              type: "slider",
+              focusAt: "center",
+              perView: 1,
+              autoplay: 5000,
+              animationDuration: 1000,
+              gap: 0,
+              classes: {
+                activeNav: "[&>*]:bg-slate-700",
+              },
+            });
+
+            glide01.mount();
+          </script>
+          <!-- End Slider with controls inside -->
+        </div>
+
+        <!-- Top right block 3Rto3H -->
+        <div
+          class="bg-theme-golden bg-RtoH bg-cover bg-center bg-no-repeat hover:bg-theme-maroon transition-colors duration-300 text-white p-4 cursor-pointer"
+        >
+          <!-- Content for bottom right block 3Rto3H -->
+          <a href="./ourPhilosophy.html">
+            <p class="pt-96 md:pt-60 md:text-transparent hover:text-white"></p>
+          </a>
+        </div>
+        <!-- Middle right block -->
+        <div
+          class="bg-theme-maroon bg-learningByDoing bg-cover bg-center bg-no-repeat hover:bg-theme-golden transition-colors duration-300 text-white p-4 cursor-pointer"
+        >
+          <!-- Content for middle right block Learning By Doing-->
+          <a href="./ourPhilosophy.html">
+            <p class="pt-96 md:pt-60 text-center text-white"></p>
+          </a>
+        </div>
+        <!-- Bottom right block -->
+        <div
+          class="bg-theme-maroon bg-collab bg-cover bg-center bg-no-repeat hover:bg-theme-golden transition-colors duration-300 text-white p-4 cursor-pointer"
+        >
+          <!-- Content for bottom right block -->
+          <a href="./ourPhilosophy.html">
+            <p class="pt-96 md:pt-60 md:text-transparent hover:text-white"></p>
+          </a>
+        </div>
+        <!-- Bottom left block -->
+        <div
+          class="bg-theme-maroon bg-givingBack bg-cover bg-center bg-no-repeat hover:bg-theme-golden transition-colors duration-300 text-white p-4 cursor-pointer"
+        >
+          <!-- Content for bottom right block -->
+          <a href="./ourPhilosophy.html">
+            <p class="pt-96 md:pt-60 md:text-transparent hover:text-white"></p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+
+<div class="overflow-hidden" data-glide-el="track"></div>
+                      <ul class="relative w-full overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
+
+                        <!-- ADD CORRENT COURSES AND UPDATES HERE  -->
+                        <a href="https://himalayanfarmstays.com" target="_blank">
+                          <li><img src="./static/Tarchit_Trek.jpeg" class="w-full max-w-full max-h-full m-auto" /></li>
+                        </a> 
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScNX0o72ETbLmtDwyzH6XRmoe7JzcuR1vNu000QcJl2vJauuQ/viewform" target="_blank">
+                          <li><img src="./static/polFest1.jpeg" class="w-full max-w-full max-h-full m-auto" /></li>
+                        </a>
+                      </ul>
+                  </div>

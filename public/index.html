@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HIAL</title>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./static/favicon.png"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Replace the previous banner style with this new style -->
+    <style>
+      .floating-icon {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        width: 60px;
+        height: 60px;
+        border-radius: 0 50% 50% 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1000;
+        animation: pulse 2s infinite;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+        overflow: hidden;
+      }
+
+      .floating-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .floating-message {
+        position: fixed;
+        left: -400px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #800000;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        z-index: 999;
+        transition: left 0.3s ease-in-out;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      }
+
+      .floating-message.show {
+        left: 80px;
+      }
+
+      .floating-message a {
+        color: white;
+        text-decoration: underline;
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: translateY(-50%) scale(1);
+        }
+        50% {
+          transform: translateY(-50%) scale(1.1);
+        }
+        100% {
+          transform: translateY(-50%) scale(1);
+        }
+      }
+
+      .close-message {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+
+
+    
+
+    <!-- header -->
+   
+    <!--           NAV-BAR           -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+    <!--           HERO   MIAN        -->
+    <!-- Main content area -->
+    <section class="mx-auto max-w-7xl">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-2 p-4">
+      <!-- Large block on the left -->
+      <div class="md:col-span-2  md:row-span-2  relative text-white cursor-pointer">
+        <!-- Video Background -->
+        <video 
+          autoplay 
+          loop 
+          muted 
+          playsinline
+          class="absolute rounded-lg top-0 left-0 w-full h-full object-cover -z-10"
+        >
+          <source src="./static/aab.mp4" type="video/mp4">
+        </video>
+
+        <!-- Component: Slider with controls inside -->
+        <div class="relative w-full glide-01 pt-72">
+          <!-- Slides -->
+          <div class="overflow-hidden" data-glide-el="track">
+              <ul class="relative w-full overflow-hidden whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
+
+                <!-- ADD CORRENT COURSES AND UPDATES HERE  -->
+
+                  <li><img src="./static/HE.jpeg" class="w-full max-w-full max-h-full m-auto pt-36" /></li>
+                  <li><img src="./static/TD.jpeg" class="w-full max-w-full max-h-full m-auto pt-36" /></li>
+                  <li><img src="./static/EE.jpeg" class="w-full max-w-full max-h-full m-auto pt-36" /></li>
+                  <li><img src="./static/CE.jpeg" class="w-full max-w-full max-h-full m-auto pt-36" /></li>
+                  <li><img src="./static/HOTDOF.jpeg" class="w-full max-w-full max-h-full m-auto pt-36" /></li>
+              </ul>
+          </div>
+          <!-- Controls Goes Here -->
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+
+        <script>
+            var glide01 = new Glide('.glide-01', {
+                type: 'slider',
+                focusAt: 'center',
+                perView: 1,
+                autoplay: 5000,
+                animationDuration: 1000,
+                gap: 0,
+                classes: {
+                    activeNav: '[&>*]:bg-slate-700',
+                },
+
+            });
+
+            glide01.mount();
+        </script>
+        <!-- End Slider with controls inside -->  
+
+      </div>
+
+      <!-- Top right block 3Rto3H -->
+      <div
+        class="bg-theme-golden bg-RtoH bg-cover bg-center bg-no-repeat hover:bg-theme-maroon rounded-lg  transition-colors duration-300 text-white p-4 cursor-pointer"
+      >
+        <!-- Content for bottom right block 3Rto3H -->
+        <a href="./ourPhilosophy.html">
+          <p class="pt-96 md:pt-60 md:text-transparent hover:text-white "></p>
+        </a>
+      </div>
+      <!-- Middle right block -->
+      <div
+        class="bg-theme-maroon bg-learningByDoing bg-cover bg-center bg-no-repeat hover:bg-theme-golden rounded-lg  transition-colors duration-300 text-white p-4 cursor-pointer"
+      >
+        <!-- Content for middle right block Learning By Doing-->
+        <a href="./ourPhilosophy.html">
+         <p class="pt-96 md:pt-60 text-center text-white"></p>
+        </a>
+      </div>
+      <!-- Bottom right block -->
+      <div
+        class="bg-theme-maroon bg-collab bg-cover bg-center bg-no-repeat hover:bg-theme-golden rounded-lg  transition-colors duration-300 text-white p-4 cursor-pointer"
+      >
+        <!-- Content for bottom right block -->
+        <a href="./ourPhilosophy.html">
+         <p class="pt-96 md:pt-60 md:text-transparent hover:text-white"></p>
+        </a>
+      </div>
+      <!-- Bottom left block -->
+      <div
+        class="bg-theme-maroon bg-givingBack bg-cover bg-center bg-no-repeat hover:bg-theme-golden rounded-lg  transition-colors duration-300 text-white p-4 cursor-pointer"
+      >
+        <!-- Content for bottom right block -->
+        <a href="./ourPhilosophy.html">
+         <p class="pt-96 md:pt-60 md:text-transparent hover:text-white"></p>
+        </a>
+      </div>
+    </div>
+    </section>
+<!-- HH Chetsang Rinpoche Banner -->
+<section class="mx-auto max-w-7xl">
+    <div class="md:col-span-6  justify-center px-4">
+        <img class="h-full w-full rounded-lg" src="./static/hial-slide1.webp" alt="" />
+      </div>
+      </section>
+
+    <!--           HERO   SECONDARY        -->
+    <!-- Main content area -->
+    <section class="mx-auto max-w-7xl">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-2 p-4">
+      <!-- Top right block -->
+      <div
+        class="md:col-span-1 md:row-span-1 bg-theme-golden hover:bg-theme-maroon rounded-lg text-white p-4 cursor-pointer text-sm text-justify"
+      >
+        <!-- Content for top right block -->
+        <p>
+          "HIAL is a collaborative exercise between learners and facilitators,
+          and aims to inspire the seekers of knowledge to explore both outside
+          and within themselves. Instead of solving problems with the
+          conventional 3Rs (Reading, wRiting, and aRithmentic), we encourage
+          learners to problem solve using the 3Hs: Bright Head, Kind Heart, and
+          Skilled Hands." <br> <br>
+          <i> ~ Sonam Wangchuk, Founding Director</i>
+        </p>
+      </div>
+      <!-- Middle right block -->
+      <div
+        class="md:col-span-1 md:row-span-1 bg-theme-golden bg-sw bg-cover bg-center bg-no-repeat hover:bg-theme-maroon rounded-lg hover:bg-none transition-colors duration-300 p-4 cursor-pointer"
+      >
+        <!-- Content for middle right block -->
+
+        <p class="pt-96 md:pt-60 text-transparent hover:text-white">Sonam Wangchuk, Founding Director</p>
+      </div>
+
+      <!-- Large block on the left -->
+      <div
+        class="flex items-center group md:col-span-2 md:row-span-2   bg-cover bg-center bg-no-repeat transition-colors duration-300  cursor-pointer"
+      >
+        <!-- Large block large block -->
+
+          <img class="rounded-lg min-h-full" src="./static/lf21.jpg" alt="">
+
+      </div>
+
+      <!-- Bottom right block -->
+      <div
+        class="md:col-span-1 md:row-span-1 bg-theme-golden bg-gjb bg-cover bg-center bg-no-repeat hover:bg-theme-maroon rounded-lg hover:bg-none transition-colors duration-300 p-4 cursor-pointer"
+      >
+        <!-- Content for bottom right block -->
+        <p class="pt-96 md:pt-60 text-transparent hover:text-white">Message From Gitanjali</p>
+      </div>
+      <!-- Bottom left block -->
+      <div
+        class="md:col-span-1 md:row-span-1 bg-theme-golden hover:bg-theme-maroon rounded-lg  text-white p-4 cursor-pointer text-sm text-justify"
+      >
+        <!-- Content for bottom right block -->
+        <p>
+          "The secrets of your splendor are not concealed in the lines of your
+          fate, nor are they hidden in the wiring of your DNA. They exist firmly
+          and definitely, in the infinite potential of your soul. Flowering of
+          these, through unending education, is the sublime aim of life and its
+          rare privilege!" <br> <br>
+           <i> ~ Gitanjali JB, Co-Founder & CEO </i>
+        </p>
+      </div>
+    </div>
+    </section>
+
+    <!-- ------------ Youtube  video  of SW and GJB Intro ---------- -->
+    <section class="mx-auto max-w-7xl">
+    <div class="grid grid-col-1 md:grid-cols-12 gap-2 md:gap-0 mb-4 p-4">
+      <!-- video iframe in this div  SW -->
+      <div class="md:col-span-6 justify-center flex overflow-hidden">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/E8lBXYbe7j8?si=vlkbXA5rs9BcqprR&amp;controls=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- video iframe in this div Gitanjali -->
+      <div class="md:col-span-6 justify-center flex overflow-hidden">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/fC4ouuOcTAM?si=HmVmh65OGzKTKd-A"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    </section>
+    </div>
+
+    <!--           ANUAL REPORT        -->
+             <!-- heading -->
+     <div class="flex heading text-2xl px-4 font-bold text-theme-golden justify-center mt-6"><h4>Anual Reports 2019-22 </h4></div>
+     <hr class="text-xl font-medium mt-1">
+
+
+    <!-- Cover page area  -->
+    <section class="mx-auto max-w-7xl">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 p-4">
+      <!-- cover page 2019-20 -->
+       
+          <div
+            class="md:col-span-1  bg-theme-golden hover:bg-theme-maroon bg-anualReport bg-fixed bg-bottom bg-no-repeat  duration-300 text-white  cursor-pointer"
+          >
+          <a href="./static/AnualReport/Annual report 2019.pdf " target="_blank">
+          <h4 class="flex justify-center items-center p-8 font-bold">2019-20</h4>
+          </a>
+          </div>
+
+      <!-- cover page 2020-21 -->
+       
+      <div
+        class="md:col-span-1   bg-theme-maroon hover:bg-theme-golden bg-anualReport bg-fixed bg-bottom bg-no-repeat  duration-300 text-white  cursor-pointer"
+      >
+      <a href="./static/AnualReport/Annual report 2020 ,.pdf" target="_blank">
+      <h4 class="flex justify-center items-center p-8 font-bold">2020-21</h4>
+      </a>
+      </div>
+
+      <!-- cover page 2021-22 -->
+       
+      <div
+        class="md:col-span-1  bg-theme-maroon bg-anualReport bg-fixed bg-bottom bg-no-repeat hover:bg-theme-golden  transition-colors duration-300 text-white p-4 cursor-pointer"
+      >
+      <a href="./static/AnualReport/Annual Report 2022.pdf " target="_blank">
+        <h4 class="flex justify-center items-center p-8 font-bold">2021-22</h4>
+        </a>
+      </div>
+    </div>
+    </section>  
+
+    
+                                            
+
+
+
+    <!---------------------------- Footer --------------------->
+
+     <!-- Footer -->
+    <script>
+      // Use jQuery to load the footer component from footer.html
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer">
+    </div>
+
+    
+
+    <!-- Join The Cause Sticky Banner -->
+    <div class="fixed bottom-24 right-4 z-50">
+      <a href="./joinTheCause.html" class="flex items-center px-4 py-3 font-semibold bg-theme-golden rounded-full bg-opacity-90 group hover:bg-opacity-100 hover:text-red-900 text-white shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+        <span class="mr-2">Join The Cause</span>
+        <svg class="stroke-current" width="10" height="10" stroke-width="2" viewBox="0 0 10 10" aria-hidden="true">
+          <g fill-rule="evenodd">
+            <path class="transition duration-200 ease-in-out opacity-0 group-hover:opacity-100" d="M0 5h7"></path>
+            <path
+              class="transition duration-200 ease-in-out opacity-100 group-hover:transform group-hover:translate-x-1"
+              d="M1 1l4 4-4 4"></path>
+          </g>
+        </svg>
+      </a>
+    </div>
+
+<!-- Script -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/10/17/11/20241017110210-A7ZSM3MX.js"></script>
+    
+
+    <!--  -->
+    <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script> -->
+
+    <!-- Replace the previous script with this new script -->
+    <script>
+      function toggleMessage() {
+        const message = document.getElementById('floating-message');
+        message.classList.toggle('show');
+      }
+    </script>
+  </body>
+</html>

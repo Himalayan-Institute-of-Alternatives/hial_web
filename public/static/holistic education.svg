@@ -1,0 +1,19 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500">
+	<title>template</title>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 60px;fill: #ffffff;font-weight: 400;font-family: "Roboto-Regular", "Roboto" } 
+		.t1 { font-size: 30px;fill: #ffffff;font-weight: 400;font-family: "Roboto-Regular", "Roboto" } 
+	</style>
+	<rect width="1500" height="500" id="Layer 1" style="fill: #711117"/>
+	<text id="The current pace of global development renders insufficient the 3Rs (Reading, wRiting, aRithmetic) and necessitates the need for 3Hs, (Head, Hands &amp; Heart)." style="transform: matrix(1,0,0,1,131,213.12)" >
+		<tspan x="0" y="0" class="t0">Holistic</tspan><tspan  y="0" class="t0"> </tspan><tspan  y="0" class="t0">Education
+</tspan>
+	</text>
+	<text id="The current pace of global devel" style="transform: matrix(1,0,0,1,133,274.12)" >
+		<tspan x="0" y="0" class="t1">The current pace of global development renders insufficient the 3Rs (Reading, wRiting, aRithmetic) </tspan><tspan  y="0" class="t1">
+</tspan>
+		<tspan x="0" y="36" class="t1">and necessitates the need for 3Hs, (Head, Hands &amp; Heart).
+</tspan>
+	</text>
+</svg>

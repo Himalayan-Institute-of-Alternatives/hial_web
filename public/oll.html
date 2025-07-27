@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OLL</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./static/favicon.png"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  </head>
+  <body>
+    <!--    NAV - BAR -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+
+
+     <!-- main content -->
+     <div class="flex heading text-4xl px-4 font-bold text-theme-golden justify-center mt-6"><h6>OUR LIVE LABs</h6></div>
+     <hr class="text-xl font-medium mt-1">
+    <!-- ------------ grid ---------- -->
+    <div
+      class="grid grid-col-1 md:grid-cols-12 gap-1 my-4 p-4 place-items-start"
+    >
+      <!-- SPV  -->
+      <div class="md:col-span-12 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">Overview:</h4>
+           <ol>
+            <li>Sheshyon Innovations We prioritize using sun and earth (and waste) to build our buildings but also work with conventional materials when needed. We are pioneers in Passive Solar Heated Building technology. To take this technology to the masses, government and Army we have started the Shesyon Innovations construction company. It promotes regenerative construction technologies to develop Ladakh as a model community for the Hindu Kush Himalayas and ultimately the mountain regions of the world.</li> <br>
+            <li>Shesyon Brick Productions: We produce bricks made of local mud mixed with straw that is rescued from Punjab/Delhi NCR. These bricks are low density and have high insulation value. Thus, they reduce pollution twice, first in Delhi and then in Ladakh.</li> <br>
+            <li>Ice Stupas: Ice Stupa is a mechanism of water management by freezing waste-winter-water in the form of conical artificial glaciers in the high mountains. It melts providing water in the agricultural fields in spring the driest season of the year and when it is needed the most. It is now being used to rehabilitate villages that were deserted because of climate change.</li> <br>
+            <li>High Valley Desert Greenings: With climate change, Ladakh is experiencing increasing amount of rainfall leading to flash flood events due to lack of vegetation on the bare mountains. So, we are working to help nature get greener at higher valley areas to allow the precipitation to soak inside the ground instead of running off.</li> <br>
+            <li>Himalayan Farmstays: As a live lab to the school of responsible tourism we are nurturing farm stays to support local economy by empowering the villagers of Ladakh while providing an authentic experience to the tourists and enabling the students to learn the basics of hospitality while working with the local communities.</li>
+           </ol>
+        </p>
+      </div>
+      
+    </div>
+
+     <!-- Footer -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>

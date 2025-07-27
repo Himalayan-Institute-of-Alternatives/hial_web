@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omniverse</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./static/favicon.png"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  </head>
+  <body>
+    <!--    NAV - BAR -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+
+
+     <!-- main content -->
+     <div class="flex heading text-4xl px-4 font-bold text-theme-golden justify-center mt-6"><h6>Omniverse</h6></div>
+     <hr class="text-xl font-medium mt-1">
+    <!-- ------------ grid ---------- -->
+    <div
+      class="grid grid-cols-12 gap-1 my-4 p-4 place-items-center mx-6"
+    >
+      <!--  omni Content  -->
+      <div class="col-span-6 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+        For Evolving Intelligently
+Towards a life of harmony
+
+with self, society and natureculturally, and environmentally.
+        </p>
+        
+        <!-- button -->
+        <a href="https://omniverse.life/">
+        <button class="rounded-full bg-theme-golden text-white  hover:bg-theme-maroon font-medium font-lg px-6 py-2 my-5 ml-9">Visit Omniverse</button>
+    </a>
+      </div>
+      
+      <!-- omni side photo  -->
+      <div class="col-span-6 justify-center flex overflow-hidden mt-6 w-1/2">
+       <img src="./static/omni.png" alt="">
+      </div>
+    </div>
+
+     <!-- Footer -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agri Photovoltaic</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./static/favicon.png"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  </head>
+  <body>
+    <!--    NAV - BAR -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+
+
+     <!-- main content -->
+     <div class="flex heading text-4xl px-4 font-bold text-theme-golden justify-center mt-6"><h6>Agri Photovoltaic</h6></div>
+     <hr class="text-xl font-medium mt-1">
+    <!-- ------------ grid ---------- -->
+    <div
+      class="grid grid-col-1 md:grid-cols-12 gap-1 my-4 p-4 place-items-start"
+    >
+      <!-- SPV  -->
+      <div class="md:col-span-12 place-content-center justify-center flex-col overflow-hidden">
+        
+        <p>
+          <h4 class="text-xl font-bold text-theme-golden pr-2">Overview:</h4>
+        
+             HIAL has partnered with Indian Oil Corporation Limited (IOCL) to develop an Agri Voltaic roadmap for Ladakh. This roadmap will serve as a reference document for the local and central government, facilitating the promotion and assurance of nutrient security for the region's pashmina goats. HIAL aims to prototype a scalable entrepreneurial model of greenhouse agrivoltaic based fodder production coupled with pashmina goat herding in Phyang village of Leh district in Ladakh. The project includes setting up a 40 kW Solar PV system with a greenhouse under it that creates the baseline data for quantification of fodder production from such projects; the number of goats that can be benefited, and to develop a economic model for such projects on a large scale. Through this project, HIAL and IOCL are actively working towards enhancing nutrient security and sustainability for the pashmina goat population in Ladakh while leveraging solar energy and promoting agricultural innovation.	
+        </p>
+      </div>
+      
+    </div>
+
+    <!-- Gallery Grid -->
+     <hr class="text-xl font-medium my-2">
+
+    <section class="imahe-grid my-4 mx-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-4">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center"
+          src="./static/agri1.jpeg"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center"
+          src="./static/agri2.jpeg"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center"
+          src="./static/agri3.jpeg"
+        />
+      </div>
+       <div>
+        <img
+          class="h-auto max-w-full rounded-lg object-cover object-center"
+          src="./static/agri1.jpeg"
+        />
+      </div>
+    </div>
+    </div>
+      </div>
+    </section>
+
+     <!-- Footer -->
+    <script>
+      // Use jQuery to load the header component from header.html
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>
