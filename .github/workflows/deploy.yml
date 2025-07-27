@@ -37,7 +37,7 @@ jobs:
       - name: Build Tailwind CSS
         run: |
           cd public
-          npx tailwindcss -i ./src/input.css -o ./style.css --minify
+          npx tailwindcss -i ../src/input.css -o ./style.css --minify
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
