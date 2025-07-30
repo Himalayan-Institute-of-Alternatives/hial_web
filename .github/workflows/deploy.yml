@@ -49,6 +49,15 @@ jobs:
           # Replace all CSS links with versioned links
           find . -name "*.html" -type f -exec sed -i "s/href=\"style\.css\"/href=\"style.css?v=${{ steps.cache-bust.outputs.version }}\"/g" {} \;
 
+      - name: Check for missing files
+        run: |
+          cd public
+          echo "Checking for common missing files..."
+          # List all referenced files to help identify missing ones
+          find . -name "*.html" -exec grep -h "src=\"./static/" {} \; | sed 's/.*src="\.\/static\///' | sed 's/".*//' | sort | uniq > referenced_files.txt
+          echo "Referenced files:"
+          cat referenced_files.txt
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
