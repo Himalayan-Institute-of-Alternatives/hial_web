@@ -58,6 +58,21 @@ jobs:
           echo "Referenced files:"
           cat referenced_files.txt
 
+      - name: Fix case sensitivity issues
+        run: |
+          cd public
+          echo "Fixing case sensitivity issues..."
+          # Fix common case sensitivity issues in HTML files
+          find . -name "*.html" -type f -exec sed -i 's/href="\.\/executiveTeam\.html"/href=".\/executiveteam.html"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/href="\.\/hillsFello\.html"/href=".\/hillsfello.html"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/href="\.\/ladakhFellow\.html"/href=".\/ladakhfellow.html"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/href="\.\/osDA\.html"/href=".\/osda.html"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/href="\.\/dwF\.html"/href=".\/dwf.html"/g' {} \;
+          find . -name "*.html" -type f -type f -exec sed -i 's/href="\.\/campusLife\.html"/href=".\/campuslife.html"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/href="\.\/joinTheCause\.html"/href=".\/jointhecause.html"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/href="\.\/SEF\/index\.html"/href=".\/sef\/index.html"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/href="\.\/AnualReport\//href=".\/anualreport\//g' {} \;
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
