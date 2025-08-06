@@ -135,6 +135,10 @@ jobs:
           find . -name "*.html" -type f -exec sed -i 's/src="\.\/static\/values_side_phpto\.webp"/src=".\/static\/values_side_phpto.webp"/g' {} \;
           find . -name "*.html" -type f -exec sed -i 's/src="\.\/static\/osda\/osdaHero\.png"/src=".\/static\/osda\/osdahero.png"/g' {} \;
 
+          # Fix Tailwind config case sensitivity issues
+          echo "Fixing Tailwind config case sensitivity..."
+          sed -i 's/heroSlider\.gif/heroslider.gif/g' tailwind.config.js
+
       - name: Verify file existence and provide summary
         run: |
           cd public

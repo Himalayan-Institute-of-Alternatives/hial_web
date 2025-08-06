@@ -18,9 +18,9 @@ module.exports = {
         collab: "url('./static/22.png')",
         givingBack: "url('./static/33.png')",
         sw: "url('./static/sw.jpg')",
-        gjb: "url('./static/GJA.jpeg')",
+        gjb: "url('./static/gja.jpeg')",
         hero_hial_campus_aab: "url('./static/hial_campus_aab.jpg')",
-        slider: "url('./static/heroSlider.gif')",
+        slider: "url('./static/heroslider.gif')",
 
         pattern: "url('/img/pattern.png')",
         anualReport: "url('./static/gallery.jpg')",
