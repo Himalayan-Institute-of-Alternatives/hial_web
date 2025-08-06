@@ -139,6 +139,31 @@ jobs:
           echo "Fixing Tailwind config case sensitivity..."
           sed -i 's/heroSlider\.gif/heroslider.gif/g' tailwind.config.js
 
+          # Fix additional HTML file references
+          find . -name "*.html" -type f -exec sed -i 's/href="\.\/lifeAtPhyangvillage\.html"/href=".\/lifeatphyangvillage.html"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/href="\.\/agriVoltac\.html"/href=".\/agrivoltac.html"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/href="\.\/IsAutomation\.html"/href=".\/isautomation.html"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/href="\.\/solarTent\.html"/href=".\/solartent.html"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/href="\.\/GTS\.html"/href=".\/gts.html"/g' {} \;
+
+          # Fix logo and other image references
+          find . -name "*.html" -type f -exec sed -i 's/src="\.\/static\/logo_axixBank\.png"/src=".\/static\/logo_axixbank.png"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/src="\.\/static\/logo_CHRobinson\.png"/src=".\/static\/logo_chrobinson.png"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/src="\.\/static\/logo_infoEdge\.gif"/src=".\/static\/logo_infoedge.gif"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/src="\.\/static\/logo_jainIrrigation\.png"/src=".\/static\/logo_jainirrigation.png"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/src="\.\/static\/logo_LNG\.jpg"/src=".\/static\/logo_lng.jpg"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/src="\.\/static\/logo_PWC\.png"/src=".\/static\/logo_pwc.png"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/src="\.\/static\/logo_R2F\.jpg"/src=".\/static\/logo_r2f.jpg"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/src="\.\/static\/logo_sterlingIndia\.webp"/src=".\/static\/logo_sterlingindia.webp"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/src="\.\/static\/logo_TT_Tibet\.png"/src=".\/static\/logo_tt_tibet.png"/g' {} \;
+
+          # Fix video references
+          find . -name "*.html" -type f -exec sed -i 's/src="\.\/static\/videos\/Ladakh_Fellow_Promo\.mp4"/src=".\/static\/videos\/ladakh_fellow_promo.mp4"/g' {} \;
+
+          # Fix PDF references
+          find . -name "*.html" -type f -exec sed -i 's/href="\.\/static\/osda\/OSDA 2025-26 Brochure - Latest Update\.pdf"/href=".\/static\/osda\/osda 2025-26 brochure - latest update.pdf"/g' {} \;
+          find . -name "*.html" -type f -exec sed -i 's/href="\.\/static\/DfW\/61\. Hands On Documentary Film Workshop in Ladakh - Updated\.pdf"/href=".\/static\/dfw\/61. hands on documentary film workshop in ladakh - updated.pdf"/g' {} \;
+
       - name: Verify file existence and provide summary
         run: |
           cd public
