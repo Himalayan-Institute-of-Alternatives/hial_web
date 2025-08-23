@@ -47,6 +47,11 @@ Fixed all case-sensitive image references and missing image files that were caus
 - Fixed `hial-logo-transpirant.png` → `logo.png`
 - Fixed `footer_logo_white.png` → `logo_white.png`
 
+### 7. Advisory Board Page (`advisoryboard.html`)
+
+- Fixed `VenKhenpoRigzin.jpg` → `venkhenporigzin.jpg`
+- Fixed `Chewang_Norphel_in_2009.jpg` → `chewang_norphel_in_2009.jpg`
+
 ## Missing Image Replacements
 
 ### 1. Executive Team Page (`executiveteam.html`)
