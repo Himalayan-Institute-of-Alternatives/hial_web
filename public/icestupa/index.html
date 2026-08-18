@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ice Stupa — Himalayan Institute of Alternatives</title>
+<meta name="description" content="How villages across Ladakh have frozen their own water towers since 2014 — milestones, reach, and impact of the Ice Stupa project." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="brand">HIAL <span>/ Ice Stupa</span></div>
+  <a class="cta" href="https://hial.edu.in" target="_blank" rel="noopener noreferrer">hial.edu.in →</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="hero">
+  <div class="hero-cone-stage">
+    <svg id="coneSvg" viewBox="0 0 400 460" xmlns="http://www.w3.org/2000/svg">
+      <!-- rings built bottom-up; JS toggles .on to reveal them as the page loads/scrolls -->
+      <g id="coneRings"></g>
+      <!-- pipe -->
+      <line x1="200" y1="0" x2="200" y2="70" stroke="#3E7C8C" stroke-width="4" />
+      <circle cx="200" cy="70" r="5" fill="#6FC6DC" />
+    </svg>
+  </div>
+  <div class="wrap hero-content">
+    <p class="eyebrow">Himalayan Institute of Alternatives</p>
+    <h1>Ice Stupa</h1>
+    <p class="lede" id="heroSubtitle"></p>
+    <div class="hero-counter">
+      <span class="num" id="heroCounter">0</span>
+      <span class="num-label" id="heroCounterLabel"></span>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll — watch it build ↓</div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <p class="eyebrow">Why a cone</p>
+      <h2 class="section-title">Water, frozen upright</h2>
+      <p>Ladakh is a high-altitude desert: barely 100mm of rain a year, and villages depend on glacier melt arriving weeks after they need it most, in April and May. Flat ice sheets melt fast once the spring sun returns. A tall, narrow cone shades itself — most of its surface faces away from the sun at any given hour — so it survives long enough to matter.</p>
+      <p>No pumps, no power, no fuel. Just a pipe, elevation, and winter air cold enough to freeze water mid-fall. It's a piece of engineering built almost entirely from gravity.</p>
+    </div>
+    <div class="about-figure">
+      <p class="quote">A shaded patch of ice under a footbridge, still standing in May while everything around it had already melted — that's what started this.</p>
+      <cite>— Paraphrased from the project's own origin account</cite>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="panel">
+  <div class="wrap">
+    <p class="eyebrow">The mechanism</p>
+    <h2 class="section-title">Four steps, one winter</h2>
+    <div class="how-grid" id="howGrid"></div>
+  </div>
+</section>
+
+<!-- MILESTONES -->
+<section id="milestones">
+  <div class="wrap">
+    <p class="eyebrow">Milestones</p>
+    <h2 class="section-title">From one footbridge to two dozen villages</h2>
+    <p class="lede">Laid out the way the stupa itself grows — one layer at a time, base to peak.</p>
+    <div class="timeline" id="timeline">
+      <div class="timeline-spine"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="panel" id="reach">
+  <div class="wrap">
+    <p class="eyebrow">Reach</p>
+    <h2 class="section-title">Where the stupas stand</h2>
+    <p class="lede">An illustrative sketch of the valley, not a survey map — tap a marker for what happened there.</p>
+    <div class="map-wrap">
+      <svg id="mapSvg" viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,190 C90,150 160,210 240,170 C330,120 400,150 500,110" stroke="#3E7C8C" stroke-width="3" fill="none" opacity="0.5"/>
+        <path d="M0,140 C120,90 220,130 320,80 C400,45 460,70 500,50" stroke="#22394A" stroke-width="18" fill="none" opacity="0.5"/>
+        <g id="mapPins"></g>
+      </svg>
+      <div class="map-note" id="mapNote"></div>
+    </div>
+    <p class="map-caption">River line and ridge shown schematically to orient the markers, not to scale.</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="impact">
+  <div class="wrap">
+    <p class="eyebrow">Impact, in numbers</p>
+    <h2 class="section-title">A decade of winters</h2>
+    <div class="stats-grid" id="statsGrid"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section panel">
+  <div class="wrap">
+    <h2>Ladakh's institutions still need building.</h2>
+    <p class="lede" style="margin-left:auto;margin-right:auto;">Ice Stupa is one strand of HIAL's work. See the rest, or find your own way to contribute.</p>
+    <a class="btn primary" href="https://hial.edu.in" target="_blank" rel="noopener noreferrer">Visit hial.edu.in</a>
+    <a class="btn ghost" href="https://hial.edu.in" target="_blank" rel="noopener noreferrer">Get involved</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Himalayan Institute of Alternatives, Ladakh</p>
+    <p>Content drafted from public sources — figures marked for verification pending HIAL's own records.</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

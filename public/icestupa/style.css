@@ -1,0 +1,200 @@
+/* ============================================================
+   ICE STUPA — design tokens
+   ============================================================ */
+:root{
+  --bg:        #0A1622;
+  --bg-panel:  #0F202D;
+  --bg-panel-2:#132734;
+  --ice:       #EEF6F9;
+  --ice-dim:   #B7C9D2;
+  --frost:     #6FC6DC;
+  --frost-dim: #3E7C8C;
+  --amber:     #D9A441;
+  --amber-dim: #7A6430;
+  --rock:      #9C8468;
+  --line:      rgba(238,246,249,0.12);
+
+  --f-display: 'Space Grotesk', sans-serif;
+  --f-body:    'Source Serif 4', serif;
+  --f-mono:    'IBM Plex Mono', monospace;
+
+  --max: 1180px;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ice);
+  font-family:var(--f-body);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; }
+}
+
+img,svg{ max-width:100%; display:block; }
+a{ color:inherit; }
+.wrap{ max-width:var(--max); margin:0 auto; padding:0 24px; }
+
+h1,h2,h3,h4{ font-family:var(--f-display); font-weight:600; letter-spacing:-0.01em; margin:0; }
+.eyebrow{
+  font-family:var(--f-mono); text-transform:uppercase; letter-spacing:0.14em;
+  font-size:0.72rem; color:var(--frost); margin:0 0 14px;
+}
+.section-title{ font-size:clamp(1.7rem,3.4vw,2.6rem); color:var(--ice); margin-bottom:14px; }
+.lede{ font-size:1.05rem; color:var(--ice-dim); max-width:640px; }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.site-nav{
+  position:sticky; top:0; z-index:50;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 24px; backdrop-filter:blur(10px);
+  background:rgba(10,22,34,0.72); border-bottom:1px solid var(--line);
+}
+.site-nav .brand{ font-family:var(--f-display); font-weight:700; font-size:1rem; letter-spacing:0.02em; }
+.site-nav .brand span{ color:var(--frost); }
+.site-nav a.cta{
+  font-family:var(--f-mono); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.08em;
+  color:var(--bg); background:var(--amber); padding:9px 16px; border-radius:2px; text-decoration:none;
+}
+
+/* ============================================================
+   HERO + GROWING CONE
+   ============================================================ */
+.hero{
+  position:relative; min-height:100svh; display:flex; align-items:flex-end;
+  padding:120px 0 60px; overflow:hidden;
+  background:
+    radial-gradient(ellipse at 50% 120%, rgba(111,198,220,0.14), transparent 60%),
+    linear-gradient(180deg,#08111C 0%, #0A1622 60%, #0A1622 100%);
+}
+.hero-cone-stage{
+  position:absolute; inset:0; display:flex; align-items:flex-end; justify-content:center;
+  pointer-events:none;
+}
+#coneSvg{ width:min(70vw,560px); height:auto; }
+.cone-ring{ transform-origin:center bottom; opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease; }
+.cone-ring.on{ opacity:1; transform:translateY(0); }
+
+.hero-content{ position:relative; z-index:2; width:100%; }
+.hero-content h1{
+  font-size:clamp(2.6rem,9vw,6rem); line-height:0.96; color:var(--ice);
+  text-shadow:0 2px 40px rgba(0,0,0,0.4);
+}
+.hero-content .lede{ margin-top:18px; font-size:1.15rem; max-width:520px; color:var(--ice-dim); }
+
+.hero-counter{
+  margin-top:36px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+  font-family:var(--f-mono);
+}
+.hero-counter .num{
+  font-size:clamp(1.8rem,4.6vw,3.2rem); color:var(--frost); font-weight:600; letter-spacing:-0.02em;
+}
+.hero-counter .num-label{ font-size:0.82rem; color:var(--ice-dim); max-width:220px; text-transform:uppercase; letter-spacing:0.06em; }
+
+.scroll-hint{
+  position:absolute; bottom:22px; left:50%; transform:translateX(-50%);
+  font-family:var(--f-mono); font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase;
+  color:var(--ice-dim); opacity:0.7; z-index:2;
+}
+
+/* ============================================================
+   GENERIC SECTION
+   ============================================================ */
+section{ padding:96px 0; position:relative; }
+.panel{ background:var(--bg-panel); }
+
+/* ---- About ---- */
+.about-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:64px; align-items:start; }
+.about-grid p{ color:var(--ice-dim); font-size:1.02rem; margin:0 0 16px; }
+.about-figure{
+  border:1px solid var(--line); border-radius:4px; padding:26px;
+  background:linear-gradient(160deg, var(--bg-panel-2), var(--bg-panel));
+}
+.about-figure .quote{ font-family:var(--f-body); font-style:italic; color:var(--ice); font-size:1.15rem; border-left:2px solid var(--amber); padding-left:18px; }
+.about-figure cite{ display:block; margin-top:14px; font-family:var(--f-mono); font-size:0.72rem; color:var(--ice-dim); font-style:normal; }
+
+@media (max-width:860px){ .about-grid{ grid-template-columns:1fr; gap:32px; } }
+
+/* ---- How it works ---- */
+.how-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:4px; overflow:hidden; margin-top:44px; }
+.how-step{ background:var(--bg); padding:28px 22px; }
+.how-step .step-num{ font-family:var(--f-mono); color:var(--amber); font-size:0.85rem; }
+.how-step h4{ font-size:1.05rem; margin:10px 0 8px; color:var(--ice); }
+.how-step p{ font-size:0.9rem; color:var(--ice-dim); margin:0; }
+@media (max-width:860px){ .how-grid{ grid-template-columns:1fr; } }
+
+/* ============================================================
+   MILESTONES — ascending rings, mirrors the cone's own growth
+   ============================================================ */
+.timeline{ position:relative; margin-top:56px; }
+.timeline-spine{
+  position:absolute; left:24px; top:0; bottom:0; width:2px;
+  background:linear-gradient(180deg, var(--frost-dim), var(--amber-dim));
+}
+.tl-item{
+  position:relative; padding-left:72px; margin-bottom:52px; opacity:0; transform:translateY(18px);
+  transition:opacity .6s ease, transform .6s ease;
+}
+.tl-item.on{ opacity:1; transform:translateY(0); }
+.tl-item:last-child{ margin-bottom:0; }
+.tl-ring{
+  position:absolute; left:0; top:2px; width:50px; height:50px; border-radius:50%;
+  border:2px solid var(--frost); background:var(--bg-panel);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--f-mono); font-size:0.66rem; color:var(--frost); text-align:center; line-height:1.1;
+}
+.tl-item:nth-child(odd) .tl-ring{ border-color:var(--amber); color:var(--amber); }
+.tl-item h4{ font-size:1.2rem; color:var(--ice); margin-bottom:6px; }
+.tl-item .tl-year{ font-family:var(--f-mono); font-size:0.72rem; color:var(--ice-dim); text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px; }
+.tl-item p{ color:var(--ice-dim); max-width:620px; margin:0; }
+
+/* ============================================================
+   MAP / REACH
+   ============================================================ */
+.map-wrap{ position:relative; margin-top:48px; border:1px solid var(--line); border-radius:6px; overflow:hidden; background:linear-gradient(180deg,#0C1D29,#0A1622); }
+.map-caption{ font-family:var(--f-mono); font-size:0.7rem; color:var(--ice-dim); margin-top:10px; }
+#mapSvg{ width:100%; height:auto; display:block; }
+.map-pin{ cursor:pointer; }
+.map-pin circle{ fill:var(--frost); stroke:var(--bg); stroke-width:2; transition:r .2s ease, fill .2s ease; }
+.map-pin:hover circle, .map-pin.active circle{ fill:var(--amber); r:8; }
+.map-pin text{ font-family:var(--f-mono); font-size:9px; fill:var(--ice-dim); }
+.map-note{
+  position:absolute; max-width:220px; background:var(--bg-panel-2); border:1px solid var(--line);
+  border-radius:4px; padding:12px 14px; font-size:0.85rem; color:var(--ice); display:none; z-index:5;
+  box-shadow:0 12px 30px rgba(0,0,0,0.4);
+}
+.map-note.show{ display:block; }
+.map-note strong{ display:block; font-family:var(--f-mono); font-size:0.68rem; color:var(--amber); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:4px; }
+
+/* ============================================================
+   STATS
+   ============================================================ */
+.stats-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:4px; overflow:hidden; margin-top:44px; }
+.stat{ background:var(--bg-panel); padding:32px 22px; }
+.stat .value{ font-family:var(--f-display); font-size:clamp(1.6rem,3vw,2.3rem); color:var(--frost); }
+.stat .label{ font-family:var(--f-mono); font-size:0.76rem; color:var(--ice-dim); margin-top:8px; }
+@media (max-width:860px){ .stats-grid{ grid-template-columns:1fr 1fr; } }
+
+/* ============================================================
+   CTA / FOOTER
+   ============================================================ */
+.cta-section{ text-align:center; padding:110px 0; }
+.cta-section h2{ font-size:clamp(1.8rem,4vw,2.8rem); }
+.cta-section .lede{ margin:14px auto 30px; }
+.btn{
+  display:inline-block; font-family:var(--f-mono); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.08em;
+  padding:14px 28px; border-radius:2px; text-decoration:none;
+}
+.btn.primary{ background:var(--amber); color:var(--bg); }
+.btn.ghost{ border:1px solid var(--line); color:var(--ice); margin-left:12px; }
+
+footer{ border-top:1px solid var(--line); padding:32px 0; }
+footer .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+footer p{ margin:0; font-family:var(--f-mono); font-size:0.72rem; color:var(--ice-dim); }
