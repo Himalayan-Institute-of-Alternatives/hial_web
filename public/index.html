@@ -95,6 +95,35 @@
         right: 10px;
         cursor: pointer;
       }
+
+      /* Scroll-reveal: elements fade + rise into place as they enter view */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Slightly slower, smoother easing on existing hover transitions */
+      .hover-lift {
+        transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+      }
+      .hover-lift:hover {
+        transform: scale(1.02);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Subtle slow zoom on the hero background video */
+      .hero-video {
+        animation: heroZoom 20s ease-in-out infinite alternate;
+      }
+      @keyframes heroZoom {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.06); }
+      }
     </style>
   </head>
   <body>
@@ -134,14 +163,15 @@
     <section class="mx-auto max-w-7xl">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-2 p-4">
       <!-- Large block on the left -->
-      <div class="md:col-span-2  md:row-span-2  relative text-white cursor-pointer">
+      <div class="md:col-span-2  md:row-span-2  relative overflow-hidden text-white cursor-pointer">
         <!-- Video Background -->
         <video 
           autoplay 
           loop 
           muted 
           playsinline
-          class="absolute rounded-lg top-0 left-0 w-full h-full object-cover -z-10"
+          preload="auto"
+          class="hero-video absolute rounded-lg top-0 left-0 w-full h-full object-cover -z-10"
         >
           <source src="./static/aab.mp4" type="video/mp4">
         </video>
@@ -188,7 +218,7 @@
 
       <!-- Top right block 3Rto3H -->
       <div
-        class="bg-theme-golden bg-RtoH bg-cover bg-center bg-no-repeat hover:bg-theme-maroon rounded-lg  transition-colors duration-300 text-white p-4 cursor-pointer"
+        class="hover-lift bg-theme-golden bg-RtoH bg-cover bg-center bg-no-repeat hover:bg-theme-maroon rounded-lg  transition-colors duration-300 text-white p-4 cursor-pointer"
       >
         <!-- Content for bottom right block 3Rto3H -->
         <a href="./ourphilosophy.html">
@@ -197,7 +227,7 @@
       </div>
       <!-- Middle right block -->
       <div
-        class="bg-theme-maroon bg-learningByDoing bg-cover bg-center bg-no-repeat hover:bg-theme-golden rounded-lg  transition-colors duration-300 text-white p-4 cursor-pointer"
+        class="hover-lift bg-theme-maroon bg-learningByDoing bg-cover bg-center bg-no-repeat hover:bg-theme-golden rounded-lg  transition-colors duration-300 text-white p-4 cursor-pointer"
       >
         <!-- Content for middle right block Learning By Doing-->
         <a href="./ourphilosophy.html">
@@ -206,7 +236,7 @@
       </div>
       <!-- Bottom right block -->
       <div
-        class="bg-theme-maroon bg-collab bg-cover bg-center bg-no-repeat hover:bg-theme-golden rounded-lg  transition-colors duration-300 text-white p-4 cursor-pointer"
+        class="hover-lift bg-theme-maroon bg-collab bg-cover bg-center bg-no-repeat hover:bg-theme-golden rounded-lg  transition-colors duration-300 text-white p-4 cursor-pointer"
       >
         <!-- Content for bottom right block -->
         <a href="./ourphilosophy.html">
@@ -215,7 +245,7 @@
       </div>
       <!-- Bottom left block -->
       <div
-        class="bg-theme-maroon bg-givingBack bg-cover bg-center bg-no-repeat hover:bg-theme-golden rounded-lg  transition-colors duration-300 text-white p-4 cursor-pointer"
+        class="hover-lift bg-theme-maroon bg-givingBack bg-cover bg-center bg-no-repeat hover:bg-theme-golden rounded-lg  transition-colors duration-300 text-white p-4 cursor-pointer"
       >
         <!-- Content for bottom right block -->
         <a href="./ourphilosophy.html">
@@ -237,7 +267,7 @@
     <div class="grid grid-cols-1 md:grid-cols-4 gap-2 p-4">
       <!-- Top right block -->
       <div
-        class="md:col-span-1 md:row-span-1 bg-theme-golden hover:bg-theme-maroon rounded-lg text-white p-4 cursor-pointer text-sm text-justify"
+        class="hover-lift md:col-span-1 md:row-span-1 bg-theme-golden hover:bg-theme-maroon rounded-lg text-white p-4 cursor-pointer text-sm text-justify"
       >
         <!-- Content for top right block -->
         <p>
@@ -278,7 +308,7 @@
       </div>
       <!-- Bottom left block -->
       <div
-        class="md:col-span-1 md:row-span-1 bg-theme-golden hover:bg-theme-maroon rounded-lg  text-white p-4 cursor-pointer text-sm text-justify"
+        class="hover-lift md:col-span-1 md:row-span-1 bg-theme-golden hover:bg-theme-maroon rounded-lg  text-white p-4 cursor-pointer text-sm text-justify"
       >
         <!-- Content for bottom right block -->
         <p>
@@ -337,7 +367,7 @@
       <!-- cover page 2019-20 -->
        
           <div
-            class="md:col-span-1  bg-theme-golden hover:bg-theme-maroon bg-anualReport bg-fixed bg-bottom bg-no-repeat  duration-300 text-white  cursor-pointer"
+            class="hover-lift md:col-span-1  bg-theme-golden hover:bg-theme-maroon bg-anualReport bg-fixed bg-bottom bg-no-repeat  duration-300 text-white  cursor-pointer"
           >
           <a href="./static/anualreport/annual report 2019-20.pdf" target="_blank">
           <h4 class="flex justify-center items-center p-8 font-bold">2019-20</h4>
@@ -347,7 +377,7 @@
       <!-- cover page 2020-21 -->
        
       <div
-        class="md:col-span-1   bg-theme-maroon hover:bg-theme-golden bg-anualReport bg-fixed bg-bottom bg-no-repeat  duration-300 text-white  cursor-pointer"
+        class="hover-lift md:col-span-1   bg-theme-maroon hover:bg-theme-golden bg-anualReport bg-fixed bg-bottom bg-no-repeat  duration-300 text-white  cursor-pointer"
       >
               <a href="./static/anualreport/annual report 2020-21.pdf" target="_blank">
       <h4 class="flex justify-center items-center p-8 font-bold">2020-21</h4>
@@ -357,7 +387,7 @@
       <!-- cover page 2021-22 -->
        
       <div
-        class="md:col-span-1  bg-theme-maroon bg-anualReport bg-fixed bg-bottom bg-no-repeat hover:bg-theme-golden  transition-colors duration-300 text-white p-4 cursor-pointer"
+        class="hover-lift md:col-span-1  bg-theme-maroon bg-anualReport bg-fixed bg-bottom bg-no-repeat hover:bg-theme-golden  transition-colors duration-300 text-white p-4 cursor-pointer"
       >
               <a href="./static/anualreport/annual report 2021-22.pdf" target="_blank">
         <h4 class="flex justify-center items-center p-8 font-bold">2021-22</h4>
@@ -414,6 +444,30 @@
         const message = document.getElementById('floating-message');
         message.classList.toggle('show');
       }
+    </script>
+
+    <!-- Scroll-reveal trigger: adds .active to .reveal elements as they enter the viewport -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const revealEls = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window)) {
+          // Fallback: just show everything if the browser can't observe
+          revealEls.forEach((el) => el.classList.add('active'));
+          return;
+        }
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+        );
+        revealEls.forEach((el) => observer.observe(el));
+      });
     </script>
   </body>
 </html>
