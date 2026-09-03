@@ -1,5 +1,5 @@
 const { put } = require('@vercel/blob');
-const formidable = require('formidable');
+const { formidable } = require('formidable');
 const crypto = require('crypto');
 const { isAuthenticated } = require('./_lib/auth');
 
