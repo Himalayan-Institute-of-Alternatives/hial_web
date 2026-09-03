@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin — Ice Stupa</title>
+<meta name="robots" content="noindex, nofollow" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../style.css" />
+<link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="brand">HIAL <span>/ Ice Stupa Admin</span></div>
+  <a class="cta" id="logoutBtn" href="#" style="display:none;">Log out</a>
+</nav>
+
+<!-- LOGIN VIEW -->
+<div class="wrap admin-wrap" id="loginView">
+  <div class="admin-panel" style="max-width:380px; margin:80px auto;">
+    <p class="eyebrow">Staff access only</p>
+    <h2 class="section-title" style="font-size:1.6rem;">Admin Login</h2>
+    <form id="loginForm">
+      <input type="password" id="passwordInput" placeholder="Password" class="admin-input" required autofocus />
+      <button type="submit" class="btn primary" style="width:100%; margin-top:14px;">Log in</button>
+      <p class="admin-error" id="loginError"></p>
+    </form>
+  </div>
+</div>
+
+<!-- ADMIN VIEW -->
+<div class="wrap admin-wrap" id="adminView" style="display:none;">
+
+  <section style="padding-top:40px;">
+    <p class="eyebrow">Add content</p>
+    <h2 class="section-title" style="font-size:1.8rem;">New upload</h2>
+
+    <div class="admin-panel">
+      <div class="type-toggle" id="typeToggle">
+        <button type="button" class="type-btn active" data-type="testimonial">Testimonial</button>
+        <button type="button" class="type-btn" data-type="gallery-photo">Gallery Photo</button>
+        <button type="button" class="type-btn" data-type="gallery-video">Gallery Video</button>
+      </div>
+
+      <form id="uploadForm">
+        <input type="hidden" id="typeField" value="testimonial" />
+
+        <!-- Testimonial fields -->
+        <div id="testimonialFields">
+          <input type="text" id="authorName" placeholder="Name" class="admin-input" />
+          <input type="text" id="role" placeholder="Role / village (optional)" class="admin-input" />
+          <textarea id="quote" placeholder="Testimonial text" class="admin-input" rows="4"></textarea>
+        </div>
+
+        <!-- Gallery fields -->
+        <div id="galleryFields" style="display:none;">
+          <input type="file" id="mediaFile" class="admin-input" accept="image/*" />
+          <input type="text" id="caption" placeholder="Caption (optional)" class="admin-input" />
+        </div>
+
+        <button type="submit" class="btn primary" id="submitBtn" style="margin-top:14px;">Upload</button>
+        <span class="admin-status" id="uploadStatus"></span>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">Manage</p>
+    <h2 class="section-title" style="font-size:1.8rem;">Existing content</h2>
+    <div id="itemsList" class="admin-items"></div>
+  </section>
+
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

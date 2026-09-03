@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gallery — Ice Stupa, HIAL</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href="index.html">HIAL <span>/ Ice Stupa</span></a>
+  <div class="nav-dropdown" id="navDropdown">
+    <button class="nav-dropdown-btn" id="navDropdownBtn">Explore ▾</button>
+    <div class="nav-dropdown-menu">
+      <a href="index.html">Overview</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="gallery.html" class="active">Gallery</a>
+    </div>
+  </div>
+</nav>
+
+<header style="padding:70px 0 30px;">
+  <div class="wrap">
+    <p class="eyebrow">In pictures and film</p>
+    <h1 class="section-title" style="font-size:clamp(2rem,5vw,3rem);">Gallery</h1>
+    <p class="lede">Builds, villages, and the process, as documented by HIAL staff and visiting teams.</p>
+  </div>
+</header>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div id="galleryGrid" class="gallery-grid"></div>
+    <p class="admin-empty" id="galleryEmpty" style="display:none;">Nothing here yet — check back soon.</p>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <div class="lightbox-content" id="lightboxContent"></div>
+  <p class="lightbox-caption" id="lightboxCaption"></p>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>Himalayan Institute of Alternatives, Ladakh</p>
+    <a href="index.html" style="color:var(--frost);">← Back to Ice Stupa overview</a>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script src="gallery.js"></script>
+</body>
+</html>
