@@ -19,13 +19,7 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
 renderer.setSize(innerWidth, innerHeight);
-// Orbit-drag is a mouse interaction. On touch devices, capturing touch
-// input here would block normal page scrolling, so it's left off below
-// mobile breakpoint - the day/night animation still plays either way,
-// it's only manual rotation that's desktop-only.
-if (window.innerWidth > 700) {
-    renderer.domElement.style.pointerEvents = "auto";
-}
+renderer.domElement.style.pointerEvents = "auto";
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1.05;
@@ -34,6 +28,10 @@ document.body.appendChild(renderer.domElement);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.dampingFactor = 0.06;
+// Zoom-on-scroll would otherwise fight with normal page scrolling
+// whenever the cursor sits over the background rather than a card.
+// Rotate-by-drag stays on since dragging isn't a scroll gesture.
+controls.enableZoom = false;
 controls.minDistance = 7;
 controls.maxDistance = 30;
 controls.maxPolarAngle = Math.PI * 0.47;
