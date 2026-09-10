@@ -19,7 +19,13 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
 renderer.setSize(innerWidth, innerHeight);
-renderer.domElement.style.pointerEvents = "auto";
+// Orbit-drag is a mouse interaction. On touch devices, capturing touch
+// input here would block normal page scrolling, so it's left off below
+// mobile breakpoint - the day/night animation still plays either way,
+// it's only manual rotation that's desktop-only.
+if (window.innerWidth > 700) {
+    renderer.domElement.style.pointerEvents = "auto";
+}
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1.05;

@@ -99,11 +99,23 @@ canvas{
 .reach-note strong{ display:block; font-family:var(--f-mono); font-size:10px; color:#ffc928; text-transform:uppercase; letter-spacing:.06em; margin-bottom:4px; }
 
 @media (max-width:700px){
+  /* Let touch gestures reach the page for scrolling, instead of the
+     3D canvas capturing them for orbit-drag (see three-scene.js). */
+  canvas{ pointer-events:none; }
+
   #quickLinks{ bottom:12px; }
   #quickLinks a{ padding:8px 10px; font-size:9px; }
   .site-section{ padding:90px 18px 130px; }
   .section-card{ padding:25px 23px; }
-  #telemetry{ top:120px; right:14px; width:165px; padding:12px; }
+
+  /* Was a fixed panel that overlapped every section's text as you
+     scrolled. On mobile there's no room for a persistent floating
+     panel, so it now sits once in the hero area and scrolls away
+     normally with the page, like any other content. */
+  #telemetry{
+    position:absolute; top:230px; left:14px; right:14px; width:auto; padding:14px;
+  }
+
   #title{ top:78px; font-size:22px; }
   .mini-stats{ grid-template-columns:1fr 1fr; }
 }
