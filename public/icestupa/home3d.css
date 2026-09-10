@@ -1,0 +1,109 @@
+/* ============================================================
+   3D HOMEPAGE — extends style.css, used only on index.html
+   Adapted from prototype: offsets shifted down to clear the
+   site's existing sticky .site-nav bar (~58px tall).
+   ============================================================ */
+
+html, body{ background:#07111d; }
+
+canvas{
+  display:block; width:100%; height:100%; position:fixed; inset:0; z-index:0;
+}
+
+#loading{
+  position:fixed; inset:0; display:grid; place-items:center;
+  color:rgba(255,255,255,.75); letter-spacing:.14em; font-size:11px;
+  text-transform:uppercase; pointer-events:none; z-index:5;
+}
+
+#title{
+  position:fixed; top:90px; left:50%; transform:translateX(-50%); z-index:10;
+  color:rgba(255,255,255,0.94); font-size:clamp(24px,3vw,42px); font-weight:500;
+  letter-spacing:0.18em; text-transform:uppercase;
+  text-shadow:0 2px 18px rgba(0,0,0,0.35); pointer-events:none;
+  font-family:var(--f-display);
+}
+
+#telemetry{
+  position:fixed; top:90px; right:28px; z-index:10; width:180px;
+  padding:13px 14px 12px; border:1px solid rgba(255,255,255,0.14); border-radius:14px;
+  background:rgba(8,18,29,0.68); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  color:#fff; box-shadow:0 12px 35px rgba(0,0,0,0.22); font-family:var(--f-mono);
+}
+#telemetry .panel-title{ margin-bottom:9px; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; opacity:.52; }
+.metric{ display:flex; align-items:baseline; justify-content:space-between; padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.08); }
+.metric:last-child{ border-bottom:0; padding-bottom:0; }
+.metric-name{ font-size:11px; opacity:.62; }
+.metric-value{ font-size:12px; font-weight:500; }
+#telemetry .status{ display:inline-flex; align-items:center; gap:7px; margin-top:9px; font-size:10px; opacity:.7; }
+#telemetry .status-dot{ width:6px; height:6px; border-radius:50%; background:#b9e8ff; box-shadow:0 0 10px #b9e8ff; }
+
+/* ---------- QUICK LINK BAR (in-page section jump) ---------- */
+#quickLinks{
+  position:fixed; left:50%; bottom:18px; transform:translateX(-50%); z-index:30;
+  display:flex; align-items:center; gap:4px; padding:5px; flex-wrap:wrap; justify-content:center;
+  border:1px solid rgba(255,255,255,0.13); border-radius:12px;
+  background:rgba(7,15,25,0.74); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.25); max-width:calc(100vw - 24px);
+}
+#quickLinks a{
+  color:rgba(255,255,255,0.72); text-decoration:none; font-size:11px; letter-spacing:0.08em;
+  text-transform:uppercase; padding:9px 13px; border-radius:8px; transition:color .2s ease, background .2s ease;
+  font-family:var(--f-mono); white-space:nowrap;
+}
+#quickLinks a:hover{ color:#fff; background:rgba(255,255,255,0.09); }
+
+#pageContent{ position:relative; z-index:5; width:100%; pointer-events:none; }
+.page-spacer{ height:100vh; min-height:560px; }
+
+.site-section{
+  min-height:78vh; box-sizing:border-box; padding:110px 8vw 150px;
+  display:flex; align-items:center; pointer-events:none;
+}
+.section-card{
+  width:min(760px,100%); padding:34px 38px; border:1px solid rgba(255,255,255,0.12); border-radius:18px;
+  background:rgba(7,17,29,0.78); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 18px 50px rgba(0,0,0,0.24); color:rgba(255,255,255,0.9); pointer-events:auto;
+}
+.section-card h2{
+  margin:0 0 13px; font-size:clamp(25px,3vw,38px); font-weight:500; letter-spacing:.06em;
+  text-transform:uppercase; font-family:var(--f-display); color:#fff;
+}
+.section-card p{ margin:0 0 14px; max-width:680px; color:rgba(255,255,255,0.66); font-size:14px; line-height:1.8; font-family:var(--f-body); }
+.section-card p:last-child{ margin-bottom:0; }
+
+/* Compact milestone list inside a single card, rather than one card per year */
+.mini-milestone{ padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.08); }
+.mini-milestone:last-child{ border-bottom:0; padding-bottom:0; }
+.mini-milestone:first-child{ padding-top:0; }
+.mini-milestone .mm-year{ font-family:var(--f-mono); font-size:11px; color:#7fd4e8; text-transform:uppercase; letter-spacing:.08em; }
+.mini-milestone h4{ margin:4px 0 6px; font-size:16px; color:#fff; font-weight:500; }
+.mini-milestone p{ font-size:13px; color:rgba(255,255,255,0.62); margin:0; }
+
+/* Data/stats grid inside a card */
+.mini-stats{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:6px; }
+.mini-stat .v{ font-family:var(--f-display); font-size:1.5rem; color:#7fd4e8; }
+.mini-stat .l{ font-family:var(--f-mono); font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px; }
+
+/* Reach map - needs real pointer interaction, unlike the read-only cards */
+#reachCard{ pointer-events:auto; }
+#reachMapSvg{ width:100%; height:auto; margin-top:10px; }
+.reach-pin circle{ fill:#7fd4e8; stroke:#07111d; stroke-width:2; cursor:pointer; transition:r .15s ease, fill .15s ease; }
+.reach-pin:hover circle{ fill:#ffc928; r:8; }
+.reach-pin text{ font-family:var(--f-mono); font-size:9px; fill:rgba(255,255,255,0.7); }
+.reach-note{
+  margin-top:12px; padding:12px 14px; border:1px solid rgba(255,255,255,0.14); border-radius:8px;
+  background:rgba(255,255,255,0.04); font-size:13px; color:rgba(255,255,255,0.75); display:none;
+}
+.reach-note.show{ display:block; }
+.reach-note strong{ display:block; font-family:var(--f-mono); font-size:10px; color:#ffc928; text-transform:uppercase; letter-spacing:.06em; margin-bottom:4px; }
+
+@media (max-width:700px){
+  #quickLinks{ bottom:12px; }
+  #quickLinks a{ padding:8px 10px; font-size:9px; }
+  .site-section{ padding:90px 18px 130px; }
+  .section-card{ padding:25px 23px; }
+  #telemetry{ top:120px; right:14px; width:165px; padding:12px; }
+  #title{ top:78px; font-size:22px; }
+  .mini-stats{ grid-template-columns:1fr 1fr; }
+}
