@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Stupa Fellowship | HIAL</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="./static/favicon.png" />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!--    NAV - BAR -->
+    <script>
+      $(function () {
+        $("#header").load("./components/header.html");
+      });
+    </script>
+    <div id="header"></div>
+
+    <!-- main content -->
+    <div class="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
+      <!-- Hero Image (replace src when the final image is ready) -->
+      <div class="flex justify-center mb-4 sm:mb-8">
+        <img
+          src="./static/isc.webp"
+          alt="Ice Stupa Fellowship"
+          class="w-full max-w-4xl rounded-lg shadow-lg"
+        />
+      </div>
+      <hr class="border-t-2 border-theme-golden mb-4 sm:mb-8" />
+
+      <!-- Title block -->
+      <div class="text-center mb-4 sm:mb-8">
+        <h1 class="text-2xl sm:text-4xl font-bold text-theme-golden mb-2">
+          Ice Stupa Fellowship
+        </h1>
+        <p class="text-base sm:text-xl font-semibold">
+          Winter Batch 2026-27
+        </p>
+        <p class="text-sm sm:text-lg font-medium mt-1">
+          6-month residential course
+        </p>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="flex flex-col lg:grid lg:grid-cols-2 gap-4 sm:gap-8">
+
+        <!-- ABOUT THE FELLOWSHIP -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md lg:col-span-2">
+          <h4 class="text-lg sm:text-2xl font-bold text-theme-golden mb-2 sm:mb-4">ABOUT THE FELLOWSHIP:</h4>
+          <p class="text-sm sm:text-base">
+            The Himalayan region is experiencing rapid environmental change,
+            with implications for water availability, mountain ecosystems,
+            agriculture, and the livelihoods of local communities. In
+            high-altitude cold deserts such as Ladakh, where precipitation is
+            limited and water availability is closely linked to seasonal snow
+            and glacier melt, developing locally appropriate water-management
+            solutions is increasingly important.
+            <br /><br />
+            The Ice Stupa Fellowship at the Himalayan Institute of
+            Alternatives, Ladakh (HIAL) aims to bring together students and
+            emerging researchers from engineering, physical sciences,
+            environmental sciences, architecture, and related disciplines to
+            explore innovative technological solutions for water-related
+            challenges in the Himalayas.
+            <br /><br />
+            The fellowship will use
+            <strong>Ice Stupa technology as a starting point for
+            interdisciplinary research, engineering, experimentation, and
+            innovation</strong>. Participants will engage with real-world
+            problems through field-oriented research, prototyping, modelling,
+            and testing, while exploring how scientific knowledge and
+            engineering design can be adapted to challenging mountain
+            environments.
+          </p>
+
+          <h4 class="text-base sm:text-xl font-bold text-theme-golden mt-4">
+            Key details of the Fellowship:
+          </h4>
+          <ul class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base">
+            <li>Duration: 6 months, fully residential (winter months, November to April)</li>
+            <li>Location: HIAL campus, Phyang, Leh-UT Ladakh, with field stays in villages across Ladakh</li>
+            <li>Eligibility: Applicants from the Himalayan region of India, Nepal and Bhutan</li>
+            <li>Fee: No course fee &mdash; participants cover food and accommodation at Rs 10,000 per month</li>
+          </ul>
+        </div>
+
+        <!-- ============ VIDEO PLACEHOLDER ============
+             To add the video, replace the placeholder <div> below with ONE of:
+             YouTube:
+               <iframe style="width:100%;height:100%;border:0;border-radius:0.5rem;"
+                 src="https://www.youtube.com/embed/VIDEO_ID"
+                 title="Ice Stupa Fellowship"
+                 allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+             Self-hosted file:
+               <video controls preload="metadata" style="width:100%;height:100%;border-radius:0.5rem;">
+                 <source src="./static/icestupa-fellowship/video.mp4" type="video/mp4" />
+               </video>
+        -->
+        <div class="flex justify-center lg:col-span-2" id="fellowship-video">
+          <div class="w-full max-w-4xl" style="aspect-ratio: 16 / 9;">
+            <div style="border:2px dashed #b8860b; border-radius:0.5rem; display:flex; align-items:center; justify-content:center; text-align:center; color:#6b7280; background:#fafafa; width:100%;height:100%;">
+              <span>Video coming soon</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- WHY ICE STUPAS -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md lg:col-span-2">
+          <h4 class="text-lg sm:text-2xl font-bold text-theme-golden mb-2 sm:mb-4">WHY ICE STUPAS?</h4>
+          <p class="text-sm sm:text-base mb-2">
+            Ice Stupas are artificial ice structures developed to store water
+            in frozen form during winter and release it as they melt in
+            spring. In suitable locations, this approach can help make water
+            available during periods when agricultural demand begins to rise
+            but natural water sources may be limited.
+          </p>
+          <p class="text-sm sm:text-base mb-2">
+            The technology also raises important research and engineering
+            questions. How can water be transported and frozen efficiently
+            under varying climatic conditions? How can artificial ice systems
+            be designed for different terrain and water requirements? What
+            roles can sensors, automation, predictive modelling, and new
+            materials play in improving their performance?
+          </p>
+          <p class="text-sm sm:text-base mb-2">
+            These questions extend beyond Ice Stupas themselves. They connect
+            to broader challenges in mountain hydrology, cryosphere research,
+            environmental monitoring, structural engineering, and
+            climate-responsive infrastructure.
+          </p>
+          <p class="text-sm sm:text-base">
+            The fellowship seeks to create a learning and research environment
+            in which participants can investigate these questions and develop
+            solutions grounded in scientific understanding and local
+            realities.
+          </p>
+        </div>
+
+        <!-- OBJECTIVES -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4 class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4">OBJECTIVES OF THE FELLOWSHIP:</h4>
+          <p class="text-sm sm:text-base mb-2">The fellowship aims to:</p>
+          <ul class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base">
+            <li>Build interdisciplinary understanding of Ice Stupa technology, artificial ice systems, and mountain water challenges.</li>
+            <li>Encourage field-oriented research into the engineering and environmental problems associated with high-altitude water systems.</li>
+            <li>Support the development, prototyping, modelling, and testing of innovative technological solutions.</li>
+            <li>Explore the application of automation, Internet of Things (IoT), sensing systems, and autonomous technologies in mountain environments.</li>
+            <li>Connect engineering and scientific research with the practical needs of Himalayan communities.</li>
+            <li>Foster collaboration among students, scientists, researchers, engineers, and scholars from diverse disciplines.</li>
+          </ul>
+        </div>
+
+        <!-- RESEARCH AND LEARNING THEMES -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4 class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4">RESEARCH AND LEARNING THEMES:</h4>
+          <p class="text-sm sm:text-base mb-2">The fellowship will explore the following themes:</p>
+          <ul class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base">
+            <li><strong>Ice Stupa and Artificial Ice Systems</strong></li>
+            <li><strong>Mountain Hydrology</strong></li>
+            <li><strong>Automation and Autonomous Technologies</strong></li>
+            <li><strong>IoT, Sensing and Wireless Systems</strong></li>
+            <li><strong>Mechanical and Materials Engineering</strong></li>
+            <li><strong>Structural Design and Architecture</strong></li>
+            <li><strong>Modelling, Simulation and Algorithms</strong></li>
+            <li><strong>Glaciology and Cryosphere Research</strong></li>
+          </ul>
+        </div>
+
+        <!-- ============ IMAGE PLACEHOLDERS ============
+             Replace each placeholder <div> with:
+             <img src="./static/icestupa-fellowship/FILENAME.webp" alt="DESCRIPTION"
+                  class="w-full rounded-lg shadow-lg" />
+        -->
+        <div class="lg:col-span-2">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4" id="fellowship-images">
+            <div style="border:2px dashed #b8860b; border-radius:0.5rem; display:flex; align-items:center; justify-content:center; text-align:center; color:#6b7280; background:#fafafa; min-height:200px;"><span>Image 1</span></div>
+            <div style="border:2px dashed #b8860b; border-radius:0.5rem; display:flex; align-items:center; justify-content:center; text-align:center; color:#6b7280; background:#fafafa; min-height:200px;"><span>Image 2</span></div>
+            <div style="border:2px dashed #b8860b; border-radius:0.5rem; display:flex; align-items:center; justify-content:center; text-align:center; color:#6b7280; background:#fafafa; min-height:200px;"><span>Image 3</span></div>
+          </div>
+        </div>
+
+        <!-- WHAT WILL FELLOWS DO -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md lg:col-span-2">
+          <h4 class="text-lg sm:text-2xl font-bold text-theme-golden mb-2 sm:mb-4">WHAT WILL FELLOWS DO?</h4>
+          <p class="text-sm sm:text-base mb-2">
+            During the fellowship, participants will engage with practical
+            research and engineering challenges through activities such as:
+          </p>
+          <ul class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base">
+            <li><strong>Field-oriented research:</strong> Examine real-world problems related to artificial ice systems, water availability, and high-altitude environments.</li>
+            <li><strong>Design and innovation:</strong> Develop ideas and engineering approaches to address identified challenges.</li>
+            <li><strong>Prototyping and experimentation:</strong> Build, test, and improve prototypes, components, or technological solutions.</li>
+            <li><strong>Modelling and simulation:</strong> Apply analytical and computational methods to understand system performance and evaluate design alternatives.</li>
+            <li><strong>Interdisciplinary collaboration:</strong> Work with scientists, researchers, engineers, and fellow participants from different academic backgrounds.</li>
+            <li><strong>Field studies and observation:</strong> Investigate the environmental and operational conditions that influence the performance of technologies in Himalayan settings.</li>
+          </ul>
+        </div>
+
+        <!-- WHO CAN APPLY -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4 class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4">WHO CAN APPLY?</h4>
+          <p class="text-sm sm:text-base mb-2">
+            People only from <strong>Himalayan region in India</strong> and
+            <strong>Nepal &amp; Bhutan</strong>, aged 23 to 30, with
+            relevant academic backgrounds are eligible to apply, including
+            those studying:
+          </p>
+          <ul class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base">
+            <li>Civil Engineering and Architecture</li>
+            <li>Mechanical Engineering and Materials Science</li>
+            <li>Electronics and Electrical Engineering</li>
+            <li>Computer Science, IoT, and Automation</li>
+            <li>Physics</li>
+            <li>Glaciology and Hydrology</li>
+            <li>Environmental Science and Climate Science</li>
+          </ul>
+          <p class="text-sm sm:text-base mt-3">
+            <em>We are also open to those people beyond the above background
+            to apply but having deep interest and keen in working with
+            Artificial Glaciers systems in their own regions to help community
+            facing water scarcity.</em>
+          </p>
+        </div>
+
+        <!-- WHY JOIN -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4 class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4">WHY JOIN THE FELLOWSHIP?</h4>
+          <p class="text-sm sm:text-base mb-2">
+            The Ice Stupa Fellowship offers an opportunity to connect academic
+            knowledge with real-world technological challenges in a
+            distinctive Himalayan environment.
+          </p>
+          <p class="text-sm sm:text-base mb-2">Fellows will have the opportunity to:</p>
+          <ul class="list-disc pl-4 sm:pl-6 space-y-1 sm:space-y-2 text-sm sm:text-base">
+            <li>Explore an emerging area of climate-responsive water technology.</li>
+            <li>Apply their academic knowledge to practical research and engineering problems.</li>
+            <li>Gain experience in experimentation, prototyping, modelling, and field-based investigation.</li>
+            <li>Learn from and collaborate with people from different scientific and technical disciplines.</li>
+            <li>Explore how technologies can be designed for extreme temperatures, high altitudes, and demanding terrain.</li>
+            <li>Contribute ideas towards improving the understanding, design, monitoring, and performance of artificial ice systems.</li>
+          </ul>
+        </div>
+
+        <!-- OUR APPROACH -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4 class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4">OUR APPROACH:</h4>
+          <p class="text-sm sm:text-base mb-2">
+            At HIAL, the fellowship will emphasise learning through engagement
+            with real problems. Participants will be encouraged to question
+            existing approaches, examine evidence, test ideas, learn from past
+            experiments, and refine their solutions.
+          </p>
+          <p class="text-sm sm:text-base">
+            The programme brings together scientific inquiry, engineering
+            practice, environmental understanding, and interdisciplinary
+            collaboration. Its central premise is that meaningful
+            technological innovation emerges when rigorous research is
+            connected to the conditions in which a technology must actually
+            function.
+          </p>
+        </div>
+
+        <!-- THE LARGER VISION -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md">
+          <h4 class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4">THE LARGER VISION:</h4>
+          <p class="text-sm sm:text-base mb-2">
+            The Ice Stupa Fellowship seeks to nurture a community of emerging
+            researchers and innovators who can contribute to the development
+            of appropriate technologies for the Himalayan region and other
+            challenging environments.
+          </p>
+          <p class="text-sm sm:text-base">
+            By connecting Ice Stupa technology with wider questions in
+            hydrology, cryosphere science, engineering, sensing, automation,
+            and design, the fellowship aims to encourage solutions that are
+            scientifically informed, context-sensitive, and responsive to the
+            realities of mountain environments.
+          </p>
+        </div>
+
+        <!-- CLOSING LINE -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md lg:col-span-2 text-center">
+          <p class="text-base sm:text-xl font-semibold text-theme-golden">
+            Join us in exploring how science, engineering, and
+            interdisciplinary collaboration can contribute to more resilient
+            water systems in the Himalayas.
+          </p>
+        </div>
+
+        <!-- FAQ -->
+        <div class="bg-white p-3 sm:p-6 rounded-lg shadow-md lg:col-span-2 text-center" id="faq">
+          <h4 class="text-base sm:text-xl font-bold text-theme-golden mb-2 sm:mb-4">FREQUENTLY ASKED QUESTIONS</h4>
+          <p class="text-base sm:text-lg font-semibold">
+            For FAQ
+            <a
+              href="./static/icestupa-fellowship/Ice_Stupa_Fellowship_FAQ.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-theme-golden underline"
+              >click here</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Apply Now Button -->
+    <div
+      class="container mx-auto px-2 sm:px-4 py-4 sm:py-8 flex justify-center"
+    >
+      <a
+        href="https://docs.google.com/forms/d/12QShrVyxgVZhTFIin_ZUUiNeHNrvAlLn6w3Pz1wo08o/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-theme-golden hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg"
+      >
+        Apply Now
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <script>
+      $(function () {
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+  </body>
+</html>
