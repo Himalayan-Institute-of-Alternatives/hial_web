@@ -19,6 +19,18 @@
 
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      .is-gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      @media (min-width: 768px) {
+        .is-gallery {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
     <!--    NAV - BAR -->
@@ -31,13 +43,13 @@
 
     <!-- main content -->
     <div class="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
-      <!-- Hero Image (replace src when the final image is ready) -->
+      <!-- Hero Image -->
       <div class="flex justify-center mb-4 sm:mb-8">
         <img
           src="./static/icestupa-fellowship/hero.webp"
           alt="Ice Stupa Fellowship"
-          class="rounded-lg shadow-lg"
-          style="max-width: 100%; max-height: 320px; width: auto; height: auto"
+          class="w-full rounded-lg shadow-lg"
+          style="max-width: 720px; height: auto"
         />
       </div>
       <hr class="border-t-2 border-theme-golden mb-4 sm:mb-8" />
@@ -180,16 +192,30 @@
           </ul>
         </div>
 
-        <!-- ============ IMAGE PLACEHOLDERS ============
-             Replace each placeholder <div> with:
-             <img src="./static/icestupa-fellowship/FILENAME.webp" alt="DESCRIPTION"
-                  class="w-full rounded-lg shadow-lg" />
-        -->
+        <!-- GALLERY -->
         <div class="lg:col-span-2">
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4" id="fellowship-images">
-            <div style="border:2px dashed #b8860b; border-radius:0.5rem; display:flex; align-items:center; justify-content:center; text-align:center; color:#6b7280; background:#fafafa; min-height:200px;"><span>Image 1</span></div>
-            <div style="border:2px dashed #b8860b; border-radius:0.5rem; display:flex; align-items:center; justify-content:center; text-align:center; color:#6b7280; background:#fafafa; min-height:200px;"><span>Image 2</span></div>
-            <div style="border:2px dashed #b8860b; border-radius:0.5rem; display:flex; align-items:center; justify-content:center; text-align:center; color:#6b7280; background:#fafafa; min-height:200px;"><span>Image 3</span></div>
+          <div class="is-gallery" id="fellowship-images">
+            <img
+              src="./static/icestupa-fellowship/ice-stupa-1.webp"
+              alt="Ice Stupa rising from a snow-covered valley in Ladakh"
+              loading="lazy"
+              class="rounded-lg shadow-lg"
+              style="width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover"
+            />
+            <img
+              src="./static/icestupa-fellowship/ice-stupa-2.webp"
+              alt="Ice Stupa with snow-capped mountains behind it"
+              loading="lazy"
+              class="rounded-lg shadow-lg"
+              style="width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover"
+            />
+            <img
+              src="./static/icestupa-fellowship/ice-stupa-3.webp"
+              alt="Ice Stupa site with water being sprayed to build ice"
+              loading="lazy"
+              class="rounded-lg shadow-lg"
+              style="width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover"
+            />
           </div>
         </div>
 
