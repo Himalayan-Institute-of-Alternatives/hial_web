@@ -310,7 +310,7 @@ Assets live in `public/static/`. Group a programme's or event's files in their o
 - Menu: Academics → Flagship Programmes, below HELM Residency, in both header blocks
 - Files: `public/static/icestupa-fellowship/Ice_Stupa_Fellowship_FAQ.pdf`, linked from a "For FAQ click here" section
 - Apply button: links to the programme's Google Form
-- The page contains placeholder boxes for a video and three images; replace them using the comments in the file once the media is ready
+- Media in `public/static/icestupa-fellowship/`: `hero.webp` (top image), `ice-stupa-1.webp` to `ice-stupa-3.webp` (gallery). The intro video is `ice-stupa-fellowship.mp4` with `video-poster.webp` as its poster frame (portrait, 736x928)
 
 ---
 

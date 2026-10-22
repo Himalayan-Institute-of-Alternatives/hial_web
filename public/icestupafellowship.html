@@ -110,24 +110,22 @@
           </ul>
         </div>
 
-        <!-- ============ VIDEO PLACEHOLDER ============
-             To add the video, replace the placeholder <div> below with ONE of:
-             YouTube:
-               <iframe style="width:100%;height:100%;border:0;border-radius:0.5rem;"
-                 src="https://www.youtube.com/embed/VIDEO_ID"
-                 title="Ice Stupa Fellowship"
-                 allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-             Self-hosted file:
-               <video controls preload="metadata" style="width:100%;height:100%;border-radius:0.5rem;">
-                 <source src="./static/icestupa-fellowship/video.mp4" type="video/mp4" />
-               </video>
-        -->
+        <!-- VIDEO (portrait, 736x928) -->
         <div class="flex justify-center lg:col-span-2" id="fellowship-video">
-          <div class="w-full max-w-4xl" style="aspect-ratio: 16 / 9;">
-            <div style="border:2px dashed #b8860b; border-radius:0.5rem; display:flex; align-items:center; justify-content:center; text-align:center; color:#6b7280; background:#fafafa; width:100%;height:100%;">
-              <span>Video coming soon</span>
-            </div>
-          </div>
+          <video
+            controls
+            playsinline
+            preload="metadata"
+            poster="./static/icestupa-fellowship/video-poster.webp"
+            class="rounded-lg shadow-lg"
+            style="width: 100%; max-width: 420px; height: auto; background: #000"
+          >
+            <source
+              src="./static/icestupa-fellowship/ice-stupa-fellowship.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         <!-- WHY ICE STUPAS -->
